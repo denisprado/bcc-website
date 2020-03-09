@@ -1,23 +1,46 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import Head from 'components/head';
+import Header from 'components/header';
+import GlobalStyle from 'global.css.js';
+import { Container } from './layout.css';
 
-import {
-  Container,
-  Navbar,
-  NavbarLeftMenu,
-  NavbarRightMenu,
-  NavbarFooter
-} from "./layout.css.js";
-
-const Layout = () => (
-  <Container>
-    <Navbar>
-      <NavbarLeftMenu>BCC</NavbarLeftMenu>
-      <NavbarRightMenu>|||</NavbarRightMenu>
-    </Navbar>
-    <NavbarFooter>
-      <NavbarRightMenu>face - insta - linkedin</NavbarRightMenu>
-    </NavbarFooter>
-  </Container>
+const Layout = ({ data, children }) => (
+  <>
+    <GlobalStyle />
+    <Head />
+    <Header
+      title={data.site.siteMetadata.siteTitle}
+      logo={data.site.siteMetadata.logo}
+    />
+    {children}
+  </>
 );
 
-export default Layout;
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  data: PropTypes.object.isRequired,
+};
+
+const LayoutWithQuery = props => (
+  <StaticQuery
+    query={graphql`
+      query LayoutQuery {
+        site {
+          siteMetadata {
+            siteTitle
+            logo
+          }
+        }
+      }
+    `}
+    render={data => <Layout data={data} {...props} />}
+  />
+);
+
+LayoutWithQuery.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default LayoutWithQuery;

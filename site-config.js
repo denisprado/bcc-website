@@ -1,16 +1,16 @@
 const path = require('path');
 
 module.exports = {
-  siteTitle: 'Denis Forigo',
-  siteTitleShort: 'Denis Forigo',
-  siteDescription: 'Portifolio.',
-  siteUrl: 'https://www.denisforigo.com',
+  siteTitle: 'Barassa & Cruz Consulting',
+  siteTitleShort: 'BCC',
+  siteDescription: 'Barassa & Cruz Consulting Website',
+  siteUrl: 'https://www.bcc.com.br',
   themeColor: '#000',
   backgroundColor: '#fff',
   pathPrefix: null,
-  logo: path.resolve(__dirname, 'src/images/icon.png'),
+  logo: path.resolve(__dirname, 'src/images/logo-100.jpg'),
   social: {
-    twitter: 'DForigo',
-    fbAppId: '966242223397117',
+    twitter: 'BCC',
+    fbAppId: '',
   },
 };

@@ -1,36 +1,36 @@
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html") {
+  if (stage === 'build-html') {
     actions.setWebpackConfig({
       module: {
         rules: [
           {
             test: /@fullpage/,
-            use: loaders.null()
-          }
-        ]
-      }
+            use: loaders.null(),
+          },
+        ],
+      },
     });
   }
 };
 
-const path = require("path");
-const DirectoryNamedWebpackPlugin = require("directory-named-webpack-plugin");
+const path = require('path');
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 
 exports.onCreateWebpackConfig = ({
   stage,
   getConfig,
   rules,
   loaders,
-  actions
+  actions,
 }) => {
   actions.setWebpackConfig({
     resolve: {
-      modules: [path.resolve(__dirname, "src"), "node_modules"],
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
       plugins: [
         new DirectoryNamedWebpackPlugin({
-          exclude: /node_modules/
-        })
-      ]
-    }
+          exclude: /node_modules/,
+        }),
+      ],
+    },
   });
 };
