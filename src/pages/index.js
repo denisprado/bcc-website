@@ -3,6 +3,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import Layout from 'components/layout';
 import Container from 'components/container';
 import Title from 'components/title';
+import Home from './home';
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
 
@@ -28,6 +29,7 @@ const originalColors = [
 class App extends React.Component {
   constructor(props) {
     super(props);
+    const { data } = props;
     this.state = {
       sectionsColor: [...originalColors],
       fullpages: [
@@ -73,16 +75,9 @@ class App extends React.Component {
           sectionsColor={this.state.sectionsColor}
           render={comp => (
             <ReactFullpage.Wrapper>
-              {fullpages.map(({ text }) => (
-                <div key={text} className={SEL}>
-                  <Container>
-                    <Title size="large" as="h1">
-                      Criando <strong>valor</strong> junto às tecnologias
-                      emergentes verdes e de baixo carbono
-                    </Title>
-                  </Container>
-                </div>
-              ))}
+              <Layout data>
+                <Home />
+              </Layout>
             </ReactFullpage.Wrapper>
           )}
         />
