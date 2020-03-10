@@ -7444,10 +7444,10 @@ gatsby-plugin-react-helmet@^3.1.23:
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-gatsby-plugin-react-svg@^2.0.0:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-svg/-/gatsby-plugin-react-svg-2.1.2.tgz#e5aa026ece1a8aa3319bf10a8e20cf4595aec932"
-  integrity sha512-y2vqiI/+bW8UPNL8628NwoX6kHtM4WJz6CiHPc9fhvSUa2Y8wriFJnGl1K249/9RXomOUQhl7r7JOuVhweSl1w==
+gatsby-plugin-react-svg@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-svg/-/gatsby-plugin-react-svg-3.0.0.tgz#67984bf350bce0532bef965fab094b0b461cdf68"
+  integrity sha512-myZl5NjVZwLLn4ovwSDM7cufa8yjaRiU5KoufJrz8FEalRroZ/hFSCCKNVna3blTwxcS0rZgISigYn9/xY7rkw==
   dependencies:
     svg-react-loader "^0.4.4"
 
@@ -7492,6 +7492,14 @@ gatsby-plugin-styled-components@^3.1.20:
   integrity sha512-ledGQkZL9DS40IrhbJudZPAIc9gDqL+WcjB630JhT7bJvA0Ss8ugnAHKJYrVslbeCgWUg3ey07NnmLePoaLnXQ==
   dependencies:
     "@babel/runtime" "^7.7.6"
+
+gatsby-plugin-web-font-loader@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-web-font-loader/-/gatsby-plugin-web-font-loader-1.0.4.tgz#c50bdb0c1980110b3fd213a5be70feb2459514c3"
+  integrity sha512-3c39bX9CcsYJQFhhmTyjuMJSqpld2rX+HsTOxP9k1PKFR4Rvo3lpzBW4d1tVpmUesR8BNL6u9eHT7/XksS1iog==
+  dependencies:
+    babel-runtime "^6.26.0"
+    webfontloader "^1.6.28"
 
 gatsby-plugin-webpack-size@^0.0.3:
   version "0.0.3"
@@ -13777,6 +13785,13 @@ react-hot-loader@^4.12.18, react-hot-loader@^4.8.0:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
+react-icons@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.9.0.tgz#89a00f20a0e02e6bfd899977eaf46eb4624239d5"
+  integrity sha512-gKbYKR+4QsD3PmIHLAM9TDDpnaTsr3XZeK1NTAb6WQQ+gxEdJ0xuCgLq0pxXdS7Utg2AIpcVhM1ut/jlDhcyNg==
+  dependencies:
+    camelcase "^5.0.0"
+
 react-immutable-proptypes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-immutable-proptypes/-/react-immutable-proptypes-2.1.0.tgz#023d6f39bb15c97c071e9e60d00d136eac5fa0b4"
@@ -17161,6 +17176,11 @@ web-namespaces@^1.0.0, web-namespaces@^1.1.2:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"
   integrity sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==
+
+webfontloader@^1.6.28:
+  version "1.6.28"
+  resolved "https://registry.yarnpkg.com/webfontloader/-/webfontloader-1.6.28.tgz#db786129253cb6e8eae54c2fb05f870af6675bae"
+  integrity sha1-23hhKSU8tujq5UwvsF+HCvZnW64=
 
 webpack-assets-manifest@^3.1.1:
   version "3.1.1"

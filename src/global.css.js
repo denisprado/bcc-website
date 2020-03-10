@@ -34,10 +34,11 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: proxima-nova, sans-serif;
+    color: white;
     line-height: 1;
     font-size: 1.6rem;
-    color: #000;
+    color: white;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -90,6 +91,16 @@ export default createGlobalStyle`
 
   p {
     margin-bottom: 2rem;
+  }
+
+  a {
+    color: white;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    font-size: 2.1rem;
+    &:hover {
+      color: inherit;
+    }
   }
 
 `;

@@ -1,8 +1,17 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
+import { accent } from 'constants/theme';
 
 export const Text = styled.span`
   display: block;
+  width: ${({ size }) => () => {
+    switch (size) {
+      case 'large':
+        return '70%';
+      default:
+        return '100%';
+    }
+  }};
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
@@ -14,9 +23,9 @@ export const Text = styled.span`
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '3.2rem';
+        return '5.25rem';
       default:
-        return '2rem';
+        return '2.125rem';
     }
   }};
   line-height: 1.2;
@@ -31,4 +40,8 @@ export const Text = styled.span`
       }
     }};
   `};
+
+  strong {
+    color: ${accent};
+  }
 `;

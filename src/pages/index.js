@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Layout from 'components/layout';
+import Container from 'components/container';
+import Title from 'components/title';
 const SEL = 'custom-section';
 const SECTION_SEL = `.${SEL}`;
 
@@ -13,14 +15,14 @@ const pluginWrapper = () => {
 };
 
 const originalColors = [
-  '#ff5f45',
-  '#0798ec',
-  '#fc6c7c',
-  '#435b71',
-  'orange',
-  'blue',
-  'purple',
-  'yellow',
+  '#194090',
+  '#194090',
+  '#194090',
+  '#194090',
+  '#194090',
+  '#194090',
+  '#194090',
+  '#194090',
 ];
 
 class App extends React.Component {
@@ -30,7 +32,8 @@ class App extends React.Component {
       sectionsColor: [...originalColors],
       fullpages: [
         {
-          text: 'Section 1',
+          text:
+            'Criando <strong>valor</strong> junto às tecnologias emergentes verdes e de baixo carbono',
         },
         {
           text: 'Section 2',
@@ -72,7 +75,12 @@ class App extends React.Component {
             <ReactFullpage.Wrapper>
               {fullpages.map(({ text }) => (
                 <div key={text} className={SEL}>
-                  <h1>{text}</h1>
+                  <Container>
+                    <Title size="large" as="h1">
+                      Criando <strong>valor</strong> junto às tecnologias
+                      emergentes verdes e de baixo carbono
+                    </Title>
+                  </Container>
                 </div>
               ))}
             </ReactFullpage.Wrapper>

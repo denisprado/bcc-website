@@ -15,22 +15,25 @@ module.exports = {
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-eslint',
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: 'xik8dji',
+          families: ['Proxima Nova'],
+        },
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
         path: `${__dirname}/src/pages/`,
       },
     },
+    'gatsby-plugin-react-svg',
+
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-webpack-size',
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /images\/.*\.svg$/,
-        },
-      },
-    },
   ],
 };
