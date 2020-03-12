@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "bcc-site",
+  "description": "BCC Website",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -35,9 +35,9 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-plugin-webpack-size": "^0.0.3",
     "gatsby-source-filesystem": "^2.1.49",
-    "gatsby-transformer-json": "^2.2.27",
-    "gatsby-transformer-remark": "^2.6.54",
-    "gatsby-transformer-sharp": "^2.3.17",
+    "gatsby-transformer-json": "^2.1.11",
+    "gatsby-transformer-remark": "^2.3.9",
+    "gatsby-transformer-sharp": "^2.1.18",
     "intersection-observer": "^0.5.1",
     "locomotive-scroll": "^3.3.9",
     "netlify-cms-app": "^2.11.25",

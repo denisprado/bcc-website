@@ -26,19 +26,12 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages/`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'content',
         path: `${__dirname}/content`,
       },
     },
-    'gatsby-plugin-react-svg',
 
+    'gatsby-plugin-react-svg',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-webpack-size',
