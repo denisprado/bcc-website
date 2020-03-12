@@ -6,13 +6,15 @@ import Title from 'components/title';
 import Layout from 'components/layout';
 
 const Index = ({ data }) => (
-  <Layout>
-    <Container>
-      <Title size="large" as="h1">
-        {data.homeJson.content}
-      </Title>
-    </Container>
-  </Layout>
+  <Container>
+    <Title size="large" as="h1">
+      <p
+        dangerouslySetInnerHTML={{
+          __html: data.homeJson.content.childMarkdownRemark.html,
+        }}
+      />
+    </Title>
+  </Container>
 );
 
 Index.propTypes = {

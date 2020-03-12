@@ -6,4 +6,6 @@ export const SectionLayout = styled.div`
   background-color: ${props => (props.bgColor ? props.bgColor : 'transparent')};
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
 `;
