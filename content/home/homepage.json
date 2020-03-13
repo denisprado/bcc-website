@@ -1,4 +1,30 @@
 {
-  "title": "Home",
-  "content": "intro.md"
+  "sections": [
+    {
+      "title": "hero",
+      "content": "intro.md",
+      "type": "text",
+      "bgColor": "#194090"
+    },
+    {
+      "title": "o que fazemos?",
+      "type": "gallery",
+      "content": "",
+      "bgColor": "linear-gradient(to bottom, #194090 0%,#3c77cf 100%)",
+      "cards": [
+        {
+          "image": "../images/gallery/mapeamento.png",
+          "text": "Atuamos no <strong>mapeamento</strong> e recomendações de políticas públicas e governança para Ciência, Tecnologia e Inovação (CT&I) e na execução de Roadmaps tecnológicos e estudos de inteligência de trajetórias tecnológicas e perante o Governo Federal e Instituições Internacionais"
+        },
+        {
+          "image": "../images/gallery/ideacao.png",
+          "text": "Ideação de projetos de P&D para tecnologias emergentes (componentes para veículos híbridos, elétricos como Powertrains Elétricos para a cadeia Automotiva)"
+        },
+        {
+          "image": "../images/gallery/projetos.png",
+          "text": "Execução de projetos de investimentos, com a análise de modelos de negócios e introdução ao mercado, considerando análise de cadeias de valor e cluster produtivos."
+        }
+      ]
+    }
+  ]
 }
