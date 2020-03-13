@@ -39,7 +39,12 @@ export const query = graphql`
         bgColor
         type
         cards {
-          text
+          text {
+            childMarkdownRemark {
+              html
+              rawMarkdownBody
+            }
+          }
           image {
             childImageSharp {
               fluid(maxHeight: 500, quality: 90) {

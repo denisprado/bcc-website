@@ -1,0 +1,1 @@
+Atuamos no <strong>mapeamento</strong> e recomendações de políticas públicas e governança para Ciência, Tecnologia e Inovação (CT&I) e na execução de Roadmaps tecnológicos e estudos de inteligência de trajetórias tecnológicas e perante o Governo Federal e Instituições Internacionais
