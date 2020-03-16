@@ -12,16 +12,42 @@
       "bgColor": "linear-gradient(to bottom, #194090 0%,#3c77cf 100%)",
       "cards": [
         {
+          "title": "Mapeamento",
           "image": "../images/gallery/mapeamento.png",
           "text": "card_mapeamento.md"
         },
         {
+          "title": "Ideação",
           "image": "../images/gallery/ideacao.png",
           "text": "card_ideacao.md"
         },
         {
+          "title": "Projetos",
           "image": "../images/gallery/projetos.png",
           "text": "card_projetos.md"
+        }
+      ]
+    },
+    {
+      "title": "como fazemos?",
+      "type": "slide",
+      "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #194090 100%)",
+      "cards": [
+        {
+          "title": "Pesquisa",
+          "text": "slide_pesquisa.md"
+        },
+        {
+          "title": "Consultoria",
+          "text": "slide_consultoria.md"
+        },
+        {
+          "title": "Eventos",
+          "text": "slide_eventos.md"
+        },
+        {
+          "title": "Educação",
+          "text": "slide_educacao.md"
         }
       ]
     }
