@@ -11,6 +11,7 @@ const App = ({ data }) => (
     {data.homeJson.sections.map(section => (
       <Section key={section.title} bgColor={section.bgColor}>
         <Container>
+          {console.log(section.cards)}
           {section.type === 'text' && (
             <Title size="large" as="h1">
               <p

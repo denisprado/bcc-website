@@ -8,7 +8,7 @@ const Section = ({ children, bgColor }) => (
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
-  props: PropTypes.node.isRequired,
+  bgColor: PropTypes.node.isRequired,
 };
 
 export default Section;

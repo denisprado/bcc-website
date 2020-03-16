@@ -15,11 +15,16 @@ const Item = ({ text, image }) =>
               ? image.childImageSharp.fluid.src
               : image
           }
-          alt={text}
+          alt={text.childMarkdownRemark.rawMarkdownBody}
         />
         <ContainerText>
           <figcaption>
-            <Title>{text}</Title>
+            <Title
+              as="p"
+              dangerouslySetInnerHTML={{
+                __html: text.childMarkdownRemark.html,
+              }}
+            ></Title>
           </figcaption>
         </ContainerText>
       </figure>
@@ -27,7 +32,7 @@ const Item = ({ text, image }) =>
   ) : null;
 
 Item.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.object,
   image: PropTypes.object.isRequired,
 };
 
