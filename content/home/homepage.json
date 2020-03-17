@@ -4,7 +4,14 @@
       "title": "hero",
       "content": "intro.md",
       "type": "text",
-      "bgColor": "#194090"
+      "bgColor": "#194090",
+      "cards": [
+        {
+          "title": "Mapeamento",
+          "image": "../images/gallery/mapeamento.png",
+          "text": "card_mapeamento.md"
+        }
+      ]
     },
     {
       "title": "o que fazemos?",

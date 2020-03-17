@@ -9,7 +9,7 @@ import React from 'react';
 
 const App = ({ data }) => (
   <Layout>
-    {data &&
+    {data.homeJson.sections &&
       data.homeJson.sections.map(section => (
         <Section key={section.title} bgColor={section.bgColor}>
           <Container>
