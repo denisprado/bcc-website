@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-//import Item from 'components/SlideShow/item';
-import { Container } from './SlideShow.css';
+s
+
 
 function SlideShow({ items }) {
   const [index, setIndex] = useState(0);
@@ -12,7 +12,7 @@ function SlideShow({ items }) {
   const handlePrevious = () =>
     index === 0 ? setIndex(length) : setIndex(index - 1);
 
-  return <Container>Test</Container>;
+  
 }
 
 SlideShow.propTypes = {

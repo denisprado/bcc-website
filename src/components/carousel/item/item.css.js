@@ -12,6 +12,7 @@ export const ContainerText = styled.div`
   margin: 2rem 0;
   font-size: 1.8rem;
   line-height: 1.25;
+  color: white;
   strong {
     color: ${accent};
   }

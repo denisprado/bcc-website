@@ -2,7 +2,7 @@ import Layout from 'components/layout';
 import Container from 'components/container';
 import Section from 'components/section';
 import Gallery from 'components/gallery';
-import SlideShow from 'components/slideshow';
+import Carousel from 'components/carousel';
 import Title from 'components/title';
 import { graphql } from 'gatsby';
 import React from 'react';
@@ -26,7 +26,7 @@ const App = ({ data }) => (
               <Gallery items={section.cards}></Gallery>
             )}
             {section.type === 'slide' && (
-              <SlideShow items={section.cards}></SlideShow>
+              <Carousel items={section.cards}></Carousel>
             )}
           </Container>
         </Section>

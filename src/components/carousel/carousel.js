@@ -6,7 +6,6 @@ import { Container } from './Carousel.css';
 function Carousel({ items }) {
   return (
     <Container>
-      {console.log(items)}
       {items.map((item, i) => (
         <Item {...item} key={i} />
       ))}

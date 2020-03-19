@@ -42,19 +42,23 @@
       "cards": [
         {
           "title": "Pesquisa",
-          "text": "slide_pesquisa.md"
+          "text": "slide_pesquisa.md",
+          "image": ""
         },
         {
           "title": "Consultoria",
-          "text": "slide_consultoria.md"
+          "text": "slide_consultoria.md",
+          "image": ""
         },
         {
           "title": "Eventos",
-          "text": "slide_eventos.md"
+          "text": "slide_eventos.md",
+          "image": ""
         },
         {
           "title": "Educação",
-          "text": "slide_educacao.md"
+          "text": "slide_educacao.md",
+          "image": ""
         }
       ]
     }
