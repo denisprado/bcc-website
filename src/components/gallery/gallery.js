@@ -5,7 +5,7 @@ import { Container } from './gallery.css';
 
 function Gallery({ items }) {
   return (
-    <Container>
+    <Container size={items.length}>
       {items.map((item, i) => (
         <Item {...item} key={i} />
       ))}

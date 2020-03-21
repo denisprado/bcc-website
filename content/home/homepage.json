@@ -16,22 +16,28 @@
     {
       "title": "o que fazemos?",
       "type": "gallery",
-      "bgColor": "linear-gradient(to bottom, #194090 0%,#3c77cf 100%)",
+      "bgColor": "linear-gradient(to bottom, #194090 0%, #3c77cf 100%)",
       "cards": [
         {
           "title": "Mapeamento",
           "image": "../images/gallery/mapeamento.png",
-          "text": "card_mapeamento.md"
+          "text": "card_mapeamento.md",
+          "sizeText": "medium",
+          "bgCardColor": true
         },
         {
           "title": "Ideação",
           "image": "../images/gallery/ideacao.png",
-          "text": "card_ideacao.md"
+          "text": "card_ideacao.md",
+          "sizeText": "medium",
+          "bgCardColor": true
         },
         {
           "title": "Projetos",
           "image": "../images/gallery/projetos.png",
-          "text": "card_projetos.md"
+          "text": "card_projetos.md",
+          "sizeText": "medium",
+          "bgCardColor": true
         }
       ]
     },
@@ -60,6 +66,50 @@
           "text": "slide_educacao.md",
           "image": ""
         }
+      ]
+    }
+    ,
+    {
+      "title": "nossos projetos",
+      "type": "gallery",
+      "bgColor": "#194090",
+      "cards": [
+        {
+          "title": "Construção da Plataforma Nacional da Mobilidade Elétrica (PNME)",
+          "text": "slide_pnme.md",
+          "sizeText": "large",
+          "sizeTitle": "large",
+          "image": "",
+          "bgCardColor": false
+        }
+      ]
+    }
+    ,
+    {
+      "title": "quem somos?",
+      "type": "gallery",
+      "bgColor": "linear-gradient(to bottom, #194090 0%, #13316c 100%)",
+      "cards": [
+        {
+          "title": "Robson Barassa",
+          "text": "slide_robson.md",
+          "image":"../images/robson.png",
+          "bgCardColor": false
+        },
+        {
+          "title": "Edgar Cruz",
+          "text": "slide_edgar.md",
+          "image":"../images/edgar.png",
+          "bgCardColor": false
+        }
+      ]
+    }
+    ,
+    {
+      "title": "nossos valores",
+      "type": "gallery",
+      "bgColor": "#13316c",
+      "cards": [
       ]
     }
   ]

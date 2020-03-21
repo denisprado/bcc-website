@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Title from 'components/title';
+import Text from 'components/text';
 
-import { Link } from 'gatsby';
+import { Container, ContainerText } from './item.css';
 
-import { Title, Container, ContainerText } from './item.css';
-
-const Item = ({ text, image }) =>
-  image ? (
-    <Container>
+const Item = ({ text, image, title, sizeText, sizeTitle, bgCardColor }) => (
+  <Container bgCardColor={bgCardColor}>
+    {image && text ? (
       <figure>
         <img
           src={
@@ -15,25 +15,38 @@ const Item = ({ text, image }) =>
               ? image.childImageSharp.fluid.src
               : image
           }
-          alt={text.childMarkdownRemark.rawMarkdownBody}
+          alt={text.childMarkdownRemark.html}
         />
-        <ContainerText>
-          <figcaption>
-            <Title
-              as="p"
-              dangerouslySetInnerHTML={{
-                __html: text.childMarkdownRemark.html,
-              }}
-            ></Title>
-          </figcaption>
-        </ContainerText>
       </figure>
-    </Container>
-  ) : null;
+    ) : null}
+    {title ? (
+      <ContainerText>
+        <Title as="h2" size={sizeTitle}>
+          {title}
+        </Title>
+      </ContainerText>
+    ) : null}
+    {text ? (
+      <ContainerText>
+        <Text size={sizeText}>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: text.childMarkdownRemark.html,
+            }}
+          />
+        </Text>
+      </ContainerText>
+    ) : null}
+  </Container>
+);
 
 Item.propTypes = {
+  bgCardColor: PropTypes.bool,
   text: PropTypes.object,
-  image: PropTypes.object.isRequired,
+  sizeText: PropTypes.object,
+  title: PropTypes.object,
+  sizeTitle: PropTypes.object,
+  image: PropTypes.object,
 };
 
 export default Item;

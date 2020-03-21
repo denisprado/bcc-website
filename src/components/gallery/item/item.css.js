@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
-import { accent } from 'constants/theme';
+import { primary, accent } from 'constants/theme';
 
 export const Container = styled.div`
-  background-color: #194090;
+  background-color: ${props => (props.bgCardColor ? primary : 'transparent')};
   display: block;
   padding: 3rem;
+  ${MEDIA.TABLET`
+    margin-top:2rem;
+  `};
 `;
 
 export const ContainerText = styled.div`

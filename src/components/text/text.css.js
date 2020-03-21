@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { accent } from 'constants/theme';
 
-export const Text = styled.span`
+export const TextContainer = styled.span`
   display: block;
   margin: ${({ align }) => () => {
     switch (align) {
@@ -12,20 +12,10 @@ export const Text = styled.span`
         return '';
     }
   }};
-  width: ${({ size }) => () => {
-    switch (size) {
-      case 'large':
-        return '70%';
-      case 'medium':
-        return '90%';
-      default:
-        return '100%';
-    }
-  }};
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '400';
+        return '200';
       case 'medium':
         return '100';
       default:
@@ -35,11 +25,11 @@ export const Text = styled.span`
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '5.25rem';
+        return '2.8rem';
       case 'medium':
-        return '4.8rem';
+        return '2.4rem';
       default:
-        return '2.125rem';
+        return '1.6rem';
     }
   }};
   line-height: 1.2;
@@ -48,16 +38,24 @@ export const Text = styled.span`
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':
-          return '2.6rem';
+          return '1.25rem';
         case 'medium':
-          return '2.3rem';
+          return '1rem';
         default:
-          return '2rem';
+          return '.75rem';
       }
     }};
   `};
 
   strong {
     color: ${accent};
+  }
+
+  ul {
+    list-style: disc;
+    li {
+      font-size: 1.6rem;
+      margin: 1.6rem;
+    }
   }
 `;

@@ -7,10 +7,29 @@ import Title from 'components/title';
 import { graphql } from 'gatsby';
 import React from 'react';
 
+function sortHome(list) {
+  const mapped = list.map(function(el, i) {
+    return { index: i, value: el };
+  });
+
+  // ordenando o array mapeado contendo os dados resumidos
+  mapped.sort(function(a, b) {
+    return +(a.value < b.value) || +(a.value === b.value) + 1;
+  });
+
+  // containerpara o resultado ordenado
+  const result = mapped.map(function(el) {
+    return list[el.index];
+  });
+
+  return result;
+}
+
 const App = ({ data }) => (
+  // array temporário que armazena os objetos com o índice e o valor para ordenação
   <Layout>
     {data.homeJson.sections &&
-      data.homeJson.sections.map(section => (
+      sortHome(data.homeJson.sections).map(section => (
         <Section key={section.title} bgColor={section.bgColor}>
           <Container>
             {section.type === 'text' && (
@@ -44,13 +63,16 @@ export const query = graphql`
         bgColor
         type
         cards {
+          bgCardColor
           title
+          sizeTitle
           text {
             childMarkdownRemark {
               html
               rawMarkdownBody
             }
           }
+          sizeText
           image {
             childImageSharp {
               fluid(maxHeight: 500, quality: 90) {
