@@ -109,7 +109,10 @@
       "title": "nossos valores",
       "type": "gallery",
       "bgColor": "#13316c",
-      "cards": [
+      "cards": [{
+        "image":"../images/valores.png",
+        "bgCardColor": false
+      }
       ]
     }
   ]

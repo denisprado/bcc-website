@@ -7,7 +7,7 @@ import { Container, ContainerText } from './item.css';
 
 const Item = ({ text, image, title, sizeText, sizeTitle, bgCardColor }) => (
   <Container bgCardColor={bgCardColor}>
-    {image && text ? (
+    {image  ? (
       <figure>
         <img
           src={
@@ -15,7 +15,8 @@ const Item = ({ text, image, title, sizeText, sizeTitle, bgCardColor }) => (
               ? image.childImageSharp.fluid.src
               : image
           }
-          alt={text.childMarkdownRemark.html}
+          alt={text && text.childMarkdownRemark.html}
+          
         />
       </figure>
     ) : null}

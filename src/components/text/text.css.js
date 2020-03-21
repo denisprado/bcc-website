@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { accent } from 'constants/theme';
+import bullet from '../../images/bullet.png'
 
 export const TextContainer = styled.span`
   display: block;
@@ -52,7 +53,7 @@ export const TextContainer = styled.span`
   }
 
   ul {
-    list-style: disc;
+    list-style-image: url('${bullet}');
     li {
       font-size: 1.6rem;
       margin: 1.6rem;
