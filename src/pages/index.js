@@ -4,8 +4,15 @@ import Section from 'components/section';
 import Gallery from 'components/gallery';
 import Carousel from 'components/carousel';
 import Title from 'components/title';
+import PageTitle from 'components/pagetitle';
+import PageFooter from 'components/pagefooter';
 import { graphql } from 'gatsby';
 import React from 'react';
+import styled from 'styled-components'
+
+const PageContent = styled.div`
+  
+`
 
 function sortHome(list) {
   const mapped = list.map(function(el, i) {
@@ -32,21 +39,32 @@ const App = ({ data }) => (
       sortHome(data.homeJson.sections).map(section => (
         <Section key={section.title} bgColor={section.bgColor}>
           <Container>
+            <PageTitle>
+              <img src={section.connectorBegin} alt={section.title} />
+              <Title as="h1">
+              <img src={section.connectorEnd.childImageSharp.fluid.src} alt={section.title} />{section.title}
+              </Title>
+            </PageTitle>
+              <PageContent>
             {section.type === 'text' && (
               <Title size="large" as="h1">
                 <p
                   dangerouslySetInnerHTML={{
                     __html: section.content.childMarkdownRemark.html,
                   }}
-                />
+                  />
               </Title>
             )}
             {section.type === 'gallery' && (
               <Gallery items={section.cards}></Gallery>
-            )}
+              )}
             {section.type === 'slide' && (
               <Carousel items={section.cards}></Carousel>
-            )}
+              )}
+            </PageContent>
+            <PageFooter>
+              <img src={section.connectorBegin.childImageSharp.fluid.src} alt={section.title} />
+            </PageFooter>
           </Container>
         </Section>
       ))}
@@ -61,6 +79,20 @@ export const query = graphql`
       sections {
         title
         bgColor
+        connectorBegin {
+          childImageSharp {
+            fluid( quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        connectorEnd {
+          childImageSharp {
+            fluid( quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         type
         cards {
           bgCardColor
@@ -75,7 +107,7 @@ export const query = graphql`
           sizeText
           image {
             childImageSharp {
-              fluid(maxHeight: 500, quality: 90) {
+              fluid(maxHeight: 100, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
