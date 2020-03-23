@@ -13,7 +13,6 @@ import styled from 'styled-components'
 const PageContent = styled.div`
   
 `
-
 function sortHome(list) {
   const mapped = list.map(function(el, i) {
     return { index: i, value: el };
@@ -40,10 +39,11 @@ const App = ({ data }) => (
         <Section key={section.title} bgColor={section.bgColor}>
           <Container>
             <PageTitle>
-              <img src={section.connectorBegin} alt={section.title} />
+            {section.connectorBegin &&
               <Title as="h1">
-              <img src={section.connectorEnd.childImageSharp.fluid.src} alt={section.title} />{section.title}
+                <img src={section.connectorBegin.childImageSharp.fluid.src} alt={section.title} />{section.title}
               </Title>
+            }
             </PageTitle>
               <PageContent>
             {section.type === 'text' && (
@@ -52,7 +52,7 @@ const App = ({ data }) => (
                   dangerouslySetInnerHTML={{
                     __html: section.content.childMarkdownRemark.html,
                   }}
-                  />
+                />
               </Title>
             )}
             {section.type === 'gallery' && (
@@ -63,7 +63,9 @@ const App = ({ data }) => (
               )}
             </PageContent>
             <PageFooter>
-              <img src={section.connectorBegin.childImageSharp.fluid.src} alt={section.title} />
+            { section.connectorEnd &&
+              <img src={section.connectorEnd.childImageSharp.fluid.src} alt={section.title} />
+            }
             </PageFooter>
           </Container>
         </Section>

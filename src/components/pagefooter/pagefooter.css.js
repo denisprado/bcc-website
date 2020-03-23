@@ -5,7 +5,7 @@ import { accent } from 'constants/theme';
 export const Text = styled.span`
   display: block;
 
-  margin-top: 10rem;
+  margin-bottom: -1rem;
 
   margin: ${({ align }) => () => {
     switch (align) {

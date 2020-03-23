@@ -4,8 +4,8 @@
       "title": "",
       "content": "intro.md",
       "type": "text",
-      "connectorBegin": "../images/connector-begin.png",
-      "connectorEnd":"../images/connector-end.png",
+      "connectorBegin": "",
+      "connectorEnd":"../images/connector-begin.png",
       "bgColor": "#194090",
       "cards": [
         {
@@ -18,8 +18,8 @@
     {
       "title": "o que fazemos?",
       "type": "gallery",
-      "connectorBegin": "../images/connector-begin.png",
-      "connectorEnd":"../images/connector-end.png",
+      "connectorBegin": "../images/connector-end.png",
+      "connectorEnd":"../images/connector-begin.png",
       "bgColor": "linear-gradient(to bottom, #194090 0%, #3c77cf 100%)",
       "cards": [
         {
@@ -48,8 +48,8 @@
     {
       "title": "como fazemos?",
       "type": "slide",
-      "connectorBegin": "../images/connector-begin.png",
-      "connectorEnd":"../images/connector-end.png",
+      "connectorBegin": "../images/connector-end.png",
+      "connectorEnd":"../images/connector-begin.png",
       "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #194090 100%)",
       "cards": [
         {
@@ -79,8 +79,8 @@
       "title": "nossos projetos",
       "type": "gallery",
       "bgColor": "#194090",
-      "connectorBegin": "../images/connector-begin.png",
-      "connectorEnd":"../images/connector-end.png",
+      "connectorBegin": "../images/connector-end.png",
+      "connectorEnd":"../images/connector-begin.png",
       "cards": [
         {
           "title": "Construção da Plataforma Nacional da Mobilidade Elétrica (PNME)",
@@ -96,8 +96,8 @@
     {
       "title": "quem somos?",
       "type": "gallery",
-      "connectorBegin": "../images/connector-begin.png",
-      "connectorEnd":"../images/connector-end.png",
+      "connectorBegin": "../images/connector-end.png",
+      "connectorEnd":"../images/connector-begin.png",
       "bgColor": "linear-gradient(to bottom, #194090 0%, #13316c 100%)",
       "cards": [
         {
@@ -118,8 +118,7 @@
     {
       "title": "nossos valores",
       "type": "gallery",
-      "connectorBegin": "../images/connector-begin.png",
-      "connectorEnd":"../images/connector-end.png",
+      "connectorBegin": "../images/connector-end.png",
       "bgColor": "#13316c",
       "cards": [{
         "image":"../images/valores.png",
