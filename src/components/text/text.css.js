@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { accent } from 'constants/theme';
-import bullet from '../../images/bullet.png'
+import bullet from '../../images/bullet.png';
 
 export const TextContainer = styled.span`
   display: block;
@@ -26,11 +26,11 @@ export const TextContainer = styled.span`
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '2.8rem';
+        return '2.6rem';
       case 'medium':
-        return '2.4rem';
+        return '1.8rem';
       default:
-        return '1.6rem';
+        return '1.2rem';
     }
   }};
   line-height: 1.2;

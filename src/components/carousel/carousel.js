@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Item from 'components/carousel/item';
-import Title from 'components/title';
 import { Container, Menu, MenuItem, Button } from './carousel.css';
 
 function Carousel({ items }) {

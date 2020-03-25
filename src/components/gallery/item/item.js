@@ -7,7 +7,7 @@ import { Container, ContainerText } from './item.css';
 
 const Item = ({ text, image, title, sizeText, sizeTitle, bgCardColor }) => (
   <Container bgCardColor={bgCardColor}>
-    {image  ? (
+    {image ? (
       <figure>
         <img
           src={
@@ -16,7 +16,6 @@ const Item = ({ text, image, title, sizeText, sizeTitle, bgCardColor }) => (
               : image
           }
           alt={text && text.childMarkdownRemark.html}
-          
         />
       </figure>
     ) : null}

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import MEDIA from 'helpers/mediaTemplates';
 
 export const SectionLayout = styled.div`
   margin: 0 0;

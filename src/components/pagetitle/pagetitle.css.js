@@ -17,16 +17,7 @@ export const Text = styled.span`
         return '';
     }
   }};
-  width: ${({ size }) => () => {
-    switch (size) {
-      case 'large':
-        return '70%';
-      case 'medium':
-        return '90%';
-      default:
-        return '100%';
-    }
-  }};
+
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':

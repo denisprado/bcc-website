@@ -20,6 +20,7 @@ export default createGlobalStyle`
     border: 0;
     font-size: 100%;
     font: inherit;
+    font-family: proxima-nova, Arial, Helvetica, sans-serif;
     vertical-align: baseline;
   }
 

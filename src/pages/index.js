@@ -8,11 +8,10 @@ import PageTitle from 'components/pagetitle';
 import PageFooter from 'components/pagefooter';
 import { graphql } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const PageContent = styled.div`
-  
-`
+const PageContent = styled.div``;
 function sortHome(list) {
   const mapped = list.map(function(el, i) {
     return { index: i, value: el };
@@ -38,40 +37,51 @@ const App = ({ data }) => (
       sortHome(data.homeJson.sections).map(section => (
         <Section key={section.title} bgColor={section.bgColor}>
           <Container>
-            <PageTitle>
-            {section.connectorBegin &&
-              <Title as="h1">
-                <img src={section.connectorBegin.childImageSharp.fluid.src} alt={section.title} />{section.title}
-              </Title>
-            }
-            </PageTitle>
-              <PageContent>
-            {section.type === 'text' && (
-              <Title size="large" as="h1">
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: section.content.childMarkdownRemark.html,
-                  }}
-                />
-              </Title>
-            )}
-            {section.type === 'gallery' && (
-              <Gallery items={section.cards}></Gallery>
+            <PageTitle align={section.connectorBeginAlign}>
+              {section.connectorBegin && (
+                <Title as="h1">
+                  <img
+                    src={section.connectorBegin.childImageSharp.fluid.src}
+                    alt={section.title}
+                  />
+                  {section.title}
+                </Title>
               )}
-            {section.type === 'slide' && (
-              <Carousel items={section.cards}></Carousel>
+            </PageTitle>
+            <PageContent>
+              {section.type === 'text' && (
+                <Title size="large" as="h1">
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: section.content.childMarkdownRemark.html,
+                    }}
+                  />
+                </Title>
+              )}
+              {section.type === 'gallery' && (
+                <Gallery items={section.cards}></Gallery>
+              )}
+              {section.type === 'slide' && (
+                <Carousel items={section.cards}></Carousel>
               )}
             </PageContent>
-            <PageFooter>
-            { section.connectorEnd &&
-              <img src={section.connectorEnd.childImageSharp.fluid.src} alt={section.title} />
-            }
+            <PageFooter align={section.connectorEndAlign}>
+              {section.connectorEnd && (
+                <img
+                  src={section.connectorEnd.childImageSharp.fluid.src}
+                  alt={section.title}
+                />
+              )}
             </PageFooter>
           </Container>
         </Section>
       ))}
   </Layout>
 );
+
+App.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default App;
 
@@ -81,16 +91,18 @@ export const query = graphql`
       sections {
         title
         bgColor
+        connectorBeginAlign
         connectorBegin {
           childImageSharp {
-            fluid( quality: 100) {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
+        connectorEndAlign
         connectorEnd {
           childImageSharp {
-            fluid( quality: 100) {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -109,7 +121,7 @@ export const query = graphql`
           sizeText
           image {
             childImageSharp {
-              fluid(maxHeight: 100, quality: 100) {
+              fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }

@@ -4,7 +4,7 @@
       "title": "",
       "content": "intro.md",
       "type": "text",
-      "connectorBegin": "",
+      "connectorBegin": "../images/none.png",
       "connectorEnd":"../images/connector-begin.png",
       "bgColor": "#194090",
       "cards": [
@@ -19,7 +19,9 @@
       "title": "o que fazemos?",
       "type": "gallery",
       "connectorBegin": "../images/connector-end.png",
-      "connectorEnd":"../images/connector-begin.png",
+      "connectorBeginAlign": "center",
+      "connectorEnd":"../images/connector-center-begin.png",
+      "connectorEndAlign": "center",
       "bgColor": "linear-gradient(to bottom, #194090 0%, #3c77cf 100%)",
       "cards": [
         {
@@ -49,7 +51,9 @@
       "title": "como fazemos?",
       "type": "slide",
       "connectorBegin": "../images/connector-end.png",
+      "connectorBeginAlign":"center",
       "connectorEnd":"../images/connector-begin.png",
+      "connectorEndAlign":"center",
       "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #194090 100%)",
       "cards": [
         {

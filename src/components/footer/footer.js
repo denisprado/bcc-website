@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import posed from 'react-pose';
 import { Container } from './footer.css';
 
