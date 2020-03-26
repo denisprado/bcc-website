@@ -4,11 +4,7 @@ import { accent } from 'constants/theme';
 
 export const Text = styled.span`
   display: block;
-
-  img {
-    margin-right: 2rem;
-  }
-
+  width: 100%;
   margin: ${({ align }) => () => {
     switch (align) {
       case 'center':
@@ -41,6 +37,9 @@ export const Text = styled.span`
   line-height: 1.2;
 
   ${MEDIA.TABLET`
+    img{
+      display: none;
+    }
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':

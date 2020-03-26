@@ -5,7 +5,7 @@
       "content": "intro.md",
       "type": "text",
       "connectorBegin": "../images/none.png",
-      "connectorEnd":"../images/connector-begin.png",
+      "connectorEnd":"../images/arrow-left.png",
       "bgColor": "#194090",
       "cards": [
         {
@@ -18,9 +18,9 @@
     {
       "title": "o que fazemos?",
       "type": "gallery",
-      "connectorBegin": "../images/connector-end.png",
-      "connectorBeginAlign": "center",
-      "connectorEnd":"../images/connector-center-begin.png",
+      "connectorBegin": "../images/circle-left.png",
+      "connectorBeginAlign": "left",
+      "connectorEnd":"../images/arrow-left-to-center.png",
       "connectorEndAlign": "center",
       "bgColor": "linear-gradient(to bottom, #194090 0%, #3c77cf 100%)",
       "cards": [
@@ -50,9 +50,9 @@
     {
       "title": "como fazemos?",
       "type": "slide",
-      "connectorBegin": "../images/connector-end.png",
+      "connectorBegin": "../images/circle-center.png",
       "connectorBeginAlign":"center",
-      "connectorEnd":"../images/connector-begin.png",
+      "connectorEnd":"../images/arrow-center-to-left.png",
       "connectorEndAlign":"center",
       "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #194090 100%)",
       "cards": [
@@ -83,8 +83,8 @@
       "title": "nossos projetos",
       "type": "gallery",
       "bgColor": "#194090",
-      "connectorBegin": "../images/connector-end.png",
-      "connectorEnd":"../images/connector-begin.png",
+      "connectorBegin": "../images/circle-left.png",
+      "connectorEnd":"../images/arrow-left.png",
       "cards": [
         {
           "title": "Construção da Plataforma Nacional da Mobilidade Elétrica (PNME)",
@@ -100,8 +100,8 @@
     {
       "title": "quem somos?",
       "type": "gallery",
-      "connectorBegin": "../images/connector-end.png",
-      "connectorEnd":"../images/connector-begin.png",
+      "connectorBegin": "../images/circle-left.png",
+      "connectorEnd":"../images/arrow-center.png",
       "bgColor": "linear-gradient(to bottom, #194090 0%, #13316c 100%)",
       "cards": [
         {
@@ -122,7 +122,7 @@
     {
       "title": "nossos valores",
       "type": "gallery",
-      "connectorBegin": "../images/connector-end.png",
+      "connectorBegin": "../images/circle-center.png",
       "bgColor": "#13316c",
       "cards": [{
         "image":"../images/valores.png",

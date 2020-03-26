@@ -10,6 +10,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Img from "gatsby-image"
 
 const PageContent = styled.div``;
 function sortHome(list) {
@@ -33,16 +34,18 @@ function sortHome(list) {
 const App = ({ data }) => (
   // array temporário que armazena os objetos com o índice e o valor para ordenação
   <Layout>
+    
     {data.homeJson.sections &&
       sortHome(data.homeJson.sections).map(section => (
         <Section key={section.title} bgColor={section.bgColor}>
           <Container>
             <PageTitle align={section.connectorBeginAlign}>
-              {section.connectorBegin && (
+              {section.connectorBegin && section.connectorBegin.childImageSharp.fluid.src.substring(section.connectorBegin.childImageSharp.fluid.src.length - 8, section.connectorBegin.childImageSharp.fluid.src.length) !== "none.png" && (
                 <Title as="h1">
-                  <img
-                    src={section.connectorBegin.childImageSharp.fluid.src}
+                  <Img
+                    fluid={section.connectorBegin.childImageSharp.fluid}
                     alt={section.title}
+                    width="100%" height="100%"
                   />
                   {section.title}
                 </Title>
@@ -67,9 +70,10 @@ const App = ({ data }) => (
             </PageContent>
             <PageFooter align={section.connectorEndAlign}>
               {section.connectorEnd && (
-                <img
-                  src={section.connectorEnd.childImageSharp.fluid.src}
+                <Img
+                  fluid={section.connectorEnd.childImageSharp.fluid}
                   alt={section.title}
+                  width="100%" height="100%"
                 />
               )}
             </PageFooter>
@@ -95,7 +99,7 @@ export const query = graphql`
         connectorBegin {
           childImageSharp {
             fluid(quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -103,7 +107,7 @@ export const query = graphql`
         connectorEnd {
           childImageSharp {
             fluid(quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }

@@ -5,7 +5,8 @@ import { accent } from 'constants/theme';
 export const Text = styled.span`
   display: block;
 
-  margin-bottom: -1rem;
+  
+  width: 100%;
 
   margin: ${({ align }) => () => {
     switch (align) {
@@ -13,16 +14,6 @@ export const Text = styled.span`
         return '0 auto';
       default:
         return '';
-    }
-  }};
-  width: ${({ size }) => () => {
-    switch (size) {
-      case 'large':
-        return '70%';
-      case 'medium':
-        return '90%';
-      default:
-        return '100%';
     }
   }};
   font-weight: ${({ size }) => () => {
@@ -48,6 +39,9 @@ export const Text = styled.span`
   line-height: 1.2;
 
   ${MEDIA.TABLET`
+  img{
+    display: none;
+  }
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':
