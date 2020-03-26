@@ -84,7 +84,7 @@
       "type": "gallery",
       "bgColor": "#194090",
       "connectorBegin": "../images/circle-left.png",
-      "connectorEnd":"../images/arrow-left.png",
+      "connectorEnd":"../images/arrow-left-to-center.png",
       "cards": [
         {
           "title": "Construção da Plataforma Nacional da Mobilidade Elétrica (PNME)",
@@ -100,7 +100,7 @@
     {
       "title": "quem somos?",
       "type": "gallery",
-      "connectorBegin": "../images/circle-left.png",
+      "connectorBegin": "../images/circle-center.png",
       "connectorEnd":"../images/arrow-center.png",
       "bgColor": "linear-gradient(to bottom, #194090 0%, #13316c 100%)",
       "cards": [

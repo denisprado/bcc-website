@@ -39,18 +39,7 @@ const App = ({ data }) => (
       sortHome(data.homeJson.sections).map(section => (
         <Section key={section.title} bgColor={section.bgColor}>
           <Container>
-            <PageTitle align={section.connectorBeginAlign}>
-              {section.connectorBegin && section.connectorBegin.childImageSharp.fluid.src.substring(section.connectorBegin.childImageSharp.fluid.src.length - 8, section.connectorBegin.childImageSharp.fluid.src.length) !== "none.png" && (
-                <Title as="h1">
-                  <Img
-                    fluid={section.connectorBegin.childImageSharp.fluid}
-                    alt={section.title}
-                    width="100%" height="100%"
-                  />
-                  {section.title}
-                </Title>
-              )}
-            </PageTitle>
+            <PageTitle align={section.connectorBeginAlign} img={section.connectorBegin.childImageSharp.fluid} text={section.title}/>              
             <PageContent>
               {section.type === 'text' && (
                 <Title size="large" as="h1">

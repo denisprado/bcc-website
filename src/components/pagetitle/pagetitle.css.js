@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { accent } from 'constants/theme';
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`
+
 export const Text = styled.span`
   display: block;
   width: 100%;
