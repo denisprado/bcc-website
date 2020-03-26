@@ -101,20 +101,19 @@
       "title": "quem somos?",
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
+      "connectorBeginAlign": "center",
       "connectorEnd":"../images/arrow-center.png",
       "bgColor": "linear-gradient(to bottom, #194090 0%, #13316c 100%)",
       "cards": [
         {
           "title": "Robson Barassa",
           "text": "slide_robson.md",
-          "image":"../images/robson.png",
-          "bgCardColor": false
+          "image":"../images/robson.png"
         },
         {
           "title": "Edgar Cruz",
           "text": "slide_edgar.md",
-          "image":"../images/edgar.png",
-          "bgCardColor": false
+          "image":"../images/edgar.png"
         }
       ]
     }
@@ -123,6 +122,7 @@
       "title": "nossos valores",
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
+      "connectorBeginAlign":"center",
       "bgColor": "#13316c",
       "cards": [{
         "image":"../images/valores.png",

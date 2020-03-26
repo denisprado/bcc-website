@@ -3,6 +3,7 @@ import MEDIA from 'helpers/mediaTemplates';
 
 export const Container = styled.div`
   display: grid;
+  margin: 0 auto;
   grid-template-columns: repeat(${props => props.size && props.size}, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 1.6rem;

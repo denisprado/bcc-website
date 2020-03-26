@@ -6,6 +6,7 @@ export const Container = styled.div`
   background-color: ${props => (props.bgCardColor ? primary : 'transparent')};
   display: block;
   padding: 3rem;
+  margin: 0 auto;
   ${MEDIA.TABLET`
     margin-top:2rem;
   `};

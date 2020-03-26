@@ -10,7 +10,7 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Img from "gatsby-image"
+import Img from 'gatsby-image';
 
 const PageContent = styled.div``;
 function sortHome(list) {
@@ -34,12 +34,15 @@ function sortHome(list) {
 const App = ({ data }) => (
   // array temporário que armazena os objetos com o índice e o valor para ordenação
   <Layout>
-    
     {data.homeJson.sections &&
       sortHome(data.homeJson.sections).map(section => (
         <Section key={section.title} bgColor={section.bgColor}>
           <Container>
-            <PageTitle align={section.connectorBeginAlign} img={section.connectorBegin.childImageSharp.fluid} text={section.title}/>              
+            <PageTitle
+              align={section.connectorBeginAlign}
+              img={section.connectorBegin.childImageSharp.fluid}
+              text={section.title}
+            />
             <PageContent>
               {section.type === 'text' && (
                 <Title size="large" as="h1">
@@ -62,7 +65,8 @@ const App = ({ data }) => (
                 <Img
                   fluid={section.connectorEnd.childImageSharp.fluid}
                   alt={section.title}
-                  width="100%" height="100%"
+                  width="100%"
+                  height="100%"
                 />
               )}
             </PageFooter>

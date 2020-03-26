@@ -6,11 +6,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-`
+`;
 
 export const Text = styled.span`
-  display: block;
-  width: 100%;
   margin: ${({ align }) => () => {
     switch (align) {
       case 'center':

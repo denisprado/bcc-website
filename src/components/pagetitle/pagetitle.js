@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import { Text, Container } from './pagetitle.css';
 import Img from 'gatsby-image';
 
-const PageTitle = ({ children, as = 'span', size, align, img, text }) => {
+const PageTitle = ({ as = 'span', size, align, img, text }) => {
   return (
     <Container>
-      {img.src.substring(img.src.length - 8, img.src.length) !== "none.png" &&  (<Img fluid={img} alt={text}/>) }
-    <Text as={as} size={size} align={align}>
-      {children}
-    </Text>
+      {img.src.substring(img.src.length - 8, img.src.length) !== 'none.png' && (
+        <Img fluid={img} alt={text} />
+      )}
+      <Text as={as} size={size} align={align}>
+        {text}
+      </Text>
     </Container>
   );
 };
