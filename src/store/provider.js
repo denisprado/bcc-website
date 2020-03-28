@@ -7,8 +7,11 @@ import { Provider } from './createContext';
 class AppProvider extends Component {
   state = {
     open: false,
+    section: 0,
     showModal: () => this.setState({ open: true }),
     hideModal: () => this.setState({ open: false }),
+    moveSectionDown: () => this.setState({ section: 1 }),
+    moveSectionUp: () => this.setState({ section: -1 }),
   };
 
   render() {

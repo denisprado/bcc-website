@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Item from 'components/carousel/item';
 import { Container, Menu, MenuItem, Button } from './carousel.css';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
 function Carousel({ items }) {
   const [index, setIndex] = useState(0);
@@ -18,6 +19,11 @@ function Carousel({ items }) {
         <Container>
           <Item {...item} key={i} />
           <Menu>
+            <MenuItem>
+              <Button key={i} onClick={() => handleNext()}>
+                <IoIosArrowBack />
+              </Button>
+            </MenuItem>
             <MenuItem>
               {items.map((item, i) =>
                 i === index - 1 ? (
@@ -57,6 +63,11 @@ function Carousel({ items }) {
                   )
                 )
               )}
+            </MenuItem>
+            <MenuItem>
+              <Button key={i} onClick={() => handleNext()}>
+                <IoIosArrowForward />
+              </Button>
             </MenuItem>
           </Menu>
         </Container>

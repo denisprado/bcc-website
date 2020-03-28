@@ -6,12 +6,12 @@ import PageFooter from 'components/pagefooter';
 import PageTitle from 'components/pagetitle';
 import Section from 'components/section';
 import Title from 'components/title';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const PageContent = styled.div``;
 
@@ -37,46 +37,48 @@ const App = ({ data }) => (
   <Layout>
     {data.homeJson.sections &&
       sortHome(data.homeJson.sections).map((section, i) => (
-        <Section key={section.title} bgColor={section.bgColor}>
+        <>
           <span id={'section' + i}></span>
-          <Container>
-            <PageTitle
-              align={section.connectorBeginAlign}
-              img={section.connectorBegin.childImageSharp.fluid}
-              text={section.title}
-            />
+          <Section key={section.title} bgColor={section.bgColor}>
+            <Container>
+              <PageTitle
+                align={section.connectorBeginAlign}
+                img={section.connectorBegin.childImageSharp.fluid}
+                text={section.title}
+              />
 
-            <PageContent>
-              {section.type === 'text' && (
-                <Title size="large" as="h1">
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: section.content.childMarkdownRemark.html,
-                    }}
-                  />
-                </Title>
-              )}
-              {section.type === 'gallery' && (
-                <Gallery items={section.cards}></Gallery>
-              )}
-              {section.type === 'slide' && (
-                <Carousel items={section.cards}></Carousel>
-              )}
-            </PageContent>
-            <button key={i} onClick={() => scrollTo('#section' + (i + 1))}>
-              <PageFooter align={section.connectorEndAlign}>
-                {section.connectorEnd && (
-                  <Img
-                    fluid={section.connectorEnd.childImageSharp.fluid}
-                    alt={section.title}
-                    width="100%"
-                    height="100%"
-                  />
+              <PageContent>
+                {section.type === 'text' && (
+                  <Title size="large" as="h1">
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: section.content.childMarkdownRemark.html,
+                      }}
+                    />
+                  </Title>
                 )}
-              </PageFooter>
-            </button>
-          </Container>
-        </Section>
+                {section.type === 'gallery' && (
+                  <Gallery items={section.cards}></Gallery>
+                )}
+                {section.type === 'slide' && (
+                  <Carousel items={section.cards}></Carousel>
+                )}
+              </PageContent>
+              <button key={i} onClick={() => scrollTo('#section' + (i + 1))}>
+                <PageFooter align={section.connectorEndAlign}>
+                  {section.connectorEnd && (
+                    <Img
+                      fluid={section.connectorEnd.childImageSharp.fluid}
+                      alt={section.title}
+                      width="100%"
+                      height="100%"
+                    />
+                  )}
+                </PageFooter>
+              </button>
+            </Container>
+          </Section>
+        </>
       ))}
   </Layout>
 );
