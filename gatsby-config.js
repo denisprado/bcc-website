@@ -9,6 +9,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
+    'gatsby-plugin-smoothscroll',
     'gatsby-transformer-json',
     'gatsby-transformer-remark',
     'gatsby-plugin-netlify',

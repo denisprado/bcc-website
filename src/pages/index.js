@@ -1,4 +1,3 @@
-import ReactFullpage from '@fullpage/react-fullpage';
 import Carousel from 'components/carousel';
 import Container from 'components/container';
 import Gallery from 'components/gallery';
@@ -7,13 +6,15 @@ import PageFooter from 'components/pagefooter';
 import PageTitle from 'components/pagetitle';
 import Section from 'components/section';
 import Title from 'components/title';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const PageContent = styled.div``;
+
 function sortHome(list) {
   const mapped = list.map(function(el, i) {
     return { index: i, value: el };
@@ -33,54 +34,50 @@ function sortHome(list) {
 }
 
 const App = ({ data }) => (
-  // array temporário que armazena os objetos com o índice e o valor para ordenação
   <Layout>
-    <ReactFullpage
-      scrollingSpeed={1000}
-      render={
-        <ReactFullpage.Wrapper>
-          {data.homeJson.sections &&
-            sortHome(data.homeJson.sections).map(section => (
-              <Section key={section.title} bgColor={section.bgColor}>
-                <Container>
-                  <PageTitle
-                    align={section.connectorBeginAlign}
-                    img={section.connectorBegin.childImageSharp.fluid}
-                    text={section.title}
+    {data.homeJson.sections &&
+      sortHome(data.homeJson.sections).map((section, i) => (
+        <Section key={section.title} bgColor={section.bgColor}>
+          <span id={'section' + i}></span>
+          <Container>
+            <PageTitle
+              align={section.connectorBeginAlign}
+              img={section.connectorBegin.childImageSharp.fluid}
+              text={section.title}
+            />
+
+            <PageContent>
+              {section.type === 'text' && (
+                <Title size="large" as="h1">
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: section.content.childMarkdownRemark.html,
+                    }}
                   />
-                  <PageContent>
-                    {section.type === 'text' && (
-                      <Title size="large" as="h1">
-                        <p
-                          dangerouslySetInnerHTML={{
-                            __html: section.content.childMarkdownRemark.html,
-                          }}
-                        />
-                      </Title>
-                    )}
-                    {section.type === 'gallery' && (
-                      <Gallery items={section.cards}></Gallery>
-                    )}
-                    {section.type === 'slide' && (
-                      <Carousel items={section.cards}></Carousel>
-                    )}
-                  </PageContent>
-                  <PageFooter align={section.connectorEndAlign}>
-                    {section.connectorEnd && (
-                      <Img
-                        fluid={section.connectorEnd.childImageSharp.fluid}
-                        alt={section.title}
-                        width="100%"
-                        height="100%"
-                      />
-                    )}
-                  </PageFooter>
-                </Container>
-              </Section>
-            ))}
-        </ReactFullpage.Wrapper>
-      }
-    />
+                </Title>
+              )}
+              {section.type === 'gallery' && (
+                <Gallery items={section.cards}></Gallery>
+              )}
+              {section.type === 'slide' && (
+                <Carousel items={section.cards}></Carousel>
+              )}
+            </PageContent>
+            <button key={i} onClick={() => scrollTo('#section' + (i + 1))}>
+              <PageFooter align={section.connectorEndAlign}>
+                {section.connectorEnd && (
+                  <Img
+                    fluid={section.connectorEnd.childImageSharp.fluid}
+                    alt={section.title}
+                    width="100%"
+                    height="100%"
+                  />
+                )}
+              </PageFooter>
+            </button>
+          </Container>
+        </Section>
+      ))}
   </Layout>
 );
 

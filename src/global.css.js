@@ -104,4 +104,12 @@ export default createGlobalStyle`
     }
   }
 
+  button, button:active, button:focus {
+    background:none;
+    margin:0;
+    padding:0;
+    border:none;
+    outline:0;
+  }
+
 `;
