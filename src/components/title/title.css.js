@@ -15,7 +15,7 @@ export const Text = styled.span`
   width: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '70%';
+        return '100%';
       case 'medium':
         return '90%';
       default:
@@ -25,7 +25,7 @@ export const Text = styled.span`
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '400';
+        return '700';
       case 'medium':
         return '100';
       default:
@@ -35,7 +35,7 @@ export const Text = styled.span`
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '5.25rem';
+        return '8.2rem';
       case 'medium':
         return '4.8rem';
       default:

@@ -10,7 +10,7 @@ const PageTitle = ({ as = 'span', size, align, img, text }) => {
         <Img fluid={img} alt={text} />
       )}
       <Text as={as} size={size} align={align}>
-        {text}
+        <span dangerouslySetInnerHTML={{ __html: text }} />
       </Text>
     </Container>
   );

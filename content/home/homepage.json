@@ -1,10 +1,10 @@
 {
   "sections": [
     {
-      "title": "",
+      "title": "Barassa & Cruz <strong>Consulting</strong>",
       "content": "intro.md",
       "type": "text",
-      "connectorBegin": "../images/none.png",
+      "connectorBegin": "../images/circle-left.png",
       "connectorEnd":"../images/arrow-left.png",
       "connectorEndAlign":"left",
       "connectorEndText": "Role para saber mais",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "title": "o que fazemos?",
+      "title": "<strong>o que</strong> fazemos?",
       "type": "gallery",
       "connectorBegin": "../images/circle-left.png",
       "connectorBeginAlign": "left",
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "title": "como fazemos?",
+      "title": "<strong>como</strong> fazemos?",
       "type": "slide",
       "connectorBegin": "../images/circle-center.png",
       "connectorBeginAlign":"center",
@@ -82,7 +82,7 @@
     }
     ,
     {
-      "title": "nossos projetos",
+      "title": "nossos <strong>projetos</strong>",
       "type": "gallery",
       "bgColor": "#194090",
       "connectorBegin": "../images/circle-left.png",
@@ -92,7 +92,7 @@
           "title": "Construção da Plataforma Nacional da Mobilidade Elétrica (PNME)",
           "text": "slide_pnme.md",
           "sizeText": "large",
-          "sizeTitle": "large",
+          "sizeTitle": "medium",
           "image": "",
           "bgCardColor": false
         }
@@ -100,7 +100,7 @@
     }
     ,
     {
-      "title": "quem somos?",
+      "title": "<strong>quem</strong> somos?",
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
       "connectorBeginAlign": "center",
@@ -110,18 +110,20 @@
         {
           "title": "Robson Barassa",
           "text": "slide_robson.md",
-          "image":"../images/robson.png"
+          "image":"../images/robson.png",
+          "bgCardColor": true
         },
         {
           "title": "Edgar Cruz",
           "text": "slide_edgar.md",
-          "image":"../images/edgar.png"
+          "image":"../images/edgar.png",
+          "bgCardColor": true
         }
       ]
     }
     ,
     {
-      "title": "nossos valores",
+      "title": "nossos <strong>valores</strong>",
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/none.png",
