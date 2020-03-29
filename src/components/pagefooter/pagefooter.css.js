@@ -2,19 +2,26 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { accent } from 'constants/theme';
 
-export const Text = styled.span`
-  display: block;
-
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
+`;
 
+export const Text = styled.span`
+  display: flex;
+  color: white;
   margin: ${({ align }) => () => {
     switch (align) {
       case 'center':
         return '0 auto';
+      case 'left':
+        return '0 0';
       default:
         return '';
     }
   }};
+
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
@@ -22,7 +29,7 @@ export const Text = styled.span`
       case 'medium':
         return '100';
       default:
-        return '500';
+        return '100';
     }
   }};
   font-size: ${({ size }) => () => {
@@ -38,9 +45,9 @@ export const Text = styled.span`
   line-height: 1.2;
 
   ${MEDIA.TABLET`
-  img{
-    display: none;
-  }
+    img{
+      display: none;
+    }
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':

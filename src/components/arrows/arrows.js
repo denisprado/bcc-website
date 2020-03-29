@@ -6,15 +6,15 @@ import { Dialog } from '@reach/dialog';
 
 export default class Arrows extends PureComponent {
   render() {
-    const { section, moveSectionUp, moveSectionDown } = this.props;
+    const { section, setSection } = this.props;
 
     return (
       <Container>
-        <button onClick={moveSectionUp}>
+        <button onClick={setSection(section - 1)}>
           <GoArrowUp></GoArrowUp>
         </button>
         Section: {section}
-        <button onClick={moveSectionDown}>
+        <button onClick={setSection(section + 1)}>
           <GoArrowDown></GoArrowDown>
         </button>
       </Container>

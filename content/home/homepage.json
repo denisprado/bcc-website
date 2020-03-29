@@ -6,6 +6,8 @@
       "type": "text",
       "connectorBegin": "../images/none.png",
       "connectorEnd":"../images/arrow-left.png",
+      "connectorEndAlign":"left",
+      "connectorEndText": "Role para saber mais",
       "bgColor": "#194090",
       "cards": [
         {
@@ -122,6 +124,7 @@
       "title": "nossos valores",
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
+      "connectorEnd": "../images/none.png",
       "connectorBeginAlign":"center",
       "bgColor": "#13316c",
       "cards": [{

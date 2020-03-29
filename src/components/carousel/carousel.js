@@ -16,7 +16,7 @@ function Carousel({ items }) {
   return items.map(
     (item, i) =>
       i === index && (
-        <Container>
+        <Container key={i}>
           <Item {...item} key={i} />
           <Menu>
             <MenuItem>

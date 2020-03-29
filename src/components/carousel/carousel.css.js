@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
+import { accent } from 'constants/theme';
 
 export const Container = styled.div`
   width: 100%;
@@ -31,10 +32,14 @@ export const MenuItem = styled.div`
 `;
 
 export const Button = styled.button`
+  cursor: pointer;
   background: transparent;
   opacity: ${props => (props.active ? 1 : 0.5)};
   font-size: ${props => (props.active ? 4.8 : 2.4)}rem;
   border: none;
-
   color: white;
+  &:hover {
+    transition: 0.3s all;
+    color: ${props => !props.active && accent};
+  }
 `;

@@ -13999,6 +13999,11 @@ react-scroll-sync@^0.6.0:
   resolved "https://registry.yarnpkg.com/react-scroll-sync/-/react-scroll-sync-0.6.0.tgz#c87eba2cdd55ae35874277d74b034419d73df59a"
   integrity sha512-Frc7pNPIEQY6rUAUwm1wW0an57Xau6X1Sag+Ra2FJT+oDBEBdh4cahrE3oGwtYHPcyWMt74q7vRKLw73cPy6aw==
 
+react-scroll-wheel-handler@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/react-scroll-wheel-handler/-/react-scroll-wheel-handler-1.1.3.tgz#f158f68f0f5420baed0fa230de9b2cb9833c1a88"
+  integrity sha512-btawnnJsylekfc0C77C7DbE9pS+2Jj2UqRX54Wf+xlFVmxJVHtg/B7u4Y3rn42Bv7MkhXkq/oghgJIalQ4uGlw==
+
 react-select@^2.4.2, react-select@^2.4.3:
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/react-select/-/react-select-2.4.4.tgz#ba72468ef1060c7d46fbb862b0748f96491f1f73"
