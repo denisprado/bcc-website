@@ -40,7 +40,7 @@ export const Text = styled.span`
   }};
   line-height: 1.2;
 
-  ${MEDIA.TABLET`
+  ${MEDIA.PHONE`
     img{
       display: none;
     }

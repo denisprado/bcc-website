@@ -9,10 +9,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  ${MEDIA.MIN_TABLET`
-
- `};
-`;
+  `;
 
 export const Menu = styled.div`
   justify-items: center;

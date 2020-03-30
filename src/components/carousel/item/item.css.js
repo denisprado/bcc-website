@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import MEDIA from 'helpers/mediaTemplates';
 
 export const Container = styled.div`
   display: flex;
@@ -6,6 +7,9 @@ export const Container = styled.div`
   width: 85%;
   height: 35%;
   margin: 2rem auto;
+  ${MEDIA.PHONE`
+    flex-direction: column;  
+  `}
 `;
 
 export const ContainerText = styled.div`

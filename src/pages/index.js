@@ -63,7 +63,7 @@ function App({ data }) {
               <Container>
                 <PageTitle
                   align={section.connectorBeginAlign}
-                  img={section.connectorBegin.childImageSharp.fluid}
+                  img={section.connectorBegin && section.connectorBegin.childImageSharp.fluid}
                   text={section.title}
                 />
 
