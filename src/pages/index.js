@@ -117,7 +117,7 @@ export const query = graphql`
         connectorBeginAlign
         connectorBegin {
           childImageSharp {
-            fluid(quality: 100) {
+            fluid(quality: 100, maxWidth: 1260) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -126,7 +126,7 @@ export const query = graphql`
         connectorEndAlign
         connectorEnd {
           childImageSharp {
-            fluid(quality: 100) {
+            fluid(quality: 100, maxWidth: 1260) {
               ...GatsbyImageSharpFluid
             }
           }
