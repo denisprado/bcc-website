@@ -10,8 +10,8 @@ const Layout = ({ data, children }) => (
   <>
     <GlobalStyle />
     <Head />
-    <Header title={data.site.siteMetadata.siteTitle} />
     <Footer />
+    <Header title={data.site.siteMetadata.siteTitle} />
     {children}
   </>
 );

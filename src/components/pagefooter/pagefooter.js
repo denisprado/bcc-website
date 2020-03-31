@@ -9,7 +9,7 @@ const PageFooter = ({ as = 'span', size, align, img, text }) => {
       <Text as={as} size={size} align={align}>
         {text}
       </Text>
-      
+
       {img.src.substring(img.src.length - 8, img.src.length) !== 'none.png' && (
         <Img fluid={img} alt={text} />
       )}

@@ -7,7 +7,6 @@ import PageTitle from 'components/pagetitle';
 import Section from 'components/section';
 import Title from 'components/title';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
@@ -63,7 +62,10 @@ function App({ data }) {
               <Container>
                 <PageTitle
                   align={section.connectorBeginAlign}
-                  img={section.connectorBegin && section.connectorBegin.childImageSharp.fluid}
+                  img={
+                    section.connectorBegin &&
+                    section.connectorBegin.childImageSharp.fluid
+                  }
                   text={section.title}
                 />
 
