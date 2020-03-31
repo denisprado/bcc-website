@@ -4,12 +4,15 @@ import { accent } from 'constants/theme';
 
 export const Container = styled.div`
   width: 100%;
-  height: 60vh;
+  height: 55vh;
+  ${MEDIA.MIN_TABLET`
+    height: 60vh;
+  `}
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
-  `;
+`;
 
 export const Menu = styled.div`
   justify-items: center;
@@ -32,7 +35,10 @@ export const Button = styled.button`
   cursor: pointer;
   background: transparent;
   opacity: ${props => (props.active ? 1 : 0.5)};
-  font-size: ${props => (props.active ? 4.8 : 2.4)}rem;
+  font-size: ${props => (props.active ? 2.4 : 1.2)}rem;
+  ${MEDIA.MIN_TABLET`
+    font-size: ${props => (props.active ? 4.8 : 2.4)}rem;
+  `}
   border: none;
   color: white;
   &:hover {

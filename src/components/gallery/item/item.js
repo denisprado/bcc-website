@@ -2,31 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Title from 'components/title';
 import Text from 'components/text';
+import Img from 'gatsby-image';
 
 import { Container, ContainerText } from './item.css';
 
 const Item = ({ text, image, title, sizeText, sizeTitle, bgCardColor }) => (
   <Container bgCardColor={bgCardColor}>
-    {image ? (
+    {image && (
       <figure>
-        <img
-          src={
-            image.childImageSharp.fluid.src
-              ? image.childImageSharp.fluid.src
-              : image
+        <Img
+          fluid={
+            image.childImageSharp.fluid ? image.childImageSharp.fluid : image
           }
           alt={text && text.childMarkdownRemark.html}
         />
       </figure>
-    ) : null}
-    {title ? (
+    )}
+    {title && (
       <ContainerText>
         <Title as="h2" size={sizeTitle}>
           {title}
         </Title>
       </ContainerText>
-    ) : null}
-    {text ? (
+    )}
+    {text && (
       <ContainerText>
         <Text size={sizeText}>
           <span
@@ -36,7 +35,7 @@ const Item = ({ text, image, title, sizeText, sizeTitle, bgCardColor }) => (
           />
         </Text>
       </ContainerText>
-    ) : null}
+    )}
   </Container>
 );
 

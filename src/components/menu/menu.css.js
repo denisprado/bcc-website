@@ -5,11 +5,11 @@ import MEDIA from 'helpers/mediaTemplates.js';
 export const StyledMenu = styled.nav`
   display: flex;
   width: 100vw;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right, ${primaryDark} 0%, ${primary} 50%);
-  height: 100vh;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -18,9 +18,9 @@ export const StyledMenu = styled.nav`
   transition: transform 0.6s ease-in-out;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
 
-  @media (max-width: ${MEDIA.PHONE}) {
-    width: 100%;
-  }
+  ${MEDIA.PHONE`
+    display: none;
+    `};
 
   a {
     font-size: 4rem;
