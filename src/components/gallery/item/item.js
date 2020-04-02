@@ -8,34 +8,32 @@ import { Container, ContainerText } from './item.css';
 
 const Item = ({ text, image, title, sizeText, sizeTitle, bgCardColor }) => (
   <Container bgCardColor={bgCardColor}>
-    {image && (
-      <figure>
+    <>
+      {image && (
         <Img
-          fluid={
-            image.childImageSharp.fluid ? image.childImageSharp.fluid : image
+          fixed={
+            image.childImageSharp.fixed ? image.childImageSharp.fixed : image
           }
-          alt={text && text.childMarkdownRemark.html}
+          alt={text && text}
         />
-      </figure>
-    )}
-    {title && (
+      )}
       <ContainerText>
-        <Title as="h2" size={sizeTitle}>
-          {title}
-        </Title>
+        {title && (
+          <Title as="h2" size={sizeTitle}>
+            {title}
+          </Title>
+        )}
+        {text && (
+          <Text size={sizeText}>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: text,
+              }}
+            />
+          </Text>
+        )}
       </ContainerText>
-    )}
-    {text && (
-      <ContainerText>
-        <Text size={sizeText}>
-          <span
-            dangerouslySetInnerHTML={{
-              __html: text.childMarkdownRemark.html,
-            }}
-          />
-        </Text>
-      </ContainerText>
-    )}
+    </>
   </Container>
 );
 

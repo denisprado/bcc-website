@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 
 export const Container = styled.footer`
-${MEDIA.MIN_TABLET`
+  ${MEDIA.MIN_TABLET`
 display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -15,6 +15,6 @@ display: flex;
   ${MEDIA.PHONE`
     display: block;
     position: absolute;
-    padding:2rem;
+    padding: 2rem;
   `}
 `;

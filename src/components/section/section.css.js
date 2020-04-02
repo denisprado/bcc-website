@@ -7,6 +7,7 @@ export const SectionLayout = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   ${MEDIA.MIN_TABLET`
     height: 100vh;
   `}

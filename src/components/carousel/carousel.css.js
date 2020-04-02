@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { accent } from 'constants/theme';
+import {
+  IoIosArrowForward,
+  IoIosArrowUp,
+  IoIosArrowBack,
+  IoIosArrowDown,
+} from 'react-icons/io';
 
 export const Container = styled.div`
   width: 100%;
-  height: 55vh;
-  ${MEDIA.MIN_TABLET`
-    height: 60vh;
-  `}
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-items: center;
   flex-direction: column;
 `;
 
@@ -29,6 +32,7 @@ export const Menu = styled.div`
 export const MenuItem = styled.div`
   text-align: center;
   flex-grow: 2;
+  padding: 1rem 0 0 0;
 `;
 
 export const Button = styled.button`
@@ -45,4 +49,28 @@ export const Button = styled.button`
     transition: 0.3s all;
     color: ${props => !props.active && accent};
   }
+`;
+
+export const Fwd = styled(IoIosArrowForward)`
+  ${MEDIA.PHONE`
+    display: none;
+  `}
+`;
+
+export const Up = styled(IoIosArrowUp)`
+  ${MEDIA.MIN_TABLET`
+    display: none;
+  `}
+`;
+
+export const Back = styled(IoIosArrowBack)`
+  ${MEDIA.PHONE`
+    display: none;
+  `}
+`;
+
+export const Down = styled(IoIosArrowDown)`
+  ${MEDIA.MIN_TABLET`
+    display: none;
+  `}
 `;

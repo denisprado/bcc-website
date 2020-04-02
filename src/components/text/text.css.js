@@ -5,6 +5,7 @@ import bullet from '../../images/bullet.png';
 
 export const TextContainer = styled.span`
   display: block;
+  line-height: 1.2;
   margin: ${({ align }) => () => {
     switch (align) {
       case 'center':
@@ -30,10 +31,9 @@ export const TextContainer = styled.span`
       case 'medium':
         return '1.8rem';
       default:
-        return '1.2rem';
+        return '1rem';
     }
   }};
-  line-height: 1.2;
 
   ${MEDIA.TABLET`
     font-size: ${({ size }) => () => {
@@ -48,14 +48,11 @@ export const TextContainer = styled.span`
     }};
   `};
 
-  strong {
-    color: ${accent};
-  }
+
 
   ul {
     list-style-image: url('${bullet}');
     li {
-      font-size: 1.6rem;
       margin: 1.6rem;
     }
   }

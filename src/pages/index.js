@@ -74,7 +74,7 @@ function App({ data }) {
                     <Title size="large" as="h1">
                       <p
                         dangerouslySetInnerHTML={{
-                          __html: section.content.childMarkdownRemark.html,
+                          __html: section.content,
                         }}
                       />
                     </Title>
@@ -138,27 +138,17 @@ export const query = graphql`
           bgCardColor
           title
           sizeTitle
-          text {
-            childMarkdownRemark {
-              html
-              rawMarkdownBody
-            }
-          }
+          text
           sizeText
           image {
             childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+              fixed(quality: 100) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
         }
-        content {
-          childMarkdownRemark {
-            html
-            rawMarkdownBody
-          }
-        }
+        content
       }
     }
   }

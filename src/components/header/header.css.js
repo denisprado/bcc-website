@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Logo from 'images/logo.svg';
+import MEDIA from 'helpers/mediaTemplates.js';
+import { primary } from 'constants/theme';
 
 export const Container = styled.header`
   display: flex;
@@ -10,6 +12,12 @@ export const Container = styled.header`
   z-index: 1;
   left: 0;
   right: 0;
+
+  ${MEDIA.PHONE`
+    position: relative;
+    background-color: ${primary};
+  `}
+
   a {
     color: white;
     transition: color 0.2s ease;

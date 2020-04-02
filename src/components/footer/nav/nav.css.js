@@ -7,8 +7,9 @@ export const Container = styled.nav`
     padding: 0;
 
     li {
-      text-transform: uppercase;
-      font-size: 1.3rem;
+      a {
+        font-size: 2rem;
+      }
 
       & + li {
         margin-left: 2rem;

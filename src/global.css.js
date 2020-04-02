@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { accent } from 'constants/theme';
+import { white, accent, primaryLight } from 'constants/theme';
 
 export default createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -20,7 +20,7 @@ export default createGlobalStyle`
     border: 0;
     font-size: 100%;
     font: inherit;
-    font-family: proxima-nova, Arial, Helvetica, sans-serif;
+    font-family: proxima-nova, sans-serif;
     vertical-align: baseline;
   }
 
@@ -38,7 +38,6 @@ export default createGlobalStyle`
     font-family: proxima-nova, sans-serif;
     color: white;
     line-height: 1;
-    font-size: 1.6rem;
     color: white;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
@@ -70,7 +69,11 @@ export default createGlobalStyle`
   }
 
   a {
-    color: ${accent};
+    color: ${white};
+    &:hover{
+      color:${accent};
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   pre {
@@ -78,7 +81,6 @@ export default createGlobalStyle`
     padding: 2rem;
     margin-top: 4rem;
     overflow: auto;
-    font-size: 85%;
     line-height: 1.45;
     border-radius: 5px;
     color: ${accent};
@@ -92,16 +94,6 @@ export default createGlobalStyle`
 
   p {
     margin-bottom: 2rem;
-  }
-
-  a {
-    color: white;
-    transition: color 0.2s ease;
-    text-decoration: none;
-    font-size: 2.1rem;
-    &:hover {
-      color: inherit;
-    }
   }
 
   button, button:active, button:focus {
