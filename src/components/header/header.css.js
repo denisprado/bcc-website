@@ -7,7 +7,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem 10rem;
+  padding: 5rem 5rem;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -30,5 +30,5 @@ export const Container = styled.header`
 `;
 
 export const LogoImg = styled(Logo)`
-  height: 75px;
+  height: 60px;
 `;
