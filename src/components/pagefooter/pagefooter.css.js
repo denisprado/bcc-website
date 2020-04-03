@@ -45,7 +45,7 @@ export const Text = styled.span`
   line-height: 1.2;
 
   ${MEDIA.PHONE`
-    img{
+    img {
       display: none;
     }
     font-size: ${({ size }) => () => {
