@@ -142,7 +142,7 @@ export const query = graphql`
           sizeText
           image {
             childImageSharp {
-              fixed(quality: 100) {
+              fixed(quality: 100, width: 1260) {
                 ...GatsbyImageSharpFixed
               }
             }
