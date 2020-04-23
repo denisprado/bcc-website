@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Logo from 'images/logo.svg';
+import Logo from 'images/logo.png';
 import MEDIA from 'helpers/mediaTemplates.js';
 import { primary } from 'constants/theme';
 
