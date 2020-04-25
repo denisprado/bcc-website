@@ -1,5 +1,9 @@
 import styled from 'styled-components';
+<<<<<<< HEAD
 import Logo from 'images/logo-site.svg';
+=======
+import Logo from 'images/logo.png';
+>>>>>>> 89b1d3d0c256771f6f41eae01e941156d942fbf7
 import MEDIA from 'helpers/mediaTemplates.js';
 import { primary } from 'constants/theme';
 
