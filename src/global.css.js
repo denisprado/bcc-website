@@ -104,4 +104,9 @@ export default createGlobalStyle`
     outline:0;
   }
 
+  scroll-container {
+    display: block;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
 `;

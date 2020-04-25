@@ -18,15 +18,33 @@ export const Container = styled.div`
     padding: 3rem;
   `}
 
-  ${MEDIA.PHONE`
-    margin: 1rem 0;
+  ${MEDIA.TABLET`
+    flex-direction: row;
+    margin: 1rem;
     padding: 2rem;
   `};
 `;
 
 export const ContainerText = styled.div`
-  margin: 2rem 0;
   h2 {
-    margin: 0 0 1rem 0;
+    margin-bottom: 1rem;
   }
+  ${MEDIA.MIN_TABLET`
+    padding: 3rem;
+  `}
+  ${MEDIA.TABLET`
+    padding: 2rem;
+    
+    
+  `}
+  
 `;
+
+export const ContainerImage = styled.div`
+  
+  width: ${props => props.width && props.width};
+  ${MEDIA.TABLET`
+    width: ${props => props.width && (props.width)};
+  `
+}
+  `;

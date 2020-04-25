@@ -18,9 +18,10 @@ export const StyledMenu = styled.nav`
   transition: transform 0.6s ease-in-out;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
 
-  ${MEDIA.PHONE`
+    
+  ${MEDIA.TABLET`
     display: none;
-    `};
+  `};
 
   a {
     font-size: 4rem;

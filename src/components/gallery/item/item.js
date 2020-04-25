@@ -4,18 +4,19 @@ import Title from 'components/title';
 import Text from 'components/text';
 import Img from 'gatsby-image';
 
-import { Container, ContainerText } from './item.css';
+import { Container, ContainerText, ContainerImage } from './item.css';
 
-const Item = ({ text, image, title, sizeText, sizeTitle, bgCardColor }) => (
+const Item = ({ text, image, title, sizeText, sizeImage, sizeTitle, bgCardColor }) => (
   <Container bgCardColor={bgCardColor}>
-    <>
       {image && (
-        <Img
-          fixed={
-            image.childImageSharp.fixed ? image.childImageSharp.fixed : image
-          }
-          alt={text && text}
-        />
+        <ContainerImage width={sizeImage}>
+          <Img
+            fluid={
+              image.childImageSharp.fluid ? image.childImageSharp.fluid : image
+            }
+            alt={text && text}
+            />
+        </ContainerImage>
       )}
       <ContainerText>
         {title && (
@@ -33,7 +34,6 @@ const Item = ({ text, image, title, sizeText, sizeTitle, bgCardColor }) => (
           </Text>
         )}
       </ContainerText>
-    </>
   </Container>
 );
 

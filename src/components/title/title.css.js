@@ -55,6 +55,7 @@ export const Text = styled.span`
           return '2rem';
       }
     }};
+    margin: 0 auto;
   `};
 
   strong {

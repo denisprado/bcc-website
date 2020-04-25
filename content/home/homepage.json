@@ -13,6 +13,7 @@
         {
           "title": "Mapeamento",
           "image": "../images/gallery/mapeamento.png",
+          "sizeImage": "20%",
           "text": "Atuamos no <strong>mapeamento</strong> e recomendações de políticas públicas e governança para Ciência, Tecnologia e Inovação (CT&I) e na execução de Roadmaps tecnológicos e estudos de inteligência de trajetórias tecnológicas e perante o Governo Federal e Instituições Internacionais"
         }
       ]
@@ -31,6 +32,7 @@
           "image": "../images/gallery/mapeamento.png",
           "text": "Atuamos no <strong>mapeamento</strong> e recomendações de políticas públicas e governança para Ciência, Tecnologia e Inovação (CT&I) e na execução de Roadmaps tecnológicos e estudos de inteligência de trajetórias tecnológicas e perante o Governo Federal e Instituições Internacionais",
           "sizeText": "medium",
+          "sizeImage": "60%",
           "bgCardColor": true
         },
         {
@@ -38,6 +40,7 @@
           "image": "../images/gallery/ideacao.png",
           "text": "<strong>Ideação</strong> de projetos de P&D para tecnologias emergentes (componentes para veículos híbridos, elétricos como Powertrains Elétricos para a cadeia Automotiva)",
           "sizeText": "medium",
+          "sizeImage": "40%",
           "bgCardColor": true
         },
         {
@@ -45,6 +48,7 @@
           "image": "../images/gallery/projetos.png",
           "text": "Execução de projetos de investimentos, com a análise de modelos de negócios e introdução ao mercado, considerando análise de cadeias de valor e cluster produtivos.",
           "sizeText": "medium",
+          "sizeImage": "40%",
           "bgCardColor": true
         }
       ]
@@ -61,7 +65,7 @@
         {
           "title": "Pesquisa",
           "text": "Trabalhos exploratórios e prospectivos em tecnologias emergentes.",
-          "image": ""
+          "image": ""          
         },
         {
           "title": "Consultoria",
@@ -111,12 +115,14 @@
           "title": "Robson Barassa",
           "text": "<strong> Mais de 15 anos de experiência na Indústria Automotiva</strong><ul><li>Gerente de P&D (virabrequins, bielas, pistões, mancais e componentes do powertrain elétrico)</li><li>Desenvolveu rotorshafts para plataforma VW MEB, Tesla Model 3 e BMW</li><li>Pós-graduado em Engenharia Automotiva pela USP</li><li>Mestrando pela UNICAMP na área de Eletrificação de Veículos Pesados</li><li>Participação permanente no Grupo de Trabalho 7 da eletromobilidade no Brasil</li></ul>",
           "image":"../images/robson.png",
+          "sizeImage": "20%",
           "bgCardColor": true
         },
         {
           "title": "Edgar Cruz",
           "text": "<strong>Vasta experiência em prospecção tecnológica e recomendação de políticas públicas em CT&I.</strong><ul>          <li>Coordenador de projetos para inovação tecnológica e identificação de novos modelos de negócio para ANEEL, ME e MCTIC        <li>Doutor pela UNICAMP na área de Eletromobilidade e Mobilidade de baixo carbono e foi pesquisador visitante na Universidade de Bordeaux</li>          <li>Elaborou o Roadmap nacional para veículos elétricos (2018) e apoiou a construção do Plano Nacional de Eletromobilidade (2018)</li><li>Participação permanente no Grupo de Trabalho 7 da eletromobilidade no Brasil.</li></ul>",
           "image":"../images/edgar.png",
+          "sizeImage": "20%",
           "bgCardColor": true
         }
       ]
@@ -131,6 +137,7 @@
       "bgColor": "#13316c",
       "cards": [{
         "image":"../images/valores.png",
+        "sizeImage": "100%",
         "bgCardColor": false
       }
       ]

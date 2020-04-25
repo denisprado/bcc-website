@@ -8,11 +8,14 @@ export const ContainerLayout = styled.div`
   flex-direction: column;
   display: flex;
   width: 83.33%;
+
   ${MEDIA.MIN_TABLET`
     height: 100vh;
-     width: 66%;
+    width: 66%;
  `};
+ 
   ${MEDIA.MIN_DESKTOP`
-     width: 66%;
+    width: 65%;
+    min-width: 920px;
  `};
 `;

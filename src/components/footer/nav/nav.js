@@ -7,16 +7,6 @@ const Nav = () => (
   <Container>
     <ul>
       <li>
-        <Link to="/facebook">
-          <FaFacebookF />
-        </Link>
-      </li>
-      <li>
-        <Link to="/facebook">
-          <FaInstagram />
-        </Link>
-      </li>
-      <li>
         <Link to="/linkedink">
           <FaLinkedinIn />
         </Link>

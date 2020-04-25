@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Logo from 'images/logo.svg';
+import Logo from 'images/logo-site.svg';
 import MEDIA from 'helpers/mediaTemplates.js';
 import { primary } from 'constants/theme';
 
@@ -13,7 +13,8 @@ export const Container = styled.header`
   left: 0;
   right: 0;
 
-  ${MEDIA.PHONE`
+
+  ${MEDIA.TABLET`
     position: relative;
     background-color: ${primary};
   `}
