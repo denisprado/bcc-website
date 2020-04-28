@@ -38,13 +38,18 @@ export const MenuItem = styled.div`
 export const Button = styled.button`
   cursor: pointer;
   background: transparent;
+  font-family: 'proxima-nova';
+  text-transform: uppercase;
   opacity: ${props => (props.active ? 1 : 0.5)};
-  font-size: ${props => (props.active ? 2.4 : 1.2)}rem;
+  font-size: ${props => (props.active ? 3.2 : 3.2)}rem;
+  font-weight: ${props => !props.active && 100};
+
   ${MEDIA.MIN_TABLET`
-    font-size: ${props => (props.active ? 4.8 : 2.4)}rem;
+    font-size: ${props => (props.active ? 4.8 : 4.8)}rem;
   `}
   border: none;
   color: white;
+
   &:hover {
     transition: 0.3s all;
     color: ${props => !props.active && accent};
@@ -52,25 +57,25 @@ export const Button = styled.button`
 `;
 
 export const Fwd = styled(IoIosArrowForward)`
-  ${MEDIA.PHONE`
-    display: none;
-  `}
-`;
-
-export const Up = styled(IoIosArrowUp)`
-  ${MEDIA.MIN_TABLET`
+  ${MEDIA.TABLET`
     display: none;
   `}
 `;
 
 export const Back = styled(IoIosArrowBack)`
-  ${MEDIA.PHONE`
+  ${MEDIA.TABLET`
+    display: none;
+  `}
+`;
+
+export const Up = styled(IoIosArrowUp)`
+  ${MEDIA.MIN_DESKTOP`
     display: none;
   `}
 `;
 
 export const Down = styled(IoIosArrowDown)`
-  ${MEDIA.MIN_TABLET`
+  ${MEDIA.MIN_DESKTOP`
     display: none;
   `}
 `;

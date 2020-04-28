@@ -6,43 +6,59 @@ import Img from 'gatsby-image';
 
 import { Container, ContainerText, ContainerImage } from './item.css';
 
-const Item = ({ text, image, title, sizeText, sizeImage, sizeTitle, bgCardColor }) => (
+const Item = ({
+  text,
+  image,
+  title,
+  sizeText,
+  sizeImage,
+  sizeTitle,
+  bgCardColor,
+}) => (
   <Container bgCardColor={bgCardColor}>
-      {image && (
-        <ContainerImage width={sizeImage}>
+    {image && (
+      <ContainerImage width={sizeImage}>
+        {image.extension === 'svg' ? (
+          <img
+            src={image.publicURL}
+            alt={title}
+            style={{ width: sizeImage, minHeight: '7rem' }}
+          />
+        ) : (
           <Img
             fluid={
               image.childImageSharp.fluid ? image.childImageSharp.fluid : image
             }
             alt={text && text}
-            />
-        </ContainerImage>
+          />
+        )}
+      </ContainerImage>
+    )}
+    <ContainerText>
+      {title && (
+        <Title as="h2" size={sizeTitle}>
+          {title}
+        </Title>
       )}
-      <ContainerText>
-        {title && (
-          <Title as="h2" size={sizeTitle}>
-            {title}
-          </Title>
-        )}
-        {text && (
-          <Text size={sizeText}>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: text,
-              }}
-            />
-          </Text>
-        )}
-      </ContainerText>
+      {text && (
+        <Text size={sizeText}>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: text,
+            }}
+          />
+        </Text>
+      )}
+    </ContainerText>
   </Container>
 );
 
 Item.propTypes = {
   bgCardColor: PropTypes.bool,
-  text: PropTypes.object,
-  sizeText: PropTypes.object,
-  title: PropTypes.object,
-  sizeTitle: PropTypes.object,
+  text: PropTypes.string,
+  sizeText: PropTypes.string,
+  title: PropTypes.string,
+  sizeTitle: PropTypes.string,
   image: PropTypes.object,
 };
 

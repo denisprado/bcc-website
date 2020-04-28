@@ -10,10 +10,6 @@ export const Container = styled.div`
   flex-shrink: 1;
   flex-direction: column;
 
-  img {
-    margin-bottom: 2rem;
-  }
-
   ${MEDIA.MIN_TABLET`
     padding: 3rem;
   `}
@@ -29,22 +25,14 @@ export const ContainerText = styled.div`
   h2 {
     margin-bottom: 1rem;
   }
-  ${MEDIA.MIN_TABLET`
-    padding: 3rem;
-  `}
-  ${MEDIA.TABLET`
-    padding: 2rem;
-    
-    
-  `}
-  
 `;
 
 export const ContainerImage = styled.div`
-  
   width: ${props => props.width && props.width};
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+
   ${MEDIA.TABLET`
-    width: ${props => props.width && (props.width)};
-  `
-}
-  `;
+    width: ${props => props.width && props.width};
+  `}
+`;

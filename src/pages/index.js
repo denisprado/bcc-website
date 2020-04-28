@@ -11,21 +11,18 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-
-
-
 function sortHome(list) {
-  const mapped = list.map(function (el, i) {
+  const mapped = list.map(function(el, i) {
     return { index: i, value: el };
   });
 
   // ordenando o array mapeado contendo os dados resumidos
-  mapped.sort(function (a, b) {
+  mapped.sort(function(a, b) {
     return +(a.value < b.value) || +(a.value === b.value) + 1;
   });
 
   // containerpara o resultado ordenado
-  const result = mapped.map(function (el) {
+  const result = mapped.map(function(el) {
     return list[el.index];
   });
 
@@ -46,64 +43,59 @@ function App({ data }) {
   }
 
   return (
-
     <Layout>
       <scroll-container>
-      {data.homeJson.sections &&
-        sortHome(data.homeJson.sections).map((section, i) => (
-          <>
-          <scroll-page id={'section'+i}>
+        {data.homeJson.sections &&
+          sortHome(data.homeJson.sections).map((section, i) => (
+            <>
+              <scroll-page id={'section' + i}>
+                <Section bgColor={section.bgColor} key={i}>
+                  <Container>
+                    <PageTitle
+                      align={section.connectorBeginAlign}
+                      img={
+                        section.connectorBegin &&
+                        section.connectorBegin.childImageSharp.fluid
+                      }
+                      text={section.title}
+                    />
 
-          <Section bgColor={section.bgColor} key={i} >
-            <Container>
-              <PageTitle
-                align={section.connectorBeginAlign}
-                img={
-                  section.connectorBegin &&
-                  section.connectorBegin.childImageSharp.fluid
-                }
-                text={section.title}
-                />
-
-              <div>
-                {section.type === 'text' && (
-                  <Title size="large" as="h1">
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: section.content,
-                      }}
-                      />
-                  </Title>
-                )}
-                {section.type === 'gallery' && (
-                  
-                  <Gallery items={section.cards}></Gallery>
-                  
-                  )}
-                {section.type === 'slide' && (
-                  <Carousel items={section.cards}></Carousel>
-                  )}
-              </div>
-              <button key={i} onClick={() => scrollDown(i)}>
-                <PageFooter
-                  align={section.connectorEndAlign}
-                  img={
-                    section.connectorEnd &&
-                    section.connectorEnd.childImageSharp.fluid
-                  }
-                  text={section.connectorEndText}
-                ></PageFooter>
-              </button>
-            </Container>
-          </Section>
-          </scroll-page>
-          </>
-        ))}
-        </scroll-container>
+                    <div>
+                      {section.type === 'text' && (
+                        <Title size="large" as="h1">
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html: section.content,
+                            }}
+                          />
+                        </Title>
+                      )}
+                      {section.type === 'gallery' && (
+                        <Gallery items={section.cards}></Gallery>
+                      )}
+                      {section.type === 'slide' && (
+                        <Carousel items={section.cards}></Carousel>
+                      )}
+                    </div>
+                    <button key={i} onClick={() => scrollDown(i)}>
+                      <PageFooter
+                        align={section.connectorEndAlign}
+                        img={
+                          section.connectorEnd &&
+                          section.connectorEnd.childImageSharp.fluid
+                        }
+                        text={section.connectorEndText}
+                      ></PageFooter>
+                    </button>
+                  </Container>
+                </Section>
+              </scroll-page>
+            </>
+          ))}
+      </scroll-container>
     </Layout>
-  )
+  );
 }
-
 
 App.propTypes = {
   data: PropTypes.object.isRequired,
@@ -148,6 +140,8 @@ export const query = graphql`
                 ...GatsbyImageSharpFluid
               }
             }
+            extension
+            publicURL
           }
         }
         content

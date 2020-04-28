@@ -5,7 +5,10 @@ import { Container, ContainerText } from './item.css';
 import { useSpring, animated } from 'react-spring';
 
 const Item = ({ text }) => {
-  const props = useSpring({ opacity: 1, from: { opacity: 0 } });
+  const props = useSpring({
+    from: { transform: 'translateX(+2000%)' },
+    to: [{ transform: 'translateX(+2000%)' }, { transform: 'translateX(0%)' }],
+  });
   return (
     <Container>
       <ContainerText>

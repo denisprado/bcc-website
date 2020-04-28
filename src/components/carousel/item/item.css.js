@@ -8,6 +8,7 @@ export const Container = styled.div`
   min-height: 30vh;
   justify-items: center;
   margin: 2rem auto;
+
   ${MEDIA.PHONE`
     margin: 1rem auto;
     padding: 1rem 0;

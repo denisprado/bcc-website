@@ -37,7 +37,7 @@ export const Text = styled.span`
       case 'large':
         return '8.2rem';
       case 'medium':
-        return '4.8rem';
+        return '5.6rem';
       default:
         return '2.125rem';
     }

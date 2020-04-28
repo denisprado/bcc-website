@@ -13,8 +13,8 @@ export const Container = styled.header`
   left: 0;
   right: 0;
 
-
   ${MEDIA.TABLET`
+  display: block;
     position: relative;
     background-color: ${primary};
   `}

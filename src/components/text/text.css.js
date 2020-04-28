@@ -27,7 +27,7 @@ export const TextContainer = styled.span`
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '2.6rem';
+        return '3.2rem';
       case 'medium':
         return '1.8rem';
       default:
