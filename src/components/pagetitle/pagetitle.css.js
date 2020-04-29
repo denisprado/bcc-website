@@ -9,8 +9,8 @@ export const Container = styled.div`
   ${MEDIA.TABLET`
   img {
     display: none;
-  }`
-  }`;
+  }`}
+`;
 
 export const Text = styled.span`
   margin: ${({ align }) => () => {
@@ -25,7 +25,7 @@ export const Text = styled.span`
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '400';
+        return '100';
       case 'medium':
         return '100';
       default:
@@ -63,5 +63,6 @@ export const Text = styled.span`
 
   strong {
     color: ${accent};
+    font-weight: 400;
   }
 `;

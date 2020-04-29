@@ -13,7 +13,7 @@ export const ContainerLayout = styled.div`
     height: 100vh;
     width: 66%;
  `};
- 
+
   ${MEDIA.MIN_DESKTOP`
     width: 65%;
     min-width: 920px;

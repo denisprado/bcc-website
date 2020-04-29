@@ -9,7 +9,7 @@ const ScrollingHorizontally = ({ children }) => (
   <Scrollbars
     refs="scrollbars"
     style={{ height: '100vh', overflowX: 'scroll' }}
-    onUpdate={e => onMouseWheel(e)}
+    onUpdate={(e) => onMouseWheel(e)}
   >
     {children}
   </Scrollbars>

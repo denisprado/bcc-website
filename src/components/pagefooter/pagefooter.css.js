@@ -9,7 +9,8 @@ export const Container = styled.div`
   ${MEDIA.TABLET`
     img{
       display: none;
-    }`}`;
+    }`}
+`;
 
 export const Text = styled.span`
   display: flex;

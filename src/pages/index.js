@@ -12,17 +12,17 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 function sortHome(list) {
-  const mapped = list.map(function(el, i) {
+  const mapped = list.map(function (el, i) {
     return { index: i, value: el };
   });
 
   // ordenando o array mapeado contendo os dados resumidos
-  mapped.sort(function(a, b) {
+  mapped.sort(function (a, b) {
     return +(a.value < b.value) || +(a.value === b.value) + 1;
   });
 
   // containerpara o resultado ordenado
-  const result = mapped.map(function(el) {
+  const result = mapped.map(function (el) {
     return list[el.index];
   });
 

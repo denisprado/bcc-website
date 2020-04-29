@@ -9,7 +9,12 @@ const PageTitle = ({ as = 'span', size, align, img, text }) => {
       {img.src.substring(img.src.length - 8, img.src.length) !== 'none.png' && (
         <Img fluid={img} alt={text} />
       )}
-      <Text as={as} size={size} align={align} dangerouslySetInnerHTML={{ __html: text }} />
+      <Text
+        as={as}
+        size={size}
+        align={align}
+        dangerouslySetInnerHTML={{ __html: text }}
+      />
     </Container>
   );
 };

@@ -3,7 +3,7 @@ import MEDIA from 'helpers/mediaTemplates';
 import { primary } from 'constants/theme';
 
 export const Container = styled.div`
-  background-color: ${props => (props.bgCardColor ? primary : 'transparent')};
+  background-color: ${(props) => (props.bgCardColor ? primary : 'transparent')};
   display: flex;
   margin: 0 auto;
   flex-basis: 80px;
@@ -28,11 +28,11 @@ export const ContainerText = styled.div`
 `;
 
 export const ContainerImage = styled.div`
-  width: ${props => props.width && props.width};
+  width: ${(props) => props.width && props.width};
   margin-bottom: 2rem;
   border-radius: 1rem;
 
   ${MEDIA.TABLET`
-    width: ${props => props.width && props.width};
+    width: ${(props) => props.width && props.width};
   `}
 `;
