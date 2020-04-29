@@ -42,11 +42,13 @@ const Item = ({
       )}
       {text && (
         <Text size={sizeText}>
-          <span
-            dangerouslySetInnerHTML={{
-              __html: text,
-            }}
-          />
+          {
+            <span
+              dangerouslySetInnerHTML={{
+                __html: text,
+              }}
+            />
+          }
         </Text>
       )}
     </ContainerText>

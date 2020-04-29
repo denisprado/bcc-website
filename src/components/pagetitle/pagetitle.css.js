@@ -48,7 +48,7 @@ export const Text = styled.span`
     img{
       display: none;
     }
-    margin: 0 auto;
+    margin: 2rem auto;
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':

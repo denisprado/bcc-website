@@ -6,8 +6,8 @@ import { useSpring, animated } from 'react-spring';
 
 const Item = ({ text }) => {
   const props = useSpring({
-    from: { transform: 'translateX(+2000%)' },
-    to: [{ transform: 'translateX(+2000%)' }, { transform: 'translateX(0%)' }],
+    from: { opacity: 0 },
+    to: [{ opacity: 1 }],
   });
   return (
     <Container>

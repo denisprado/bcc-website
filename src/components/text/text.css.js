@@ -39,11 +39,11 @@ export const TextContainer = styled.span`
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':
-          return '1.25rem';
+          return '1.9rem';
         case 'medium':
-          return '1rem';
+          return '1.8rem';
         default:
-          return '.75rem';
+          return '1.6rem';
       }
     }};
   `};
@@ -52,8 +52,10 @@ export const TextContainer = styled.span`
 
   ul {
     list-style-image: url('${bullet}');
+    list-style-position:outside;
+
     li {
-      margin: 1.6rem;
+      margin: 3.2rem;
     }
   }
 `;
