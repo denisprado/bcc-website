@@ -16,7 +16,7 @@ export const Text = styled.span`
   margin: ${({ align }) => () => {
     switch (align) {
       case 'center':
-        return '0 auto';
+        return '3rem auto';
       default:
         return '';
     }

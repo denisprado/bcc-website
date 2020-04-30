@@ -54,7 +54,7 @@ export const TextContainer = styled.span`
     list-style-position:outside;
 
     li {
-      margin: 3.2rem;
+      margin: .8rem 0 0 3.2rem;
     }
   }
 `;

@@ -20,7 +20,7 @@ export const Container = styled.nav`
 `;
 
 export const BurgerContainer = styled(Burger)`
-  ${MEDIA.DESKTOP`
+  ${MEDIA.TABLET`
     display: none;
   `}
 `;
