@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Burger from 'components/burger';
+import MEDIA from 'helpers/mediaTemplates';
 
 export const Container = styled.nav`
   ul {
@@ -15,4 +17,10 @@ export const Container = styled.nav`
       }
     }
   }
+`;
+
+export const BurgerContainer = styled(Burger)`
+  ${MEDIA.DESKTOP`
+    display: none;
+  `}
 `;

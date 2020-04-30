@@ -61,6 +61,7 @@ Item.propTypes = {
   sizeText: PropTypes.string,
   title: PropTypes.string,
   sizeTitle: PropTypes.string,
+  sizeImage: PropTypes.string,
   image: PropTypes.object,
 };
 

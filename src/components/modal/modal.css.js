@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {primary, white, accent } from 'constants/theme';
+import { primary, white, accent } from 'constants/theme';
 export const Button = styled.button`
   -webkit-appearance: none;
   background-color: ${accent};
@@ -15,12 +15,6 @@ export const Button = styled.button`
   padding: 1rem 2rem;
   text-transform: uppercase;
   transition: 0.2s background-color ease;
-
-  &:active,
-  &:focus {
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
-    outline: none;
-  }
 
   &:hover {
     background-color: ${primary};

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
-import { accent } from 'constants/theme';
 import bullet from '../../images/bullet.png';
 
 export const TextContainer = styled.span`

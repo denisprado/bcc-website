@@ -15,7 +15,7 @@ export const Container = styled.div`
   `}
 
   ${MEDIA.TABLET`
-    flex-direction: row;
+
     margin: 1rem;
     padding: 2rem;
   `};
@@ -34,6 +34,6 @@ export const ContainerImage = styled.div`
   margin-right: 2rem;
 
   ${MEDIA.TABLET`
-    width: ${props => props.width && props.width};
+    width: 80vw;
   `}
 `;

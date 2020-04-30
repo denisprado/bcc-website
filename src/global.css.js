@@ -110,6 +110,10 @@ export default createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  strong{
+    color: ${accent};
+  }
+
   [data-reach-dialog-content] {
     width: 40vw;
     color: ${primary};

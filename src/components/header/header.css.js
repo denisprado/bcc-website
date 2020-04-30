@@ -14,7 +14,7 @@ export const Container = styled.header`
   right: 0;
 
   ${MEDIA.TABLET`
-  display: block;
+    display: block;
     position: relative;
     background-color: ${primary};
   `}

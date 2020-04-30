@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { primary, primaryLight, primaryDark, accent } from 'constants/theme';
+import { primary, primaryDark, accent } from 'constants/theme';
 import MEDIA from 'helpers/mediaTemplates.js';
 
 export const StyledMenu = styled.nav`

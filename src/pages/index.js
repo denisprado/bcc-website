@@ -7,24 +7,22 @@ import PageTitle from 'components/pagetitle';
 import Section from 'components/section';
 import Title from 'components/title';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import Modal from 'containers/modal';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 function sortHome(list) {
-  const mapped = list.map(function (el, i) {
+  const mapped = list.map(function(el, i) {
     return { index: i, value: el };
   });
 
   // ordenando o array mapeado contendo os dados resumidos
-  mapped.sort(function (a, b) {
+  mapped.sort(function(a, b) {
     return +(a.value < b.value) || +(a.value === b.value) + 1;
   });
 
   // containerpara o resultado ordenado
-  const result = mapped.map(function (el) {
+  const result = mapped.map(function(el) {
     return list[el.index];
   });
 
@@ -63,7 +61,6 @@ function App({ data }) {
                     />
 
                     <div>
-                      
                       {section.type === 'text' && (
                         <Title size="large" as="h1">
                           <p
@@ -71,17 +68,6 @@ function App({ data }) {
                               __html: section.content,
                             }}
                           />
-                          <Modal>
-                          <p>
-                          Consideradas propulsoras do desenvolvimento e inovação para os próximos anos, as tecnologias emergentes verdes são definidas como os artefatos tecnológicos que apresentam menor impacto ambiental em seus processos e utilização. Isso é refletido, por exemplo, na diminuição das emissões de gases do efeito estufa, na redução da pegada de CO2 no ciclo de vida do produto e incorporação da biodegradação de elementos. </p><p>
-Exemplos notáveis destas tecnologias – e expertises principais da Barassa  Cruz-  referem-se as tecnologias de mobilidade de baixa emissão, com destaque para veículos elétricos e híbridos, bem como as tecnologias de geração de energia limpa e sustentável, como os painéis fotovoltaicos.
-                            </p><p>
-
-Estas tecnologias tem ganhado tração, escalabilidade e ampliado sua difusão ao serem suportadas pelas agendas climáticas internacionais e pelos  objetivos do desenvolvimento sustentável (ODS/ONU). Pois, estes acordos celebrados realizam a pressão para que as Empresas/Estados/Países adotem práticas mais sustentáveis e com menor impacto ao meio ambiente, impondo à indústria global de produtos e serviços a necessidade de adoção de novas tecnologias alternativas às tradicionais.
-
-                            </p>
-
-                          </Modal>
                         </Title>
                       )}
                       {section.type === 'gallery' && (
