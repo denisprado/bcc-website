@@ -34,3 +34,13 @@ exports.onCreateWebpackConfig = ({
     },
   });
 };
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type HomeJson implements Node {
+      image: String!
+    }
+  `
+  createTypes(typeDefs)
+}

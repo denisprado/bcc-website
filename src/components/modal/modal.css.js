@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-
+import {primary, white, accent } from 'constants/theme';
 export const Button = styled.button`
   -webkit-appearance: none;
-  background-color: #fff;
+  background-color: ${accent};
   border-radius: 5px;
   border: none;
-  color: #757575;
-  border: 1px solid #ddd;
+  color: ${white};
+  border: 1px solid ${white};
   cursor: pointer;
   font-family: inherit;
   font-size: 1.3rem;
@@ -23,7 +23,7 @@ export const Button = styled.button`
   }
 
   &:hover {
-    background-color: #f9f9f9;
+    background-color: ${primary};
   }
 
   & + & {

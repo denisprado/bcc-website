@@ -45,11 +45,11 @@ export default class Modal extends PureComponent {
 
     return (
       <>
-        <Button onClick={showModal}>Show Modal</Button>
+        <Button onClick={showModal}>Sobre Tecnologias Emergentes</Button>
 
         <Dialog isOpen={open}>
           <Close onClick={hideModal}>
-            <VisuallyHidden>Close</VisuallyHidden>
+            <VisuallyHidden>Fechar</VisuallyHidden>
             <span aria-hidden>×</span>
           </Close>
           {children}

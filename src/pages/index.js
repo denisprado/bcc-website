@@ -7,6 +7,8 @@ import PageTitle from 'components/pagetitle';
 import Section from 'components/section';
 import Title from 'components/title';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import Modal from 'containers/modal';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
@@ -61,6 +63,7 @@ function App({ data }) {
                     />
 
                     <div>
+                      
                       {section.type === 'text' && (
                         <Title size="large" as="h1">
                           <p
@@ -68,6 +71,17 @@ function App({ data }) {
                               __html: section.content,
                             }}
                           />
+                          <Modal>
+                          <p>
+                          Consideradas propulsoras do desenvolvimento e inovação para os próximos anos, as tecnologias emergentes verdes são definidas como os artefatos tecnológicos que apresentam menor impacto ambiental em seus processos e utilização. Isso é refletido, por exemplo, na diminuição das emissões de gases do efeito estufa, na redução da pegada de CO2 no ciclo de vida do produto e incorporação da biodegradação de elementos. </p><p>
+Exemplos notáveis destas tecnologias – e expertises principais da Barassa  Cruz-  referem-se as tecnologias de mobilidade de baixa emissão, com destaque para veículos elétricos e híbridos, bem como as tecnologias de geração de energia limpa e sustentável, como os painéis fotovoltaicos.
+                            </p><p>
+
+Estas tecnologias tem ganhado tração, escalabilidade e ampliado sua difusão ao serem suportadas pelas agendas climáticas internacionais e pelos  objetivos do desenvolvimento sustentável (ODS/ONU). Pois, estes acordos celebrados realizam a pressão para que as Empresas/Estados/Países adotem práticas mais sustentáveis e com menor impacto ao meio ambiente, impondo à indústria global de produtos e serviços a necessidade de adoção de novas tecnologias alternativas às tradicionais.
+
+                            </p>
+
+                          </Modal>
                         </Title>
                       )}
                       {section.type === 'gallery' && (
@@ -108,6 +122,13 @@ export const query = graphql`
     homeJson {
       sections {
         title
+        image {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1260) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         bgColor
         connectorBeginAlign
         connectorBegin {

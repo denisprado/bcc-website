@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { white, accent, primaryLight } from 'constants/theme';
+import { white, accent, primary } from 'constants/theme';
 
 export default createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -109,4 +109,15 @@ export default createGlobalStyle`
     overflow-y: hidden;
     scroll-behavior: smooth;
   }
+
+  [data-reach-dialog-content] {
+    width: 40vw;
+    color: ${primary};
+    padding: 7rem;
+    font-size: 2.4rem;
+    font-family: proxima-nova, sans-serif;
+    margin: 10vh auto;
+    background: white;
+    outline: none;
+}
 `;
