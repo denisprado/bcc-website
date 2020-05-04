@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import { primary, primaryDark, accent } from 'constants/theme';
 import MEDIA from 'helpers/mediaTemplates.js';
 
-export const Container = styled.nav`
+export const Container = styled.div`
   display: flex;
+  border: 1px solid white;
+  border-radius: 1.6rem;
   z-index: -1;
   width: 30vw;
   height: 80vh;
@@ -12,10 +14,10 @@ export const Container = styled.nav`
   align-items: center;
   background: ${primaryDark};
   text-align: left;
-  padding: 5rem 8rem;
+  padding: 3% 3%;
   box-sizing: border-box;
   position: absolute;
-  top: 10vh;
+  top: 12vh;
   right: 5rem;
   transition: transform 0.6s ease-in-out;
   opacity: ${({ open }) => (open ? 0 : 0.95)};

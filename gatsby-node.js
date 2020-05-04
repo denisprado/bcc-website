@@ -36,11 +36,11 @@ exports.onCreateWebpackConfig = ({
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
   const typeDefs = `
-    type HomeJson implements Node {
-      image: String!
+    type homeJson implements Node {
+      image: File!
     }
-  `
-  createTypes(typeDefs)
-}
+  `;
+  createTypes(typeDefs);
+};

@@ -102,6 +102,23 @@ export default createGlobalStyle`
     padding:0;
     border:none;
     outline:0;
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: inherit;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inherit;
+    text-align: inherit;
+    align-items: inherit;
+    cursor: pointer;
+    background-color: inherit;
+    box-sizing: border-box;
+    margin: 0em;
+    font: inherit;
   }
 
   scroll-container {

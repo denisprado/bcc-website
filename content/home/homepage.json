@@ -2,7 +2,7 @@
   "sections": [
     {
       "title": " ",
-      "image": "../images/none.png",
+      "image": "../images/gallery/mapeamento.svg",
       "content": "Criando valor junto às tecnologias emergentes <strong>verdes</strong> e de baixo carbono",
       "type": "text",
       "connectorBegin": "../images/circle-left.png",
@@ -21,7 +21,7 @@
     },
     {
       "title": "<strong>o que</strong> fazemos?",
-      "image": "../images/none.png",
+
       "type": "gallery",
       "connectorBegin": "../images/circle-left.png",
       "connectorBeginAlign": "left",
@@ -57,7 +57,7 @@
     },
     {
       "title": "<strong>como</strong> fazemos?",
-      "image": "../images/none.png",
+
       "type": "slide",
       "connectorBegin": "../images/circle-center.png",
       "connectorBeginAlign":"center",
@@ -90,7 +90,7 @@
     ,
     {
       "title": "nossos <strong>projetos</strong>",
-      "image": "../images/none.png",
+
       "type": "gallery",
       "bgColor": "#194090",
       "connectorBegin": "../images/circle-left.png",
@@ -109,7 +109,7 @@
     ,
     {
       "title": "<strong>quem</strong> somos?",
-      "image": "../images/none.png",
+
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
       "connectorBeginAlign": "center",
@@ -137,7 +137,7 @@
     ,
     {
       "title": "nossos <strong>valores</strong>",
-      "image": "../images/none.png",
+
       "text": "",
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",

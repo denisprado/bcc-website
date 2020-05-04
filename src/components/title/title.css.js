@@ -9,7 +9,7 @@ export const Text = styled.span`
       case 'center':
         return '0 auto';
       default:
-        return '';
+        return '0 0 2rem 0';
     }
   }};
   width: ${({ size }) => () => {
@@ -29,7 +29,7 @@ export const Text = styled.span`
       case 'medium':
         return '100';
       default:
-        return '500';
+        return '600';
     }
   }};
   font-size: ${({ size }) => () => {

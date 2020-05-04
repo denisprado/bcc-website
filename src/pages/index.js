@@ -6,6 +6,7 @@ import PageFooter from 'components/pagefooter';
 import PageTitle from 'components/pagetitle';
 import Section from 'components/section';
 import Title from 'components/title';
+import Image from 'components/image';
 import { graphql } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import PropTypes from 'prop-types';
@@ -60,7 +61,10 @@ function App({ data }) {
                       text={section.title}
                     />
 
-                    <div>
+                    <div style={{ display: 'flex' }}>
+                      {section.image && (
+                        <Image image={section.image} title={section.title} />
+                      )}
                       {section.type === 'text' && (
                         <Title size="large" as="h1">
                           <p
@@ -114,6 +118,8 @@ export const query = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+          extension
+          publicURL
         }
         bgColor
         connectorBeginAlign

@@ -4,10 +4,12 @@ import { bool } from 'prop-types';
 import { Container } from './sideContainer.css';
 import PropTypes from 'prop-types';
 import Text from 'components/text';
+import Title from 'components/title';
 
 const sideContainer = ({ open }) => {
   return (
     <Container open={open}>
+      <Title size={'small'}>Sobre Tecnologias Emergentes</Title>
       <Text size={'medium'}>
         <p>
           Consideradas propulsoras do desenvolvimento e inovação para os

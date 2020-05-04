@@ -18,9 +18,9 @@ export const TextContainer = styled.span`
       case 'large':
         return '200';
       case 'medium':
-        return '100';
+        return '300';
       default:
-        return '500';
+        return '400';
     }
   }};
   font-size: ${({ size }) => () => {
