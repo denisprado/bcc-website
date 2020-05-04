@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { primary, primaryDark, accent } from 'constants/theme';
+import { primary, primaryDark, primaryLight, accent } from 'constants/theme';
 import MEDIA from 'helpers/mediaTemplates.js';
 
 export const Container = styled.div`
   display: flex;
-  border: 1px solid white;
+  border: 2px solid ${primaryLight};
   border-radius: 1.6rem;
   z-index: -1;
   width: 30vw;
@@ -22,7 +22,7 @@ export const Container = styled.div`
   transition: transform 0.6s ease-in-out;
   opacity: ${({ open }) => (open ? 0 : 0.95)};
   transition: 0.3s all ease-in-out;
-
+  
   ${MEDIA.TABLET`
     display: none;
   `};

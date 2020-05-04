@@ -61,10 +61,8 @@ function App({ data }) {
                       text={section.title}
                     />
 
-                    <div style={{ display: 'flex' }}>
-                      {section.image && (
-                        <Image image={section.image} title={section.title} />
-                      )}
+                    <div style={{ display: 'flex', alignItems:'center' }}>
+                      
                       {section.type === 'text' && (
                         <Title size="large" as="h1">
                           <p
@@ -73,6 +71,9 @@ function App({ data }) {
                             }}
                           />
                         </Title>
+                      )}
+                      {section.image && (
+                        <Image image={section.image} title={section.title} />
                       )}
                       {section.type === 'gallery' && (
                         <Gallery items={section.cards}></Gallery>

@@ -40,6 +40,10 @@ exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type homeJson implements Node {
       image: File!
+      cards: Cards 
+    }
+    type Cards{
+      image: File!
     }
   `;
   createTypes(typeDefs);

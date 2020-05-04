@@ -3,8 +3,9 @@ import { Container, BurgerContainer } from './nav.css';
 import Menu from 'components/menu';
 import SideButton from 'components/sideButton';
 import SideContainer from 'components/sideContainer';
+
 function Nav() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <Container>
       <SideButton open={open} setOpen={setOpen} />

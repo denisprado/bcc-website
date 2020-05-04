@@ -2,7 +2,7 @@
   "sections": [
     {
       "title": " ",
-      "image": "../images/gallery/mapeamento.svg",
+      "image": "../images/pagina-inicial.svg",
       "content": "Criando valor junto às tecnologias emergentes <strong>verdes</strong> e de baixo carbono",
       "type": "text",
       "connectorBegin": "../images/circle-left.png",
@@ -58,7 +58,7 @@
     {
       "title": "<strong>como</strong> fazemos?",
 
-      "type": "slide",
+      "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
       "connectorBeginAlign":"center",
       "connectorEnd":"../images/arrow-center-to-left.png",
@@ -68,22 +68,31 @@
         {
           "title": "Pesquisa",
           "text": "Trabalhos exploratórios e prospectivos em tecnologias emergentes.",
-          "image": ""
+          "image": "../images/gallery/pesquisa.svg",
+          "sizeText": "medium",
+          "sizeImage": "70%"
+
         },
         {
           "title": "Consultoria",
           "text": "Projetos personalizados para empresas, entidades governamentais e terceiro setor.",
-          "image": ""
+          "image": "../images/gallery/consultoria.svg",
+          "sizeImage": "70%",
+          "sizeText": "medium"
         },
         {
           "title": "Eventos",
           "text": "Organização de eventos, matchmaking de stakeholders e construção de networking.",
-          "image": ""
+          "image": "../images/gallery/eventos.svg",
+          "sizeImage": "70%",
+          "sizeText": "medium"
         },
         {
           "title": "Educação",
           "text": "Cursos e palestras direcionadas para o nível tático, estratégico e tomadores de decisão.",
-          "image": ""
+          "image": "../images/gallery/educacao.svg",
+          "sizeImage": "70%",
+          "sizeText": "medium"
         }
       ]
     }
@@ -147,6 +156,32 @@
       "cards": [{
         "image":"../images/gallery/valores.svg",
         "sizeImage": "50vw",
+        "bgCardColor": false
+      }
+      ]
+    } ,
+    {
+      "title": "entre em <strong>contato</strong>",
+
+      "text": "",
+      "image": "../images/gallery/contato.svg",
+
+      "type": "gallery",
+      "connectorBegin": "../images/circle-center.png",
+      "connectorEnd": "../images/none.png",
+      "connectorBeginAlign":"center",
+      "bgColor": "#13316c",
+      "cards": [{
+        "title":"Edgar Barassa",
+        "text": "edgarbarassa@gmail.com<br/>+55 19 99726 3740",
+        "sizeImage": "50vw",
+        "sizeText": "medium",
+        "bgCardColor": false
+      },{
+        "title":"Robson Cruz",
+        "text": "robson128@yahoo.de</br>+55 11 97533-4973",
+        "sizeImage": "50vw",
+        "sizeText": "medium",
         "bgCardColor": false
       }
       ]
