@@ -142,6 +142,22 @@
           "bgCardColor": true
         }
       ]
+    },
+    {
+      "title": "nossa <strong>história</strong>",
+
+      "text": "",
+      "type": "gallery",
+      "connectorBegin": "../images/circle-center.png",
+      "connectorEnd": "../images/arrow-center.png",
+      "connectorBeginAlign":"center",
+      "bgColor": "#13316c",
+      "cards": [{
+        "image":"../images/gallery/linha-do-tempo.svg",
+        "sizeImage": "120rem",
+        "bgCardColor": false
+      }
+      ]
     }
     ,
     {
