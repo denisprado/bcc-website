@@ -150,12 +150,12 @@
       "text": "",
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
-      "connectorEnd": "../images/none.png",
+      "connectorEnd": "../images/arrow-center.png",
       "connectorBeginAlign":"center",
       "bgColor": "#13316c",
       "cards": [{
         "image":"../images/gallery/valores.svg",
-        "sizeImage": "50vw",
+        "sizeImage": "40vw",
         "bgCardColor": false
       }
       ]
