@@ -20,12 +20,12 @@ const PageTitle = ({ as = 'span', size, align, img, text }) => {
 };
 
 PageTitle.propTypes = {
-  children: PropTypes.object.isRequired,
-  size: PropTypes.oneOf(['large', 'medium']),
+  children: PropTypes.object,
+  size: PropTypes.oneOf(['small', 'large', 'medium']),
   as: PropTypes.string,
-  img: PropTypes.string,
+  img: PropTypes.object,
   text: PropTypes.string,
-  align: PropTypes.oneOf(['center']),
+  align: PropTypes.oneOf(['left', 'center', 'right']),
 };
 
 export default PageTitle;

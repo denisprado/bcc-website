@@ -7,14 +7,15 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   ${MEDIA.TABLET`
-    img{
+
       display: none;
-    }`}
+    `}
 `;
 
 export const Text = styled.span`
   display: flex;
   color: white;
+
   margin: ${({ align }) => () => {
     switch (align) {
       case 'center':
@@ -49,7 +50,7 @@ export const Text = styled.span`
   line-height: 1.2;
 
   ${MEDIA.TABLET`
-  
+
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':

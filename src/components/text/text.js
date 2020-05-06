@@ -11,10 +11,10 @@ const Text = ({ children, as = 'span', size, align }) => {
 };
 
 Text.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   as: PropTypes.string,
   size: PropTypes.oneOf(['large', 'medium']),
-  align: PropTypes.oneOf(['center']),
+  align: PropTypes.oneOf(['left', 'center', 'right']),
 };
 
 export default Text;

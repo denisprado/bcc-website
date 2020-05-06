@@ -12,9 +12,7 @@ export const Container = styled.footer`
     right: 0;
     bottom: 0;
 `};
-  ${MEDIA.PHONE`
-    display: block;
-    position: relative;
-    padding: 2rem;
+  ${MEDIA.TABLET`
+    display: none;
   `}
 `;

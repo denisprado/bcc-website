@@ -9,15 +9,7 @@
       "connectorEnd":"../images/arrow-left.png",
       "connectorEndAlign":"left",
       "connectorEndText": "Role para saber mais",
-      "bgColor": "linear-gradient(to bottom, #194090 0%, #295aae 100%)",
-      "cards": [
-        {
-          "title": "Home",
-          "image": "../images/gallery/mapeamento.svg",
-          "sizeImage": "20%",
-          "text": "Atuamos no <strong>mapeamento</strong> e recomendações de políticas públicas e governança para Ciência, Tecnologia e Inovação (CT&I) e na execução de Roadmaps tecnológicos e estudos de inteligência de trajetórias tecnológicas e perante o Governo Federal e Instituições Internacionais"
-        }
-      ]
+      "bgColor": "linear-gradient(to bottom, #194090 0%, #295aae 100%)"
     },
     {
       "title": "<strong>o que</strong> fazemos?",
@@ -63,7 +55,7 @@
       "connectorBeginAlign":"center",
       "connectorEnd":"../images/arrow-center-to-left.png",
       "connectorEndAlign":"center",
-      "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #295aae 50%, #194090 100%)",
+      "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #295aae 50%, #295aae 100%)",
       "cards": [
         {
           "title": "Pesquisa",
@@ -101,7 +93,7 @@
       "title": "nossos <strong>projetos</strong>",
 
       "type": "gallery",
-      "bgColor": "linear-gradient(to top, #3c77cf 0%, #295aae 50%, #194090 100%)",
+      "bgColor": "linear-gradient(to top, #3c77cf 0%, #295aae 50%, #295aae 100%)",
       "connectorBegin": "../images/circle-left.png",
       "connectorEnd":"../images/arrow-left-to-center.png",
       "cards": [
@@ -123,7 +115,7 @@
       "connectorBegin": "../images/circle-center.png",
       "connectorBeginAlign": "center",
       "connectorEnd":"../images/arrow-center.png",
-      "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #295aae 50%, #295aae 100%)",
+      "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #295aae 50%, #194090 100%)",
       "cards": [
         {
           "title": "Edgar Barassa",
@@ -145,16 +137,15 @@
     },
     {
       "title": "nossa <strong>história</strong>",
-
       "text": "",
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/arrow-center.png",
       "connectorBeginAlign":"center",
-      "bgColor": "linear-gradient(to bottom, #295aae 0%, #194090 50%, #13316c 100%)",
+      "bgColor": "linear-gradient(to bottom, #194090 0%, #194090 50%, #13316c 100%)",
       "cards": [{
         "image":"../images/gallery/linha-do-tempo.svg",
-        "sizeImage": "120rem",
+        "sizeImage": "100%",
         "bgCardColor": false
       }
       ]
@@ -171,7 +162,7 @@
       "bgColor": "#13316c",
       "cards": [{
         "image":"../images/gallery/valores.svg",
-        "sizeImage": "40vw",
+        "sizeImage": "100%",
         "bgCardColor": false
       }
       ]

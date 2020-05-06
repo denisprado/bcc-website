@@ -30,6 +30,7 @@ const Item = ({
               image.childImageSharp.fluid ? image.childImageSharp.fluid : image
             }
             alt={text && text}
+            width={sizeImage}
           />
         )}
       </ContainerImage>

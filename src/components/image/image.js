@@ -13,7 +13,7 @@ const Image = ({ image, title }) => {
             image.childImageSharp.fluid ? image.childImageSharp.fluid : image
           }
           alt={title && title}
-          width={'50%'}
+          width={'100%'}
         />
       )}
     </ContainerImage>
@@ -21,7 +21,7 @@ const Image = ({ image, title }) => {
 };
 
 Image.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.object,
   title: PropTypes.string,
 };
 

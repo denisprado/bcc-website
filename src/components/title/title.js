@@ -11,9 +11,9 @@ const Title = ({ children, as = 'span', size, align }) => {
 };
 
 Title.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   as: PropTypes.string,
-  size: PropTypes.oneOf(['large', 'medium']),
+  size: PropTypes.oneOf(['small', 'large', 'medium']),
   align: PropTypes.oneOf(['center']),
 };
 

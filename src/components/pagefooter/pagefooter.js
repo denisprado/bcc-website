@@ -18,12 +18,12 @@ const PageFooter = ({ as = 'span', size, align, img, text }) => {
 };
 
 PageFooter.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.object,
   size: PropTypes.oneOf(['large', 'medium']),
   as: PropTypes.string,
-  img: PropTypes.string,
+  img: PropTypes.object,
   text: PropTypes.string,
-  align: PropTypes.oneOf(['left', 'center']),
+  align: PropTypes.oneOf(['left', 'center', 'right']),
 };
 
 export default PageFooter;
