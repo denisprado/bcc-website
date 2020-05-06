@@ -101,7 +101,7 @@
       "title": "nossos <strong>projetos</strong>",
 
       "type": "gallery",
-      "bgColor": "#194090",
+      "bgColor": "linear-gradient(to top, #3c77cf 0%, #295aae 50%, #194090 100%)",
       "connectorBegin": "../images/circle-left.png",
       "connectorEnd":"../images/arrow-left-to-center.png",
       "cards": [
@@ -123,7 +123,7 @@
       "connectorBegin": "../images/circle-center.png",
       "connectorBeginAlign": "center",
       "connectorEnd":"../images/arrow-center.png",
-      "bgColor": "linear-gradient(to bottom, #194090 0%, #13316c 100%)",
+      "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #295aae 50%, #295aae 100%)",
       "cards": [
         {
           "title": "Edgar Barassa",
@@ -131,7 +131,7 @@
           "image":"../images/robson.png",
           "sizeImage": "20%",
           "sizeText": "medium",
-          "bgCardColor": true
+          "bgCardColor": false
         },
         {
           "title": "Robson Cruz",
@@ -139,7 +139,7 @@
           "image":"../images/edgar.png",
           "sizeImage": "20%",
           "sizeText": "medium",
-          "bgCardColor": true
+          "bgCardColor": false
         }
       ]
     },
@@ -151,7 +151,7 @@
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/arrow-center.png",
       "connectorBeginAlign":"center",
-      "bgColor": "#13316c",
+      "bgColor": "linear-gradient(to bottom, #295aae 0%, #194090 50%, #13316c 100%)",
       "cards": [{
         "image":"../images/gallery/linha-do-tempo.svg",
         "sizeImage": "120rem",
