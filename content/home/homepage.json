@@ -162,7 +162,7 @@
       "bgColor": "#13316c",
       "cards": [{
         "image":"../images/gallery/valores.svg",
-        "sizeImage": "100%",
+        "sizeImage": "80%",
         "bgCardColor": false
       }
       ]

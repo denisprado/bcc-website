@@ -79,13 +79,13 @@ function App({ data }) {
                     {section.image && (
                       <Image image={section.image} title={section.title} />
                     )}
-                  </ContainerContent>
                   {section.type === 'gallery' && (
                     <Gallery items={section.cards}></Gallery>
-                  )}
+                    )}
                   {section.type === 'slide' && (
                     <Carousel items={section.cards}></Carousel>
-                  )}
+                    )}
+                  </ContainerContent>
                   <button key={i} onClick={() => scrollDown(i)}>
                     <PageFooter
                       align={section.connectorEndAlign}
