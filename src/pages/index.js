@@ -11,7 +11,7 @@ import { graphql } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import { ContainerContent } from './index.css';
+import { ContainerContent } from '../index.css';
 // import Wind from 'videos/wind.mp4';
 // import Transcript from 'file-loader!videos/description.vtt';
 

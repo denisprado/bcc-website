@@ -5,10 +5,12 @@ export const ContainerContent = styled.div`
   display: flex;
   align-items: center;
   justify-items: center;
+
   ${MEDIA.PHONE`
     flex-direction: column;
     align-items: center;
   `}
+
   ${MEDIA.PHONE`
     flex-direction: column;
     align-items: center;
