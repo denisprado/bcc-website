@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { GoArrowUp, GoArrowDown } from 'react-icons/go';
 import { Container } from './arrows.css';
 import PropTypes from 'prop-types';
-import { Dialog } from '@reach/dialog';
 
 export default class Arrows extends PureComponent {
   render() {
@@ -21,3 +20,8 @@ export default class Arrows extends PureComponent {
     );
   }
 }
+
+Arrows.propTypes = {
+  section: PropTypes.string,
+  setSection: PropTypes.func,
+};

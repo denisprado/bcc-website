@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { accent } from 'constants/theme';
-import { FiArrowDownCircle, FiXCircle} from 'react-icons/fi';
+import { FiArrowDownCircle, FiXCircle } from 'react-icons/fi';
 
 export const StyledButton = styled.button`
   &,
@@ -19,9 +19,9 @@ export const StyledButton = styled.button`
 `;
 
 export const DownBtn = styled(FiArrowDownCircle)`
-  display: ${({ open }) => (!open && 'none')};
-`
+  display: ${({ open }) => !open && 'none'};
+`;
 
 export const UpBtn = styled(FiXCircle)`
-  display: ${({ open }) => (open && 'none') };
-`
+  display: ${({ open }) => open && 'none'};
+`;

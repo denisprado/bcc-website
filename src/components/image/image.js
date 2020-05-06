@@ -16,7 +16,6 @@ const Image = ({ image, title }) => {
           width={'50%'}
         />
       )}
-      
     </ContainerImage>
   );
 };

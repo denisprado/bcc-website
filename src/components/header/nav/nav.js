@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Container, BurgerContainer } from './nav.css';
-import Menu from 'components/menu';
+import { Container } from './nav.css';
 import SideButton from 'components/sideButton';
 import SideContainer from 'components/sideContainer';
 

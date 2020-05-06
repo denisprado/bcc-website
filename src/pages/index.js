@@ -11,6 +11,8 @@ import { graphql } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import Wind from 'videos/wind.mp4';
+import Transcript from 'file-loader!videos/description.vtt';
 
 function sortHome(list) {
   const mapped = list.map(function(el, i) {
@@ -38,13 +40,16 @@ function App({ data }) {
     scrollTo('#section' + page);
   }
 
-  function scrollUp(section) {
-    section != 0 && setPage(section - 1);
-    scrollTo('#section' + page);
-  }
-
   return (
     <Layout>
+      {/* <video
+        style={{ width: '100%', position: 'absolute', zIndex: 0 }}
+        autoPlay
+        loop
+      >
+        <source src={Wind} type="video/mp4" />
+        <track kind="captions" srcLang="en" src={Transcript} default />
+      </video> */}
       <scroll-container>
         {data.homeJson.sections &&
           sortHome(data.homeJson.sections).map((section, i) => (
@@ -61,8 +66,7 @@ function App({ data }) {
                       text={section.title}
                     />
 
-                    <div style={{ display: 'flex', alignItems:'center' }}>
-                      
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
                       {section.type === 'text' && (
                         <Title size="large" as="h1">
                           <p
@@ -103,7 +107,7 @@ function App({ data }) {
 }
 
 App.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object,
 };
 
 export default App;

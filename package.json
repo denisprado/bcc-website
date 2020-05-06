@@ -10,7 +10,13 @@
     "build:dir": "mkdirp ./public/icons/",
     "build:favicons": "node scripts/favicons",
     "build": "npm run build:dir && npm run build:favicons && gatsby build",
-    "test": "ava **/*.test.js --verbose"
+    "test": "ava **/*.test.js --verbose",
+    "lint:js": "eslint --fix \"**/*.{js,jsx}\"",
+      "lint": "run-p lint:*",
+      "precommit": "lint-staged",
+      "test-write": "jest --watch",
+      "test:lint": "npm run lint",
+      "test:functional": "jest"
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.17",
@@ -76,5 +82,8 @@
     "lighthouse": "^5.6.0",
     "mkdirp": "^1.0.4",
     "node-gyp": "^6.1.0"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
   }
 }

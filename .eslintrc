@@ -4,16 +4,26 @@
     "browser": true,
     "node": true
   },
+  "globals": {
+    "graphql": true
+  },
   "rules": {
     "strict": 0,
-    "no-console": "warn",
     "quotes": [
       "warn",
       "single"
     ],
     "prettier/prettier": "warn",
     "react/prop-types": "warn",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ]
   },
   "extends": [
     "eslint:recommended",

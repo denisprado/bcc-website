@@ -40,19 +40,19 @@ export const Button = styled.button`
   background: transparent;
   font-family: 'proxima-nova';
   text-transform: uppercase;
-  opacity: ${props => (props.active ? 1 : 0.5)};
-  font-size: ${props => (props.active ? 3.2 : 3.2)}rem;
-  font-weight: ${props => !props.active && 100};
+  opacity: ${(props) => (props.active ? 1 : 0.5)};
+  font-size: ${(props) => (props.active ? 3.2 : 3.2)}rem;
+  font-weight: ${(props) => !props.active && 100};
 
   ${MEDIA.MIN_TABLET`
-    font-size: ${props => (props.active ? 4.8 : 4.8)}rem;
+    font-size: ${(props) => (props.active ? 4.8 : 4.8)}rem;
   `}
   border: none;
   color: white;
 
   &:hover {
     transition: 0.3s all;
-    color: ${props => !props.active && accent};
+    color: ${(props) => !props.active && accent};
   }
 `;
 
