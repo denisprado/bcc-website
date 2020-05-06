@@ -26,7 +26,7 @@ function sortHome(list) {
   });
 
   // containerpara o resultado ordenado
-  const result = mapped.map(el => {
+  const result = mapped.map((el) => {
     return list[el.index];
   });
 
@@ -67,11 +67,11 @@ function App({ data }) {
                   />
 
                   <ContainerContent>
-                    {section.type === 'text' && (
+                    {section.text && section.type === 'text' && (
                       <Title size="large" as="h1">
-                        <p
+                        <span
                           dangerouslySetInnerHTML={{
-                            __html: section.content,
+                            __html: section.text,
                           }}
                         />
                       </Title>
@@ -79,11 +79,11 @@ function App({ data }) {
                     {section.image && (
                       <Image image={section.image} title={section.title} />
                     )}
-                  {section.type === 'gallery' && (
-                    <Gallery items={section.cards}></Gallery>
+                    {section.type === 'gallery' && (
+                      <Gallery items={section.cards}></Gallery>
                     )}
-                  {section.type === 'slide' && (
-                    <Carousel items={section.cards}></Carousel>
+                    {section.type === 'slide' && (
+                      <Carousel items={section.cards}></Carousel>
                     )}
                   </ContainerContent>
                   <button key={i} onClick={() => scrollDown(i)}>
@@ -161,7 +161,7 @@ export const query = graphql`
             publicURL
           }
         }
-        content
+        text
       }
     }
   }

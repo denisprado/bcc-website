@@ -7,7 +7,15 @@ export const Container = styled.div`
   border: 2px solid ${primaryLight};
   border-radius: 1.6rem;
   z-index: -1;
-  width: 30vw;
+
+  ${MEDIA.MIN_TABLET`
+    width: 45%;
+    `}
+
+  ${MEDIA.MIN_DESKTOP`
+    width: 30%;
+    `}
+
   height: 80vh;
   flex-direction: column;
   justify-content: center;

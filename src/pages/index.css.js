@@ -7,5 +7,10 @@ export const ContainerContent = styled.div`
   justify-items: center;
   ${MEDIA.PHONE`
     flex-direction: column;
+    align-items: center;
+  `}
+  ${MEDIA.PHONE`
+    flex-direction: column;
+    align-items: center;
   `}
 `;

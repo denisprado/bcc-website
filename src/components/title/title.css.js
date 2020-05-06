@@ -17,7 +17,7 @@ export const Text = styled.span`
       case 'large':
         return '100%';
       case 'medium':
-        return '90%';
+        return '100%';
       default:
         return '100%';
     }
@@ -48,11 +48,11 @@ export const Text = styled.span`
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':
-          return '2.6rem';
+          return '3.6rem';
         case 'medium':
           return '3.6rem';
         default:
-          return '2rem';
+          return '2.4rem';
       }
     }};
   `};
