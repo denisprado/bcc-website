@@ -1,115 +1,89 @@
+import ReactFullpage from '@fullpage/react-fullpage';
 import Carousel from 'components/carousel';
 import Container from 'components/container';
 import Gallery from 'components/gallery';
+import Image from 'components/image';
 import Layout from 'components/layout';
 import PageFooter from 'components/pagefooter';
 import PageTitle from 'components/pagetitle';
 import Section from 'components/section';
 import Title from 'components/title';
-import Image from 'components/image';
 import { graphql } from 'gatsby';
-import scrollTo from 'gatsby-plugin-smoothscroll';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
-import { ContainerContent } from './index.css';
+import React from 'react';
+import { ContainerContent } from '../index.css';
+
 // import Wind from 'videos/wind.mp4';
 // import Transcript from 'file-loader!videos/description.vtt';
 
-function sortHome(list) {
-  const mapped = list.map((el, i) => {
-    return { index: i, value: el };
-  });
+const FullpageWrapper = ({ data }) => (
+  <Layout>
+    <ReactFullpage
+      render={({ fullpageApi }) => {
+        return (
+          <div id="fullpage-wrapper">
+            {data.homeJson.sections &&
+              data.homeJson.sections.map((section, i) => (
+                <div
+                  className="section fp-auto-height"
+                  id={'section' + i}
+                  key={i}
+                >
+                  <Section bgColor={section.bgColor}>
+                    <Container>
+                      <PageTitle
+                        align={section.connectorBeginAlign}
+                        img={
+                          section.connectorBegin &&
+                          section.connectorBegin.childImageSharp.fluid
+                        }
+                        text={section.title}
+                      />
 
-  // ordenando o array mapeado contendo os dados resumidos
-  mapped.sort((a, b) => {
-    return +(a.value < b.value) || +(a.value === b.value) + 1;
-  });
+                      <ContainerContent>
+                        {section.text && section.type === 'text' && (
+                          <Title size="large" as="h1">
+                            <span
+                              dangerouslySetInnerHTML={{
+                                __html: section.text,
+                              }}
+                            />
+                          </Title>
+                        )}
+                        {section.image && (
+                          <Image image={section.image} title={section.title} />
+                        )}
+                        {section.type === 'gallery' && (
+                          <Gallery items={section.cards}></Gallery>
+                        )}
+                        {section.type === 'slide' && (
+                          <Carousel items={section.cards}></Carousel>
+                        )}
+                      </ContainerContent>
+                      <PageFooter
+                        align={section.connectorEndAlign}
+                        img={
+                          section.connectorEnd &&
+                          section.connectorEnd.childImageSharp.fluid
+                        }
+                        text={section.connectorEndText}
+                      ></PageFooter>
+                    </Container>
+                  </Section>
+                </div>
+              ))}
+          </div>
+        );
+      }}
+    />
+  </Layout>
+);
 
-  // containerpara o resultado ordenado
-  const result = mapped.map(el => {
-    return list[el.index];
-  });
-
-  return result;
-}
-
-function App({ data }) {
-  const [page, setPage] = useState(0);
-
-  function scrollDown(section) {
-    setPage(section + 1);
-    scrollTo('#section' + page);
-  }
-
-  return (
-    <Layout>
-      {/* <video
-        style={{ width: '100%', position: 'absolute', zIndex: 0 }}
-        autoPlay
-        loop
-      >
-        <source src={Wind} type="video/mp4" />
-        <track kind="captions" srcLang="en" src={Transcript} default />
-      </video> */}
-      <scroll-container>
-        {data.homeJson.sections &&
-          sortHome(data.homeJson.sections).map((section, i) => (
-            <scroll-page id={'section' + i} key={i}>
-              <Section bgColor={section.bgColor}>
-                <Container>
-                  <PageTitle
-                    align={section.connectorBeginAlign}
-                    img={
-                      section.connectorBegin &&
-                      section.connectorBegin.childImageSharp.fluid
-                    }
-                    text={section.title}
-                  />
-
-                  <ContainerContent>
-                    {section.type === 'text' && (
-                      <Title size="large" as="h1">
-                        <p
-                          dangerouslySetInnerHTML={{
-                            __html: section.content,
-                          }}
-                        />
-                      </Title>
-                    )}
-                    {section.image && (
-                      <Image image={section.image} title={section.title} />
-                    )}
-                  {section.type === 'gallery' && (
-                    <Gallery items={section.cards}></Gallery>
-                    )}
-                  {section.type === 'slide' && (
-                    <Carousel items={section.cards}></Carousel>
-                    )}
-                  </ContainerContent>
-                  <button key={i} onClick={() => scrollDown(i)}>
-                    <PageFooter
-                      align={section.connectorEndAlign}
-                      img={
-                        section.connectorEnd &&
-                        section.connectorEnd.childImageSharp.fluid
-                      }
-                      text={section.connectorEndText}
-                    ></PageFooter>
-                  </button>
-                </Container>
-              </Section>
-            </scroll-page>
-          ))}
-      </scroll-container>
-    </Layout>
-  );
-}
-
-App.propTypes = {
+FullpageWrapper.propTypes = {
   data: PropTypes.object,
 };
 
-export default App;
+export default FullpageWrapper;
 
 export const query = graphql`
   query HomepageQuery {
@@ -161,7 +135,7 @@ export const query = graphql`
             publicURL
           }
         }
-        content
+        text
       }
     }
   }

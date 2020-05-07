@@ -1,9 +1,8 @@
 {
   "sections": [
     {
-      "title": " ",
       "image": "../images/pagina-inicial.svg",
-      "content": "Criando valor junto às tecnologias emergentes <strong>verdes</strong> e de baixo carbono",
+      "text": "Criando valor junto às tecnologias emergentes <strong>verdes</strong> e de baixo carbono",
       "type": "text",
       "connectorBegin": "../images/circle-left.png",
       "connectorEnd":"../images/arrow-left.png",
@@ -153,32 +152,22 @@
     ,
     {
       "title": "nossos <strong>valores</strong>",
-
-      "text": "",
-      "type": "gallery",
+      "image":"../images/gallery/valores.svg",
+      "type": "text",
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/arrow-center.png",
       "connectorBeginAlign":"center",
-      "bgColor": "#13316c",
-      "cards": [{
-        "image":"../images/gallery/valores.svg",
-        "sizeImage": "80%",
-        "bgCardColor": false
-      }
-      ]
+      "bgColor": "#13316c"
     } ,
     {
       "title": "entre em <strong>contato</strong>",
-
-      "text": "",
       "image": "../images/gallery/contato.svg",
-
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/none.png",
       "connectorBeginAlign":"center",
       "bgColor": "#13316c",
-      "cards": [{
+      "cards": [{},{
         "title":"Edgar Barassa",
         "text": "edgarbarassa@gmail.com<br/>+55 19 99726 3740",
         "sizeImage": "50vw",
@@ -190,7 +179,7 @@
         "sizeImage": "50vw",
         "sizeText": "medium",
         "bgCardColor": false
-      }
+        }
       ]
     }
   ]
