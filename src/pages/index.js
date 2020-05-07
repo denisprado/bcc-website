@@ -17,10 +17,10 @@ import { ContainerContent } from '../index.css';
 // import Transcript from 'file-loader!videos/description.vtt';
 
 const FullpageWrapper = ({ data }) => (
-  <ReactFullpage
-    render={({ fullpageApi }) => {
-      return (
-        <Layout>
+  <Layout>
+    <ReactFullpage
+      render={({ fullpageApi }) => {
+        return (
           <div id="fullpage-wrapper">
             {data.homeJson.sections &&
               data.homeJson.sections.map((section, i) => (
@@ -69,10 +69,10 @@ const FullpageWrapper = ({ data }) => (
                 </div>
               ))}
           </div>
-        </Layout>
-      );
-    }}
-  />
+        );
+      }}
+    />
+  </Layout>
 );
 
 FullpageWrapper.propTypes = {
