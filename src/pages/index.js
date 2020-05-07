@@ -24,7 +24,11 @@ const FullpageWrapper = ({ data }) => (
           <div id="fullpage-wrapper">
             {data.homeJson.sections &&
               data.homeJson.sections.map((section, i) => (
-                <div className="section" id={'section' + i} key={i}>
+                <div
+                  className="section fp-auto-height"
+                  id={'section' + i}
+                  key={i}
+                >
                   <Section bgColor={section.bgColor}>
                     <Container>
                       <PageTitle
