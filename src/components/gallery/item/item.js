@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import Title from 'components/title';
 import Text from 'components/text';
 import Img from 'gatsby-image';
+import IO from 'components/io';
 
 import { Container, ContainerText, ContainerImage } from './item.css';
+
 
 const Item = ({
   text,
@@ -15,45 +17,48 @@ const Item = ({
   sizeTitle,
   bgCardColor,
 }) => (
-  <Container bgCardColor={bgCardColor}>
-    {image && (
-      <ContainerImage width={sizeImage}>
-        {image.extension === 'svg' ? (
-          <img
-            src={image.publicURL}
-            alt={title}
-            style={{ width: sizeImage, minHeight: '7rem' }}
-          />
-        ) : (
-          <Img
-            fluid={
-              image.childImageSharp.fluid ? image.childImageSharp.fluid : image
-            }
-            alt={text && text}
-            width={sizeImage}
-          />
-        )}
-      </ContainerImage>
-    )}
-    <ContainerText>
-      {title && (
-        <Title as="h2" size={sizeTitle}>
-          {title}
-        </Title>
-      )}
-      {text && (
-        <Text size={sizeText}>
-          {
-            <span
-              dangerouslySetInnerHTML={{
-                __html: text,
-              }}
+  <IO rootMargin="-50px">
+  {({ isVisible }) => (
+    <Container bgCardColor={bgCardColor} isVisible={isVisible}>
+      {image && (
+        <ContainerImage width={sizeImage}>
+          {image.extension === 'svg' ? (
+            <img
+              src={image.publicURL}
+              alt={title}
+              style={{ width: sizeImage, minHeight: '7rem' }}
             />
-          }
-        </Text>
+          ) : (
+            <Img
+              fluid={
+                image.childImageSharp.fluid ? image.childImageSharp.fluid : image
+              }
+              alt={text && text}
+              width={sizeImage}
+            />
+          )}
+        </ContainerImage>
       )}
-    </ContainerText>
-  </Container>
+      <ContainerText>
+        {title && (
+          <Title as="h2" size={sizeTitle}>
+            {title}
+          </Title>
+        )}
+        {text && (
+          <Text size={sizeText}>
+            {
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: text,
+                }}
+              />
+            }
+          </Text>
+        )}
+      </ContainerText>
+    </Container>)}
+  </IO>
 );
 
 Item.propTypes = {

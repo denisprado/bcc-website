@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
-import { primary } from 'constants/theme';
+import { primary, accent } from 'constants/theme';
 
 export const Container = styled.div`
   background-color: ${props => (props.bgCardColor ? primary : 'transparent')};
   display: flex;
   flex-direction: column;
+
+  transition: opacity .4s ease;
+
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
 
   ${MEDIA.MIN_TABLET`
   padding: ${props => (props.bgCardColor ? '3rem' : 0)};
