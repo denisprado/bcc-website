@@ -6,13 +6,14 @@ export const Container = styled.div`
   background-color: ${(props) => (props.bgCardColor ? primary : 'transparent')};
   display: flex;
   flex-direction: column;
+  
+  transition: transform ${({id, isVisible}) => (isVisible && (id))}s ease;
 
-  transition: opacity .4s ease;
+  transform: ${({ isVisible }) => (isVisible ? 'scale(1)' : 'scale(0)')};
 
-  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
 
   ${MEDIA.MIN_TABLET`
-  padding: ${(props) => (props.bgCardColor ? '3rem' : 0)};
+  padding: ${({bgCardColor}) => (bgCardColor ? '3rem' : 0)};
 
   `}
 

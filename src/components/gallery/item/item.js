@@ -16,10 +16,11 @@ const Item = ({
   sizeImage,
   sizeTitle,
   bgCardColor,
+  id
 }) => (
   <IO rootMargin="-50px">
-  {({ isVisible }) => (
-    <Container bgCardColor={bgCardColor} isVisible={isVisible}>
+  {({ isVisible, hasBeenVisible }) => (
+    <Container bgCardColor={bgCardColor} isVisible={isVisible} hasBeenVisible={hasBeenVisible} id={id*.4}>
       {image && (
         <ContainerImage width={sizeImage}>
           {image.extension === 'svg' ? (

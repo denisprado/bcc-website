@@ -7,7 +7,7 @@ function Gallery({ items }) {
   return (
     <Container size={items.length}>
       {items.map((item, i) => (
-        <Item {...item} key={i} />
+        <Item {...item} key={i} id={i} />
       ))}
     </Container>
   );
