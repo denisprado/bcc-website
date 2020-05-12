@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates.js';
 
 export const ContainerImage = styled.div`
-  width: 55%;
+  width: 100%;
   padding: 0 3rem;
   margin: 0 auto;
   ${MEDIA.TABLET`

@@ -13,7 +13,9 @@
       "warn",
       "single"
     ],
-    "prettier/prettier": "warn",
+    "prettier/prettier": ["off", {}, {
+      "usePrettierrc": false
+    }],
     "react/prop-types": "warn",
     "no-unused-vars": "warn",
     "jsx-a11y/anchor-is-valid": [

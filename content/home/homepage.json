@@ -23,26 +23,26 @@
         {
           "title": "Prospecção",
           "image": "../images/gallery/mapeamento.svg",
-          "text": "<p>Atuamos na estruturação de plataformas de articulação e construção de modelos de governança</p><p>Construímos roadmaps e executamos estudos de inteligência e prospecção tecnológica</p><p>Realizamos o mapeamento e recomendações de instrumentos e políticas públicas para Ciência, Tecnologia e Inovação (CT&I).</p>",
+          "modal": "<ul><li>Atuamos na estruturação de plataformas de articulação e construção de modelos de governança</li><li>Construímos roadmaps e executamos estudos de inteligência e prospecção tecnológica</li><li>Realizamos o mapeamento e recomendações de instrumentos e políticas públicas para Ciência, Tecnologia e Inovação (CT&I).</li></ul>",
           "sizeText": "medium",
-          "sizeImage": "60%",
-          "bgCardColor": true
+          "sizeImage": "40%",
+          "bgCardColor": false
         },
         {
           "title": "Concepção",
           "image": "../images/gallery/ideacao.svg",
-          "text": "<p>Fazemos a Ideação de projetos de Pesquisa e Desenvolvimento para tecnologias emergentes verdes.</p><p>Construímos projetos de implementação de veículos elétricos e híbridos e seus componentes embarcados, bem como geração de energia elétrica sustentável e distribuída.</p><p>Sustentamos a construção de propostas  para órgãos de fomento, governo e empresas globais.</p>",
+          "modal": "<ul><li>Fazemos a Ideação de projetos de Pesquisa e Desenvolvimento para tecnologias emergentes verdes.</li><li>Construímos projetos de implementação de veículos elétricos e híbridos e seus componentes embarcados, bem como geração de energia elétrica sustentável e distribuída.</li><li>Sustentamos a construção de propostas  para órgãos de fomento, governo e empresas globais.</li></ul>",
           "sizeText": "medium",
-          "sizeImage": "60%",
-          "bgCardColor": true
+          "sizeImage": "40%",
+          "bgCardColor": false
         },
         {
           "title": "Execução",
           "image": "../images/gallery/projeto.svg",
-          "text": "<p>Executamos projetos de Pesquisa e Desenvolvimento (P&D) para tecnologias emergentes verdes.<p><p>Aportamos recomendações estratégias para investimentos e execução em novos modelos de negócios.</p><p>          Analisamos a viabilidade técnica de soluções e construímos parâmetros e indicadores de desempenho e performance.</p>",
+          "modal": "<ul><li>Executamos projetos de Pesquisa e Desenvolvimento (P&D) para tecnologias emergentes verdes.</li><li>Aportamos recomendações estratégias para investimentos e execução em novos modelos de negócios.</li><li>Analisamos a viabilidade técnica de soluções e construímos parâmetros e indicadores de desempenho e performance.</li></ul>",
           "sizeText": "medium",
-          "sizeImage": "60%",
-          "bgCardColor": true
+          "sizeImage": "40%",
+          "bgCardColor": false
         }
       ]
     },
@@ -61,28 +61,28 @@
           "text": "Trabalhos exploratórios e prospectivos em tecnologias emergentes.",
           "image": "../images/gallery/pesquisa.svg",
           "sizeText": "medium",
-          "sizeImage": "70%"
+          "sizeImage": "40%"
 
         },
         {
           "title": "Consultoria",
           "text": "Projetos personalizados para empresas, entidades governamentais e terceiro setor.",
           "image": "../images/gallery/consultoria.svg",
-          "sizeImage": "70%",
+          "sizeImage": "40%",
           "sizeText": "medium"
         },
         {
           "title": "Eventos",
           "text": "Organização de eventos, matchmaking de stakeholders e construção de networking.",
           "image": "../images/gallery/eventos.svg",
-          "sizeImage": "70%",
+          "sizeImage": "40%",
           "sizeText": "medium"
         },
         {
           "title": "Educação",
-          "text": "Cursos e palestras direcionadas para o nível tático, estratégico e tomadores de decisão.",
+          "text": "<p style={{textAlign:'center'}}>Cursos e palestras direcionadas para o nível tático, estratégico e tomadores de decisão.",
           "image": "../images/gallery/educacao.svg",
-          "sizeImage": "70%",
+          "sizeImage": "40%",
           "sizeText": "medium"
         }
       ]
@@ -118,16 +118,18 @@
       "cards": [
         {
           "title": "Edgar Barassa",
-          "text": "<p>Experiência em Prospecção Tecnológica e Governança para Ciência, Tecnologia e Inovação</p><ul><li><p>Coordenou projetos para inova&ccedil;&atilde;o tecnol&oacute;gica e roadmaps e identificou novos modelos de neg&oacute;cios.</p></li><li><p>Doutor pela UNICAMP na &aacute;rea de Eletromobilidade e Mobilidade de baixo carbono (2019), Mestre na &aacute;rea de Pol&iacute;tica Cientifica e Tecnol&oacute;gica pela UNICAMP (2015) e Graduado em Neg&oacute;cios Internacionais, UNICAMP (2012).</p></li><li><p>Pesquisador visitante na Universidade de Bordeaux no centro de pesquisa em intelig&ecirc;ncia tecnol&oacute;gica e competitiva VIA INNO (2017).</p></li><li><p>Elaborou o Roadmap Nacional para Ve&iacute;culos El&eacute;tricos (2018) e apoiou a constru&ccedil;&atilde;o do Plano Nacional de Eletromobilidade (2018).</p></li></ul>",
-          "image":"../images/robson.png",
+          "image":"../images/edgar.png",
+          "text": "<p>Experiência em Prospecção Tecnológica e Governança para Ciência, Tecnologia e Inovação</p>",
+          "modal": "<ul><li><p>Coordenou projetos para inova&ccedil;&atilde;o tecnol&oacute;gica e roadmaps e identificou novos modelos de neg&oacute;cios.</p></li><li><p>Doutor pela UNICAMP na &aacute;rea de Eletromobilidade e Mobilidade de baixo carbono (2019), Mestre na &aacute;rea de Pol&iacute;tica Cientifica e Tecnol&oacute;gica pela UNICAMP (2015) e Graduado em Neg&oacute;cios Internacionais, UNICAMP (2012).</p></li><li><p>Pesquisador visitante na Universidade de Bordeaux no centro de pesquisa em intelig&ecirc;ncia tecnol&oacute;gica e competitiva VIA INNO (2017).</p></li><li><p>Elaborou o Roadmap Nacional para Ve&iacute;culos El&eacute;tricos (2018) e apoiou a constru&ccedil;&atilde;o do Plano Nacional de Eletromobilidade (2018).</p></li></ul>",
           "sizeImage": "20%",
           "sizeText": "medium",
           "bgCardColor": false
         },
         {
           "title": "Robson Cruz",
-          "text": "<p>Experiência em Pesquisa e Desenvolvimento de Sistemas de Powertrain.</p><ul><li><p>Coordenou times globais (EUA, Alemanha, China) de desenvolvimento de projetos de </span><span>powertrain</span><span> mais leves, com menor atrito e menos poluentes&nbsp;</p></li><li><p>Engenheiro Mec&acirc;nico pela UNESP (2006); P&oacute;s-graduado em Engenharia Automotiva pela USP (2020); Mestrando pela UNICAMP na &aacute;rea de Eletrifica&ccedil;&atilde;o de Ve&iacute;culos Pesados</p></li><li><p>Participa&ccedil;&atilde;o e lideran&ccedil;a de projetos internacionais com organiza&ccedil;&otilde;es como AUDI (Ingolstadt); BMW (Munique); Volkswagen (Chemnitz); Porsche (Weisbach); Daimler (Stuttgart); CUMMINS (Columbus) e Catterpillar (Peoria).</p></li><li><p>Participou do desenvolvimento de rotorshafts para a plataforma VW MEB e Tesla Model 3</p></li></ul>",
-          "image":"../images/edgar.png",
+          "image":"../images/robson.png",
+          "text": "<p>Experiência em Pesquisa e Desenvolvimento de Sistemas de Powertrain.</p>",
+          "modal": "<ul><li><p>Coordenou times globais (EUA, Alemanha, China) de desenvolvimento de projetos de </span><span>powertrain</span><span> mais leves, com menor atrito e menos poluentes&nbsp;</p></li><li><p>Engenheiro Mec&acirc;nico pela UNESP (2006); P&oacute;s-graduado em Engenharia Automotiva pela USP (2020); Mestrando pela UNICAMP na &aacute;rea de Eletrifica&ccedil;&atilde;o de Ve&iacute;culos Pesados</p></li><li><p>Participa&ccedil;&atilde;o e lideran&ccedil;a de projetos internacionais com organiza&ccedil;&otilde;es como AUDI (Ingolstadt); BMW (Munique); Volkswagen (Chemnitz); Porsche (Weisbach); Daimler (Stuttgart); CUMMINS (Columbus) e Catterpillar (Peoria).</p></li><li><p>Participou do desenvolvimento de rotorshafts para a plataforma VW MEB e Tesla Model 3</p></li></ul>",
           "sizeImage": "20%",
           "sizeText": "medium",
           "bgCardColor": false
@@ -136,24 +138,20 @@
     },
     {
       "title": "nossa <strong>história</strong>",
-      "text": "",
-      "type": "gallery",
+      "image":"../images/gallery/linha-do-tempo.svg",
+      "type": "text",
+      "sizeImage": "100%",
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/arrow-center.png",
       "connectorBeginAlign":"center",
-      "bgColor": "linear-gradient(to bottom, #194090 0%, #194090 50%, #13316c 100%)",
-      "cards": [{
-        "image":"../images/gallery/linha-do-tempo.svg",
-        "sizeImage": "100%",
-        "bgCardColor": false
-      }
-      ]
+      "bgColor": "linear-gradient(to bottom, #194090 0%, #194090 50%, #13316c 100%)"      
     }
     ,
     {
       "title": "nossos <strong>valores</strong>",
       "image":"../images/gallery/valores.svg",
       "type": "text",
+      "sizeImage": "55%",
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/arrow-center.png",
       "connectorBeginAlign":"center",

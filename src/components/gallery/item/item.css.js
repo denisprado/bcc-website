@@ -1,19 +1,16 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
-import { primary, accent } from 'constants/theme';
+import { primary } from 'constants/theme';
 
 export const Container = styled.div`
   background-color: ${(props) => (props.bgCardColor ? primary : 'transparent')};
   display: flex;
   flex-direction: column;
-  
-  transition: transform ${({id, isVisible}) => (isVisible && (id))}s ease;
-
+  transition: transform ${({ id, isVisible }) => (isVisible && (id))}s ease;
   transform: ${({ isVisible }) => (isVisible ? 'scale(1)' : 'scale(0)')};
-
-
+  
   ${MEDIA.MIN_TABLET`
-  padding: ${({bgCardColor}) => (bgCardColor ? '3rem' : 0)};
+  padding: ${({ bgCardColor }) => (bgCardColor ? '3rem' : 0)};
 
   `}
 
@@ -24,24 +21,23 @@ export const Container = styled.div`
     text-align:center;
     ul{
       li{
-
         text-align:left;
       }
     }
   `};
 `;
 
+export const ContainerTitle = styled.div`
+`;
+
 export const ContainerText = styled.div`
-  h2 {
     margin-bottom: 1rem;
-  }
 `;
 
 export const ContainerImage = styled.div`
   width: ${(props) => props.width && props.width};
-  margin-bottom: 2rem;
   border-radius: 1rem;
-  margin-right: 2rem;
+  margin: 2rem auto;
   ${MEDIA.PHONE`
     margin: 1rem 0rem;
   `};

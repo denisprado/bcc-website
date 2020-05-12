@@ -4,6 +4,7 @@ import { accent } from 'constants/theme';
 
 export const Text = styled.span`
   display: block;
+  text-align: center;
   margin: ${({ align }) => () => {
     switch (align) {
       case 'center':
@@ -35,7 +36,7 @@ export const Text = styled.span`
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '8.2rem';
+        return '5.6rem';
       case 'medium':
         return '5.6rem';
       default:
@@ -44,7 +45,7 @@ export const Text = styled.span`
   }};
   line-height: 1.2;
 
-  ${MEDIA.TABLET`
+  ${MEDIA.TABLET`    
     font-size: ${({ size }) => () => {
       switch (size) {
         case 'large':

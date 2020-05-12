@@ -38,6 +38,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type Cards{
       image: File!
+      modal: String!
     }
   `;
   createTypes(typeDefs);

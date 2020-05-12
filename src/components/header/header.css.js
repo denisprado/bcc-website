@@ -11,7 +11,6 @@ export const Container = styled.header`
   position: fixed;
   z-index: 1;
   left: 0;
-  right: 0;
 
   ${MEDIA.TABLET`
     display: block;

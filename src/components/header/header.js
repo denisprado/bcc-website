@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import posed from 'react-pose';
 import { Container, LogoImg } from './header.css';
 
-import Nav from 'components/header/nav';
 
 // Example of a component-specific page transition
 const AnimatedContainer = posed.div({
@@ -28,7 +27,6 @@ const Header = () => (
       <Link to="/">
         <LogoImg />
       </Link>
-      <Nav />
     </Container>
   </AnimatedContainer>
 );

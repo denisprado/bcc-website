@@ -11,6 +11,7 @@ import Title from 'components/title';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Nav from 'components/header/nav';
 import { ContainerContent } from '../index.css';
 
 // import Wind from 'videos/wind.mp4';
@@ -42,16 +43,19 @@ const FullpageWrapper = ({ data }) => (
 
                       <ContainerContent>
                         {section.text && section.type === 'text' && (
-                          <Title size="large" as="h1">
-                            <span
-                              dangerouslySetInnerHTML={{
-                                __html: section.text,
-                              }}
-                            />
-                          </Title>
+                          <>
+                            <Nav />
+                            <Title size="large" as="h1">
+                              <span
+                                dangerouslySetInnerHTML={{
+                                  __html: section.text,
+                                }}
+                              />
+                            </Title>
+                          </>
                         )}
                         {section.image && (
-                          <Image image={section.image} title={section.title} />
+                          <Image image={section.image} title={section.title} width={section.sizeImage} />
                         )}
                         {section.type === 'gallery' && (
                           <Gallery items={section.cards}></Gallery>
@@ -67,7 +71,7 @@ const FullpageWrapper = ({ data }) => (
                           section.connectorEnd.childImageSharp.fluid
                         }
                         text={section.connectorEndText}
-                      ></PageFooter>
+                      />
                     </Container>
                   </Section>
                 </div>
@@ -99,6 +103,7 @@ export const query = graphql`
           extension
           publicURL
         }
+        sizeImage
         bgColor
         connectorBeginAlign
         connectorBegin {
@@ -123,6 +128,7 @@ export const query = graphql`
           title
           sizeTitle
           text
+          modal
           sizeText
           sizeImage
           image {
