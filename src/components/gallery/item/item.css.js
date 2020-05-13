@@ -9,11 +9,6 @@ export const Container = styled.div`
   transition: transform ${({ id, isVisible }) => (isVisible && (id))}s ease;
   transform: ${({ isVisible }) => (isVisible ? 'scale(1)' : 'scale(0)')};
   
-  ${MEDIA.MIN_TABLET`
-  padding: ${({ bgCardColor }) => (bgCardColor ? '3rem' : 0)};
-
-  `}
-
   ${MEDIA.TABLET`
     margin: 1rem;
     padding: 2rem 0.5rem;
@@ -31,7 +26,7 @@ export const ContainerTitle = styled.div`
 `;
 
 export const ContainerText = styled.div`
-    margin-bottom: 1rem;
+  margin: 0rem 4rem 3rem 4rem;
 `;
 
 export const ContainerImage = styled.div`

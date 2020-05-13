@@ -8,20 +8,22 @@ import { Container, ContainerItems, ContainerModal, Button } from './gallery.css
 
 const Gallery = ({ items }) => {
   const [index, setIndex] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <IO rootMargin="-50px">
-      {({ isVisible, hasBeenVisible }) => (
+      {({ isVisible }) => (
         <Container>
           <ContainerItems size={items.length}>
             {items.map((item, i) => (
-              <Button key={i} onFocus={() => setIndex(i)} active={(i === index) && item.modal && true} onClick={() => setIndex(i)} >
+              <Button key={i} onFocus={() => setIndex(i)} active={(i === index) && item.modal && true} onClick={() => { setIndex(i); setModalOpen(true) }} isModalOpen={modalOpen}>
                 <Item {...item} id={i} />
               </Button>
             ))}
           </ContainerItems>
           {items.map((item, i) => (
             i === index && item.modal &&
-            <ContainerModal key={i} isVisible={isVisible}>
+            <ContainerModal key={i} isVisible={isVisible} isModalOpen={modalOpen}>
               <Text size={'medium'}>{
                 <span
                   dangerouslySetInnerHTML={{

@@ -12,7 +12,6 @@
     },
     {
       "title": "<strong>o que</strong> fazemos?",
-
       "type": "gallery",
       "connectorBegin": "../images/circle-left.png",
       "connectorBeginAlign": "left",
@@ -48,7 +47,6 @@
     },
     {
       "title": "<strong>como</strong> fazemos?",
-
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
       "connectorBeginAlign":"center",
@@ -90,7 +88,6 @@
     ,
     {
       "title": "nossos <strong>projetos</strong>",
-
       "type": "gallery",
       "bgColor": "linear-gradient(to top, #3c77cf 0%, #295aae 50%, #295aae 100%)",
       "connectorBegin": "../images/circle-left.png",
@@ -109,7 +106,6 @@
     ,
     {
       "title": "<strong>quem</strong> somos?",
-
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
       "connectorBeginAlign": "center",

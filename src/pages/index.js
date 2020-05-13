@@ -1,5 +1,4 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import Carousel from 'components/carousel';
 import Container from 'components/container';
 import Gallery from 'components/gallery';
 import Image from 'components/image';
@@ -11,7 +10,6 @@ import Title from 'components/title';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Nav from 'components/header/nav';
 import { ContainerContent } from '../index.css';
 
 // import Wind from 'videos/wind.mp4';
@@ -43,25 +41,19 @@ const FullpageWrapper = ({ data }) => (
 
                       <ContainerContent>
                         {section.text && section.type === 'text' && (
-                          <>
-                            <Nav />
-                            <Title size="large" as="h1">
-                              <span
-                                dangerouslySetInnerHTML={{
-                                  __html: section.text,
-                                }}
-                              />
-                            </Title>
-                          </>
+                          <Title size="large" as="h1">
+                            <span
+                              dangerouslySetInnerHTML={{
+                                __html: section.text,
+                              }}
+                            />
+                          </Title>
                         )}
                         {section.image && (
                           <Image image={section.image} title={section.title} width={section.sizeImage} />
                         )}
                         {section.type === 'gallery' && (
                           <Gallery items={section.cards}></Gallery>
-                        )}
-                        {section.type === 'slide' && (
-                          <Carousel items={section.cards}></Carousel>
                         )}
                       </ContainerContent>
                       <PageFooter

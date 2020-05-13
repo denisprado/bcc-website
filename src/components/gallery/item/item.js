@@ -65,7 +65,7 @@ const Item = ({
 
 Item.propTypes = {
   bgCardColor: PropTypes.bool,
-  id: PropTypes.string,
+  id: PropTypes.number,
   text: PropTypes.string,
   sizeText: PropTypes.string,
   title: PropTypes.string,

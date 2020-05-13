@@ -5,6 +5,7 @@ export const ContainerImage = styled.div`
   width: 100%;
   padding: 0 3rem;
   margin: 0 auto;
+  text-align: center;
   ${MEDIA.TABLET`
     width: 100%;
     margin: 2rem auto;

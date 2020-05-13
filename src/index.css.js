@@ -3,6 +3,7 @@ import MEDIA from 'helpers/mediaTemplates';
 
 export const ContainerContent = styled.div`
   display: flex;
+  width: 100%;
   align-items: center;
   justify-items: center;
 
