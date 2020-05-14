@@ -11,11 +11,9 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { ContainerContent } from '../index.css';
+import Nav from 'components/header/nav'
 
-// import Wind from 'videos/wind.mp4';
-// import Transcript from 'file-loader!videos/description.vtt';
-
-const FullpageWrapper = ({ data }) => (
+const App = ({ data }) => (
   <Layout>
     <ReactFullpage
       render={({ fullpageApi }) => {
@@ -48,8 +46,9 @@ const FullpageWrapper = ({ data }) => (
                               }}
                             />
                           </Title>
-                        )}
 
+                        )}
+                        {i === 0 && <Nav />}
                         {section.image && (
                           <Image
                             image={section.image}
@@ -80,11 +79,11 @@ const FullpageWrapper = ({ data }) => (
   </Layout>
 );
 
-FullpageWrapper.propTypes = {
+App.propTypes = {
   data: PropTypes.object,
 };
 
-export default FullpageWrapper;
+export default App;
 
 export const query = graphql`
   query HomepageQuery {

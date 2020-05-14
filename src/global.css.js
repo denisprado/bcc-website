@@ -95,6 +95,9 @@ export default createGlobalStyle`
 
   p {
     margin-bottom: 2rem;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 
   button, button:active, button:focus {

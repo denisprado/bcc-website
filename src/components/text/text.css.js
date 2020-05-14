@@ -5,11 +5,11 @@ import bullet from '../../images/bullet.png';
 export const TextContainer = styled.span`
   display: block;
   line-height: 1.2;
-  text-align: ${({ size }) => () => {
-    switch (size) {
-      case 'large':
+  text-align: ${({ align }) => () => {
+    switch (align) {
+      case 'left':
         return 'left';
-      case 'medium':
+      case 'center':
         return 'center';
       default:
         return 'center';

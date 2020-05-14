@@ -63,10 +63,10 @@ export const Button = styled.button`
   &:active,
   &:focus {
     cursor: ${({ isModalOpen, hasModal }) =>
-      hasModal ? isModalOpen && 'pointer' : 'default'};
+    hasModal ? isModalOpen && 'pointer' : 'default'};
     z-index: 1;
     font-family: 'proxima-nova';
-    margin-bottom: 0rem;
+    margin-bottom:  2.6rem;
     border: none;
 
     h2 {
@@ -83,14 +83,14 @@ export const Button = styled.button`
   &:hover {
     h2 {
       color: ${({ active, hasModal }) =>
-        hasModal ? (!active ? primaryLighten : accent) : white};
+    hasModal ? (!active ? primaryLighten : accent) : white};
     }
   }
 `;
 
 export const ActiveTabContainer = styled.div`
   text-align: center;
-  margin: 0 auto -6px;
+  margin: 2.6rem auto -3.2rem;
   transition: all ${({ isVisible }) => isVisible && '3s ease'};
   opacity: ${({ isVisible, isModalOpen }) =>
     isVisible && isModalOpen ? '1' : '0'};

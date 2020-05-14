@@ -10,7 +10,7 @@ const sideContainer = ({ open }) => {
   return (
     <Container open={open}>
       <Title size={'small'}>Sobre Tecnologias Emergentes</Title>
-      <Text size={'medium'}>
+      <Text size={'small'} align={'left'}>
         <p>
           Consideradas propulsoras do desenvolvimento e inovação para os
           próximos anos, as tecnologias emergentes verdes são definidas como os

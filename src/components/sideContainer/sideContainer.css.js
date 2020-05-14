@@ -1,35 +1,22 @@
 import styled from 'styled-components';
-import { primaryDark, primaryLight, accent } from 'constants/theme';
+import { white, primaryLight, accent } from 'constants/theme';
 import MEDIA from 'helpers/mediaTemplates.js';
 
 export const Container = styled.div`
-  display: flex;
-  border: 2px solid ${primaryLight};
-  border-radius: 1.6rem;
-  z-index: -1;
-
-  ${MEDIA.MIN_TABLET`
-    width: 45%;
-    `}
-
-  ${MEDIA.MIN_DESKTOP`
-    width: 30%;
-    `}
-
-  height: 80vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: ${primaryDark};
-  text-align: left;
-  padding: 3% 3%;
-  box-sizing: border-box;
+  border-top: 1px solid ${white};
+  border-bottom: 1px solid ${white};
+  background-color: ${primaryLight};
+  margin: 0 2rem;
+  padding: 3rem;
+  z-index: 1;
   position: absolute;
   top: 12vh;
-  right: 5rem;
+  right: 3.5rem;
   transition: transform 0.6s ease-in-out;
   opacity: ${({ open }) => (open ? 0 : 0.95)};
   transition: 0.3s all ease-in-out;
+  min-width: 500px;
+
 
   ${MEDIA.TABLET`
     display: none;

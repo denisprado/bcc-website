@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, Container } from './pagetitle.css';
+import { Container } from './pagetitle.css';
 import Img from 'gatsby-image';
+import Title from 'components/title';
 
 const PageTitle = ({ as = 'span', size, align, img, text }) => {
   return (
@@ -9,12 +10,14 @@ const PageTitle = ({ as = 'span', size, align, img, text }) => {
       {img.src.substring(img.src.length - 8, img.src.length) !== 'none.png' && (
         <Img fluid={img} alt={text} />
       )}
-      <Text
-        as={as}
-        size={size}
-        align={align}
-        dangerouslySetInnerHTML={{ __html: text }}
-      />
+      <Title as={as}
+        size={'small'}
+        align={align}>
+        <span
+          dangerouslySetInnerHTML={{ __html: text }}
+        >
+        </span>
+      </Title>
     </Container>
   );
 };

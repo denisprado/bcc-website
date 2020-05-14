@@ -2,35 +2,26 @@ import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { accent } from 'constants/theme';
 
-export const Text = styled.span`
+export const Title = styled.span`
   display: block;
+  width: 100%;
+  line-height: 1.2;
+  margin: 0 0 2rem 0;
+
+  strong {
+    color: ${accent};
+  }
   
-  text-align: ${({ size }) => () => {
-    switch (size) {
-      case 'medium':
-        return 'left';
-      case 'large':
-        return 'left';
-      default:
-        return 'center';
-    }
-  }};
-  margin: ${({ align }) => () => {
+  text-align: ${({ align }) => () => {
     switch (align) {
+      case 'left':
+        return 'left';
       case 'center':
-        return '0 auto';
+        return 'center';
       default:
-        return '0 0 2rem 0';
+        return 'left';
     }
   }};
-  width: ${({ size }) => () => {
-    switch (size) {
-      case 'large':
-        return '100%';
-      case 'medium':
-        return '100%';
-      default:
-        return '100%';
     }
   }};
   font-weight: ${({ size }) => () => {
@@ -38,6 +29,8 @@ export const Text = styled.span`
       case 'large':
         return '100';
       case 'medium':
+        return '100';
+      case 'small':
         return '100';
       default:
         return '400';
@@ -49,11 +42,12 @@ export const Text = styled.span`
         return '5.6rem';
       case 'medium':
         return '5.6rem';
+      case 'small':
+        return '2.4rem';
       default:
         return '3.2rem';
     }
   }};
-  line-height: 1.2;
 
   ${MEDIA.TABLET`    
     font-size: ${({ size }) => () => {
@@ -68,7 +62,4 @@ export const Text = styled.span`
     }};
   `};
 
-  strong {
-    color: ${accent};
-  }
 `;

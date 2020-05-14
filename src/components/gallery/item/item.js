@@ -45,7 +45,7 @@ const Item = ({
           )}
           <ContainerTitle>
             {title && (
-              <Title as="h2" size={sizeTitle} >
+              <Title as="h2" size={sizeTitle} align={'center'} >
                 {title}
               </Title>
             )}

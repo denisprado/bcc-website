@@ -7,11 +7,11 @@ import { DownBtn, UpBtn, TextBtn } from './sideButton.css';
 const SideButton = ({ open, setOpen }) => {
   return (
     <StyledButton open={open} onClick={() => setOpen(!open)}>
-      <Text size={'medium'}>
-        <TextBtn open={open}>Sobre Tecnologias Emergentes</TextBtn>{' '}
-        <DownBtn open={open} />
-        <UpBtn open={open} />
+      <Text size={'small'}>
+        <TextBtn open={open}>Sobre Tecnologias Emergentes</TextBtn>
       </Text>
+      <DownBtn open={open} />
+      <UpBtn open={open} />
     </StyledButton>
   );
 };
