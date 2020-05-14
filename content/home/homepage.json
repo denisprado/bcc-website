@@ -58,7 +58,7 @@
           "title": "Pesquisa",
           "text": "Trabalhos exploratórios e prospectivos em tecnologias emergentes.",
           "image": "../images/gallery/pesquisa.svg",
-          "sizeText": "medium",
+          "sizeText": "",
           "sizeImage": "40%"
 
         },
@@ -67,21 +67,21 @@
           "text": "Projetos personalizados para empresas, entidades governamentais e terceiro setor.",
           "image": "../images/gallery/consultoria.svg",
           "sizeImage": "40%",
-          "sizeText": "medium"
+          "sizeText": ""
         },
         {
           "title": "Eventos",
           "text": "Organização de eventos, matchmaking de stakeholders e construção de networking.",
           "image": "../images/gallery/eventos.svg",
           "sizeImage": "40%",
-          "sizeText": "medium"
+          "sizeText": ""
         },
         {
           "title": "Educação",
           "text": "<p style={{textAlign:'center'}}>Cursos e palestras direcionadas para o nível tático, estratégico e tomadores de decisão.",
           "image": "../images/gallery/educacao.svg",
           "sizeImage": "40%",
-          "sizeText": "medium"
+          "sizeText": ""
         }
       ]
     }
@@ -117,16 +117,18 @@
           "image":"../images/edgar.png",
           "text": "<p>Experiência em Prospecção Tecnológica e Governança para Ciência, Tecnologia e Inovação</p>",
           "modal": "<ul><li><p>Coordenou projetos para inova&ccedil;&atilde;o tecnol&oacute;gica e roadmaps e identificou novos modelos de neg&oacute;cios.</p></li><li><p>Doutor pela UNICAMP na &aacute;rea de Eletromobilidade e Mobilidade de baixo carbono (2019), Mestre na &aacute;rea de Pol&iacute;tica Cientifica e Tecnol&oacute;gica pela UNICAMP (2015) e Graduado em Neg&oacute;cios Internacionais, UNICAMP (2012).</p></li><li><p>Pesquisador visitante na Universidade de Bordeaux no centro de pesquisa em intelig&ecirc;ncia tecnol&oacute;gica e competitiva VIA INNO (2017).</p></li><li><p>Elaborou o Roadmap Nacional para Ve&iacute;culos El&eacute;tricos (2018) e apoiou a constru&ccedil;&atilde;o do Plano Nacional de Eletromobilidade (2018).</p></li></ul>",
-          "sizeImage": "20%",
+          "sizeImage": "28%",
+          "boderRadius": "50%",
           "sizeText": "medium",
           "bgCardColor": false
         },
         {
           "title": "Robson Cruz",
           "image":"../images/robson.png",
+          "boderRadius": "50%",
           "text": "<p>Experiência em Pesquisa e Desenvolvimento de Sistemas de Powertrain.</p>",
           "modal": "<ul><li><p>Coordenou times globais (EUA, Alemanha, China) de desenvolvimento de projetos de </span><span>powertrain</span><span> mais leves, com menor atrito e menos poluentes&nbsp;</p></li><li><p>Engenheiro Mec&acirc;nico pela UNESP (2006); P&oacute;s-graduado em Engenharia Automotiva pela USP (2020); Mestrando pela UNICAMP na &aacute;rea de Eletrifica&ccedil;&atilde;o de Ve&iacute;culos Pesados</p></li><li><p>Participa&ccedil;&atilde;o e lideran&ccedil;a de projetos internacionais com organiza&ccedil;&otilde;es como AUDI (Ingolstadt); BMW (Munique); Volkswagen (Chemnitz); Porsche (Weisbach); Daimler (Stuttgart); CUMMINS (Columbus) e Catterpillar (Peoria).</p></li><li><p>Participou do desenvolvimento de rotorshafts para a plataforma VW MEB e Tesla Model 3</p></li></ul>",
-          "sizeImage": "20%",
+          "sizeImage": "28%",
           "sizeText": "medium",
           "bgCardColor": false
         }

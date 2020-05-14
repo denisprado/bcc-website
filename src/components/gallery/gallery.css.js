@@ -15,15 +15,16 @@ export const ContainerItems = styled.div`
   grid-template-columns: repeat(${(props) => props.size && props.size}, 1fr);
   grid-template-rows: 1fr;
   grid-auto-rows: 1fr;
-  grid-column-gap: ${(props) => props.size && (16 * (1 / props.size))}rem;
+  grid-column-gap: 2rem;
   ${MEDIA.TABLET`
     grid-column-gap: 2rem;
   `}
   grid-row-gap: 0px;
   width: 100%;
   align-items: start;
-  padding: 1rem 0 4rem 0;
 `;
+
+
 
 export const ContainerModal = styled.div`
     border-top: 1px solid ${white};
@@ -31,8 +32,7 @@ export const ContainerModal = styled.div`
     background-color: ${primaryLight};
     margin: 0 4rem;
     padding: .5rem;
-    min-height: 16rem;
-    transition: all ${({ isVisible }) => (isVisible && '1s ease')};
+    transition: all ${({ isVisible }) => (isVisible && '3s ease')};
     opacity: ${({ isVisible, isModalOpen }) => (isVisible && isModalOpen ? '1' : '0')};
     ul{
       display: flex;
@@ -62,21 +62,30 @@ export const Button = styled.button`
     cursor: ${({ isModalOpen }) => isModalOpen && 'pointer'};
     z-index: 1;
     font-family: 'proxima-nova';
-    background-image: url(${({ active, isModalOpen }) => (active && isModalOpen ? ActiveTab : 'none')});
-    transition: background-image ${({ isVisible }) => (isVisible && '2s ease')};
-    background-position: bottom;
-    background-repeat: no-repeat;
-    margin-bottom: -4.2rem;
+    margin-bottom: 0rem;
     border: none;
     
     h2 {
-      color: ${({ active }) => (active && accent)};
+      color: ${({ active, isModalOpen }) => (active && isModalOpen && accent)};
     }
-  }  
+  } 
+  &:active, &:focus{    
+    .withBorder{
+      border-radius: 50%;
+      border: 3px solid ${accent};
+    }
+
+  } 
   &:hover {
     h2 {
-      color: ${({ active }) => (!active ? primaryLighten : accent)};
+      color: ${({ active, hasModal }) => hasModal ? (!active ? primaryLighten : accent) : white};
     }
   }
 `;
 
+export const ActiveTabContainer = styled.div`
+  text-align: center;
+  margin: 0 auto -6px;
+  transition: all ${({ isVisible }) => (isVisible && '3s ease')};
+    opacity: ${({ isVisible, isModalOpen }) => (isVisible && isModalOpen ? '1' : '0')};
+`

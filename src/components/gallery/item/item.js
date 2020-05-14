@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Title from 'components/title';
 import Text from 'components/text';
+import Image from 'components/image';
 import Img from 'gatsby-image';
 import IO from 'components/io';
 
@@ -14,6 +15,7 @@ const Item = ({
   title,
   sizeText,
   sizeImage,
+  boderRadius,
   sizeTitle,
   bgCardColor,
   id
@@ -22,7 +24,7 @@ const Item = ({
       {({ isVisible, hasBeenVisible }) => (
         <Container bgCardColor={bgCardColor} isVisible={isVisible} hasBeenVisible={hasBeenVisible} id={id * .4}>
           {image && (
-            <ContainerImage width={sizeImage}>
+            <ContainerImage width={sizeImage} >
               {image.extension === 'svg' ? (
                 <img
                   src={image.publicURL}
@@ -35,6 +37,8 @@ const Item = ({
                     }
                     alt={text && text}
                     width={sizeImage}
+                    imgStyle={{ borderRadius: boderRadius }}
+                    className={'withBorder'}
                   />
                 )}
             </ContainerImage>

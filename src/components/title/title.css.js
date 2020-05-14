@@ -4,7 +4,17 @@ import { accent } from 'constants/theme';
 
 export const Text = styled.span`
   display: block;
-  text-align: center;
+  
+  text-align: ${({ size }) => () => {
+    switch (size) {
+      case 'medium':
+        return 'left';
+      case 'large':
+        return 'left';
+      default:
+        return 'center';
+    }
+  }};
   margin: ${({ align }) => () => {
     switch (align) {
       case 'center':
@@ -30,7 +40,7 @@ export const Text = styled.span`
       case 'medium':
         return '100';
       default:
-        return '600';
+        return '400';
     }
   }};
   font-size: ${({ size }) => () => {
@@ -40,7 +50,7 @@ export const Text = styled.span`
       case 'medium':
         return '5.6rem';
       default:
-        return '2.125rem';
+        return '3.2rem';
     }
   }};
   line-height: 1.2;

@@ -5,7 +5,16 @@ import bullet from '../../images/bullet.png';
 export const TextContainer = styled.span`
   display: block;
   line-height: 1.2;
-  text-align: center;
+  text-align: ${({ size }) => () => {
+    switch (size) {
+      case 'large':
+        return 'left';
+      case 'medium':
+        return 'center';
+      default:
+        return 'center';
+    }
+  }};
   margin: ${({ align }) => () => {
     switch (align) {
       case 'center':
@@ -17,11 +26,11 @@ export const TextContainer = styled.span`
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
-        return '200';
+        return '100';
       case 'medium':
-        return '300';
+        return '100';
       default:
-        return '400';
+        return '300';
     }
   }};
   font-size: ${({ size }) => () => {
@@ -29,9 +38,9 @@ export const TextContainer = styled.span`
       case 'large':
         return '3.2rem';
       case 'medium':
-        return '1.6rem';
+        return '2.4rem';
       default:
-        return '1rem';
+        return '1.6rem';
     }
   }};
 

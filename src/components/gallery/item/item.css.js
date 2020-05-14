@@ -26,12 +26,11 @@ export const ContainerTitle = styled.div`
 `;
 
 export const ContainerText = styled.div`
-  margin: 0rem 4rem 3rem 4rem;
+  
 `;
 
 export const ContainerImage = styled.div`
   width: ${(props) => props.width && props.width};
-  border-radius: 1rem;
   margin: 2rem auto;
   ${MEDIA.PHONE`
     margin: 1rem 0rem;

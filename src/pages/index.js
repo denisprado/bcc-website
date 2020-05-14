@@ -41,7 +41,7 @@ const FullpageWrapper = ({ data }) => (
 
                       <ContainerContent>
                         {section.text && section.type === 'text' && (
-                          <Title size="large" as="h1">
+                          <Title size="medium" as="h1">
                             <span
                               dangerouslySetInnerHTML={{
                                 __html: section.text,
@@ -123,6 +123,7 @@ export const query = graphql`
           modal
           sizeText
           sizeImage
+          boderRadius
           image {
             childImageSharp {
               fluid(quality: 100) {
