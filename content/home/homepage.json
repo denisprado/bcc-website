@@ -2,6 +2,7 @@
   "sections": [
     {
       "image": "../images/pagina-inicial.svg",
+      "sizeImage":"70%",
       "text": "Criando valor junto às tecnologias emergentes <strong>verdes</strong> e de baixo carbono",
       "type": "text",
       "connectorBegin": "../images/circle-left.png",
@@ -24,7 +25,7 @@
           "image": "../images/gallery/mapeamento.svg",
           "modal": "<ul><li>Atuamos na estruturação de plataformas de articulação e construção de modelos de governança</li><li>Construímos roadmaps e executamos estudos de inteligência e prospecção tecnológica</li><li>Realizamos o mapeamento e recomendações de instrumentos e políticas públicas para Ciência, Tecnologia e Inovação (CT&I).</li></ul>",
           "sizeText": "medium",
-          "sizeImage": "40%",
+          "sizeImage": "35%",
           "bgCardColor": false
         },
         {
@@ -32,7 +33,7 @@
           "image": "../images/gallery/ideacao.svg",
           "modal": "<ul><li>Fazemos a Ideação de projetos de Pesquisa e Desenvolvimento para tecnologias emergentes verdes.</li><li>Construímos projetos de implementação de veículos elétricos e híbridos e seus componentes embarcados, bem como geração de energia elétrica sustentável e distribuída.</li><li>Sustentamos a construção de propostas  para órgãos de fomento, governo e empresas globais.</li></ul>",
           "sizeText": "medium",
-          "sizeImage": "40%",
+          "sizeImage": "35%",
           "bgCardColor": false
         },
         {
@@ -40,7 +41,7 @@
           "image": "../images/gallery/projeto.svg",
           "modal": "<ul><li>Executamos projetos de Pesquisa e Desenvolvimento (P&D) para tecnologias emergentes verdes.</li><li>Aportamos recomendações estratégias para investimentos e execução em novos modelos de negócios.</li><li>Analisamos a viabilidade técnica de soluções e construímos parâmetros e indicadores de desempenho e performance.</li></ul>",
           "sizeText": "medium",
-          "sizeImage": "40%",
+          "sizeImage": "35%",
           "bgCardColor": false
         }
       ]
@@ -59,28 +60,28 @@
           "text": "Trabalhos exploratórios e prospectivos em tecnologias emergentes.",
           "image": "../images/gallery/pesquisa.svg",
           "sizeText": "",
-          "sizeImage": "40%"
+          "sizeImage": "35%"
 
         },
         {
           "title": "Consultoria",
           "text": "Projetos personalizados para empresas, entidades governamentais e terceiro setor.",
           "image": "../images/gallery/consultoria.svg",
-          "sizeImage": "40%",
+          "sizeImage": "35%",
           "sizeText": ""
         },
         {
           "title": "Eventos",
           "text": "Organização de eventos, matchmaking de stakeholders e construção de networking.",
           "image": "../images/gallery/eventos.svg",
-          "sizeImage": "40%",
+          "sizeImage": "35%",
           "sizeText": ""
         },
         {
           "title": "Educação",
           "text": "<p style={{textAlign:'center'}}>Cursos e palestras direcionadas para o nível tático, estratégico e tomadores de decisão.",
           "image": "../images/gallery/educacao.svg",
-          "sizeImage": "40%",
+          "sizeImage": "35%",
           "sizeText": ""
         }
       ]
@@ -117,7 +118,7 @@
           "image":"../images/edgar.png",
           "text": "<p>Experiência em Prospecção Tecnológica e Governança para Ciência, Tecnologia e Inovação</p>",
           "modal": "<ul><li><p>Coordenou projetos para inova&ccedil;&atilde;o tecnol&oacute;gica e roadmaps e identificou novos modelos de neg&oacute;cios.</p></li><li><p>Doutor pela UNICAMP na &aacute;rea de Eletromobilidade e Mobilidade de baixo carbono (2019), Mestre na &aacute;rea de Pol&iacute;tica Cientifica e Tecnol&oacute;gica pela UNICAMP (2015) e Graduado em Neg&oacute;cios Internacionais, UNICAMP (2012).</p></li><li><p>Pesquisador visitante na Universidade de Bordeaux no centro de pesquisa em intelig&ecirc;ncia tecnol&oacute;gica e competitiva VIA INNO (2017).</p></li><li><p>Elaborou o Roadmap Nacional para Ve&iacute;culos El&eacute;tricos (2018) e apoiou a constru&ccedil;&atilde;o do Plano Nacional de Eletromobilidade (2018).</p></li></ul>",
-          "sizeImage": "28%",
+          "sizeImage": "25%",
           "boderRadius": "50%",
           "sizeText": "medium",
           "bgCardColor": false
@@ -128,7 +129,7 @@
           "boderRadius": "50%",
           "text": "<p>Experiência em Pesquisa e Desenvolvimento de Sistemas de Powertrain.</p>",
           "modal": "<ul><li><p>Coordenou times globais (EUA, Alemanha, China) de desenvolvimento de projetos de </span><span>powertrain</span><span> mais leves, com menor atrito e menos poluentes&nbsp;</p></li><li><p>Engenheiro Mec&acirc;nico pela UNESP (2006); P&oacute;s-graduado em Engenharia Automotiva pela USP (2020); Mestrando pela UNICAMP na &aacute;rea de Eletrifica&ccedil;&atilde;o de Ve&iacute;culos Pesados</p></li><li><p>Participa&ccedil;&atilde;o e lideran&ccedil;a de projetos internacionais com organiza&ccedil;&otilde;es como AUDI (Ingolstadt); BMW (Munique); Volkswagen (Chemnitz); Porsche (Weisbach); Daimler (Stuttgart); CUMMINS (Columbus) e Catterpillar (Peoria).</p></li><li><p>Participou do desenvolvimento de rotorshafts para a plataforma VW MEB e Tesla Model 3</p></li></ul>",
-          "sizeImage": "28%",
+          "sizeImage": "25%",
           "sizeText": "medium",
           "bgCardColor": false
         }
@@ -142,7 +143,7 @@
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/arrow-center.png",
       "connectorBeginAlign":"center",
-      "bgColor": "linear-gradient(to bottom, #194090 0%, #194090 50%, #13316c 100%)"      
+      "bgColor": "linear-gradient(to bottom, #194090 0%, #194090 100%)"
     }
     ,
     {
@@ -153,29 +154,23 @@
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/arrow-center.png",
       "connectorBeginAlign":"center",
-      "bgColor": "#13316c"
+      "bgColor": "#194090"
     } ,
     {
       "title": "entre em <strong>contato</strong>",
       "image": "../images/gallery/contato.svg",
+      "sizeImage":"50%",
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/none.png",
       "connectorBeginAlign":"center",
-      "bgColor": "#13316c",
-      "cards": [{},{
-        "title":"Edgar Barassa",
-        "text": "edgarbarassa@gmail.com<br/>+55 19 99726 3740",
-        "sizeImage": "50vw",
+      "bgColor": "#194090",
+      "cards": [{
+        "title":"Fale conosco",
+        "text": "faleconosco@bcconsulting.com",
         "sizeText": "medium",
         "bgCardColor": false
-      },{
-        "title":"Robson Cruz",
-        "text": "robson128@yahoo.de</br>+55 11 97533-4973",
-        "sizeImage": "50vw",
-        "sizeText": "medium",
-        "bgCardColor": false
-        }
+      }
       ]
     }
   ]

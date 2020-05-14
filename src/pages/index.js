@@ -49,8 +49,13 @@ const FullpageWrapper = ({ data }) => (
                             />
                           </Title>
                         )}
+
                         {section.image && (
-                          <Image image={section.image} title={section.title} width={section.sizeImage} />
+                          <Image
+                            image={section.image}
+                            title={section.title}
+                            width={section.sizeImage}
+                          />
                         )}
                         {section.type === 'gallery' && (
                           <Gallery items={section.cards}></Gallery>

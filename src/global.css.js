@@ -22,6 +22,7 @@ export default createGlobalStyle`
     font: inherit;
     font-family: proxima-nova, sans-serif;
     vertical-align: baseline;
+    box-sizing: border-box;
   }
 
   /* HTML5 display-role reset for older browsers */

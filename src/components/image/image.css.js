@@ -3,7 +3,6 @@ import MEDIA from 'helpers/mediaTemplates.js';
 
 export const ContainerImage = styled.div`
   width: 100%;
-  padding: 0 3rem;
   margin: 0 auto;
   text-align: center;
   ${MEDIA.TABLET`
