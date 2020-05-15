@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import Title from 'components/title';
 import Text from 'components/text';
 import Image from 'components/image';
+import Contact from 'components/contact';
 import Img from 'gatsby-image';
 import IO from 'components/io';
 
@@ -16,56 +17,62 @@ const Item = ({
   sizeText,
   sizeImage,
   boderRadius,
+  component,
   sizeTitle,
   bgCardColor,
   id
-}) => (
-    <IO rootMargin="-50px">
-      {({ isVisible, hasBeenVisible }) => (
-        <Container bgCardColor={bgCardColor} isVisible={isVisible} hasBeenVisible={hasBeenVisible} id={id * .4}>
-          {image && (
-            <ContainerImage width={sizeImage} >
-              {image.extension === 'svg' ? (
-                <img
-                  src={image.publicURL}
-                  alt={title}
+}) => {
+  return <IO rootMargin="-50px">
+    {({ isVisible, hasBeenVisible }) => (
+
+      <Container bgCardColor={bgCardColor} isVisible={isVisible} hasBeenVisible={hasBeenVisible} id={id * .4}>
+
+        {image && (
+          <ContainerImage width={sizeImage} >
+            {image.extension === 'svg' ? (
+              <img
+                src={image.publicURL}
+                alt={title}
+              />
+            ) : (
+                <Img
+                  fluid={
+                    image.childImageSharp.fluid ? image.childImageSharp.fluid : image
+                  }
+                  alt={text && text}
+                  width={sizeImage}
+                  imgStyle={{ borderRadius: boderRadius }}
+                  className={'withBorder'}
                 />
-              ) : (
-                  <Img
-                    fluid={
-                      image.childImageSharp.fluid ? image.childImageSharp.fluid : image
-                    }
-                    alt={text && text}
-                    width={sizeImage}
-                    imgStyle={{ borderRadius: boderRadius }}
-                    className={'withBorder'}
-                  />
-                )}
-            </ContainerImage>
+              )}
+          </ContainerImage>
+        )}
+        <ContainerTitle>
+          {title && (
+            <Title as="h2" size={sizeTitle} align={'center'} >
+              {title}
+            </Title>
           )}
-          <ContainerTitle>
-            {title && (
-              <Title as="h2" size={sizeTitle} align={'center'} >
-                {title}
-              </Title>
-            )}
-          </ContainerTitle>
-          <ContainerText>
-            {text && (
-              <Text size={sizeText} align={'center'}>
-                {
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: text,
-                    }}
-                  />
-                }
-              </Text>
-            )}
-          </ContainerText>
-        </Container>)}
-    </IO >
-  );
+        </ContainerTitle>
+        <ContainerText>
+          {text && (
+            <Text size={sizeText} align={'center'}>
+              {
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: text,
+                  }}
+                />
+              }
+            </Text>
+          )}
+        </ContainerText>
+        {component &&
+          <Contact />
+        }
+      </Container>)}
+  </IO >
+};
 
 Item.propTypes = {
   bgCardColor: PropTypes.bool,

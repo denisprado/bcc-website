@@ -7,7 +7,7 @@ export const ContainerLayout = styled.div`
   align-items: flex-stretch;
   flex-direction: column;
   display: flex;
-
+  width: ${({ full }) => (full ? '100%' : '75%')};
   ${MEDIA.DESKTOP`
     width: ${({ full }) => (full ? '100%' : '75%')};
     height: 100vh;

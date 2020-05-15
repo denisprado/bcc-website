@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
 import { accent, white, primaryLight, primaryLighten } from 'constants/theme';
-import ActiveTab from 'images/active-tab.png';
 
 export const Container = styled.div`
   display: flex;
@@ -27,9 +26,9 @@ export const ContainerModal = styled.div`
   border-top: 1px solid ${white};
   border-bottom: 1px solid ${white};
   background-color: ${primaryLight};
-  margin: 0 2rem;
+  margin: 0 2rem 2rem;
   padding: 0.5rem;
-  transition: all ${({ isVisible }) => isVisible && '3s ease'};
+  transition: all ${({ isVisible }) => isVisible && '.5s ease'};
   opacity: ${({ isVisible, isModalOpen }) =>
     isVisible && isModalOpen ? '1' : '0'};
   ul {
@@ -91,7 +90,7 @@ export const Button = styled.button`
 export const ActiveTabContainer = styled.div`
   text-align: center;
   margin: 2.6rem auto -3.2rem;
-  transition: all ${({ isVisible }) => isVisible && '3s ease'};
+  transition: all ${({ isVisible }) => isVisible && '.5s ease'};
   opacity: ${({ isVisible, isModalOpen }) =>
     isVisible && isModalOpen ? '1' : '0'};
 `;

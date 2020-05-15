@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { ContainerContent } from '../index.css';
 import Nav from 'components/header/nav'
+import Contact from 'components/contact'
 
 const App = ({ data }) => (
   <Layout>
@@ -22,12 +23,13 @@ const App = ({ data }) => (
             {data.homeJson.sections &&
               data.homeJson.sections.map((section, i) => (
                 <div
-                  className="section fp-auto-height"
+
+                  className="section fp-auto-height "
                   id={'section' + i}
                   key={i}
                 >
-                  <Section bgColor={section.bgColor}>
-                    <Container>
+                  <Section bgColor={section.bgColor} className={section.title}>
+                    <Container full={section.full}>
                       <PageTitle
                         align={section.connectorBeginAlign}
                         img={
@@ -128,6 +130,7 @@ export const query = graphql`
           sizeText
           sizeImage
           boderRadius
+          component
           image {
             childImageSharp {
               fluid(quality: 100) {

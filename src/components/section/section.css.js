@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates.js';
 
-export const SectionLayout = styled.div`
+export const SectionLayout = styled.section`
   margin: 0 0;
   background: ${(props) => (props.bgColor ? props.bgColor : 'transparent')};
   display: flex;

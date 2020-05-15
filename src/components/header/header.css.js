@@ -10,12 +10,12 @@ export const Container = styled.header`
   padding: 5rem 5rem;
   position: fixed;
   z-index: 1;
-  left: 0;
 
   ${MEDIA.TABLET`
     display: block;
-    position: relative;
+    position: absolute;
     background-color: ${primary};
+    float: left;
   `}
 
   a {

@@ -35,10 +35,14 @@ exports.createSchemaCustomization = ({ actions }) => {
     type homeJson implements Node {
       image: File!
       cards: Cards!
+      full: Boolean!
     }
     type Cards{
       image: File!
+      text: String!
+      sizeText: String!
       modal: String!
+      component: String!
     }
   `;
   createTypes(typeDefs);

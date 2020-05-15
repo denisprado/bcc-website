@@ -160,13 +160,21 @@
       "title": "entre em <strong>contato</strong>",
       "image": "../images/gallery/contato.svg",
       "sizeImage":"50%",
+      "full": true,
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/none.png",
       "connectorBeginAlign":"center",
       "bgColor": "#194090",
-      "cards": [{
-        "title":"Fale conosco",
+      "cards": [
+        {
+          "title":"Envie uma mensagem",
+          "sizeText": "medium",
+          "component": "Contact",
+          "bgCardColor": false
+        },
+        {
+        "title":"Por email",
         "text": "faleconosco@bcconsulting.com",
         "sizeText": "medium",
         "bgCardColor": false
@@ -175,3 +183,5 @@
     }
   ]
 }
+  
+
