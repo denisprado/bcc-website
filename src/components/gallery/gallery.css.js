@@ -57,6 +57,7 @@ export const ContainerModal = styled.div`
     margin-bottom: 0;
   }
 `;
+
 export const Button = styled.button`
   &,
   &:active,
@@ -86,6 +87,17 @@ export const Button = styled.button`
     }
   }
 `;
+
+export const NoButton = styled.div`
+z-index: 1;
+font-family: 'proxima-nova';
+margin-bottom:  2.6rem;
+border: none;
+
+h2 {
+  color: ${({ active, isModalOpen }) => active && isModalOpen && accent};
+}
+`
 
 export const ActiveTabContainer = styled.div`
   text-align: center;

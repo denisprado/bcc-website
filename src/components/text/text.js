@@ -13,7 +13,7 @@ const Text = ({ children, as = 'span', size, align }) => {
 Text.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   as: PropTypes.string,
-  size: PropTypes.oneOf(['large', 'medium']),
+  size: PropTypes.oneOf(['', 'small', 'large', 'medium']),
   align: PropTypes.oneOf(['left', 'center', 'right']),
 };
 

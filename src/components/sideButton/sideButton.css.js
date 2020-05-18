@@ -1,9 +1,8 @@
-import styled from 'styled-components';
-import { accent, white } from 'constants/theme';
-import { FiHelpCircle, FiXCircle } from 'react-icons/fi';
-import { GoQuestion } from 'react-icons/go';
-
+import { accent } from 'constants/theme';
 import MEDIA from 'helpers/mediaTemplates.js';
+import { FiHelpCircle, FiXCircle } from 'react-icons/fi';
+import styled from 'styled-components';
+
 
 export const StyledButton = styled.button`
   &,

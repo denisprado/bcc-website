@@ -12,12 +12,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { ContainerContent } from '../index.css';
 import Nav from 'components/header/nav'
-import Contact from 'components/contact'
 
 const App = ({ data }) => (
   <Layout>
     <ReactFullpage
-      render={({ fullpageApi }) => {
+      render={() => {
         return (
           <div id="fullpage-wrapper">
             {data.homeJson.sections &&
@@ -88,10 +87,14 @@ App.propTypes = {
 export default App;
 
 export const query = graphql`
-  query HomepageQuery {
-    homeJson {
-      sections {
+query HomepageQuery {
+  homeJson {
+    sections {
         title
+        text
+        full
+        bgColor
+        type
         image {
           childImageSharp {
             fluid(quality: 100, maxWidth: 1260) {
@@ -102,7 +105,6 @@ export const query = graphql`
           publicURL
         }
         sizeImage
-        bgColor
         connectorBeginAlign
         connectorBegin {
           childImageSharp {
@@ -120,7 +122,6 @@ export const query = graphql`
             }
           }
         }
-        type
         cards {
           bgCardColor
           title
@@ -141,7 +142,6 @@ export const query = graphql`
             publicURL
           }
         }
-        text
       }
     }
   }

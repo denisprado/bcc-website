@@ -1,25 +1,31 @@
 import React from 'react';
 import Text from 'components/text'
+import { Label } from './contact.css'
+
 const Contact = () =>
     <form method="post" netlify-honeypot="bot-field" data-netlify="true" style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
         <input type="hidden" name="bot-field" />
-        <label><Text align={'left'}>
-
-            Email
-        </Text>
-            <input type="email" name="email" />
-        </label>
-        <label><Text align={'left'}>
-            Nome</Text>
+        <Label>
+            <Text align={'left'}>
+                <span>Nome</span>
+            </Text>
             <input type="text" name="name" />
-        </label>
-        <label><Text align={'left'}>
-            Mensagem</Text>
-            <input type="text" name="message" />
-        </label>
-        <p>
-            <button type="submit">Enviar</button>
-        </p>
+        </Label>
+        <Label>
+            <Text align={'left'}>
+                <span>Email</span>
+            </Text>
+            <input type="email" name="email" />
+        </Label>
+        <Label>
+            <Text align={'left'}>
+                <span>Mensagem</span>
+            </Text>
+            <textarea name="message" />
+        </Label>
+        <Label>
+            <button type="submit"><Text align={'center'}><span>Enviar</span></Text></button>
+        </Label>
     </form>
 
 

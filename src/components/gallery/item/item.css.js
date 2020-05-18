@@ -36,3 +36,8 @@ export const ContainerImage = styled.div`
     margin: 1rem 0rem;
   `};
 `;
+
+export const ContainerComponent = styled.div`
+    flex-grow: 2;
+
+`

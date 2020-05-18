@@ -1,8 +1,7 @@
-import React from 'react';
-import { bool, func } from 'prop-types';
-import { StyledButton } from './sideButton.css';
 import Text from 'components/text';
-import { DownBtn, UpBtn, TextBtn } from './sideButton.css';
+import { bool, func } from 'prop-types';
+import React from 'react';
+import { DownBtn, StyledButton, TextBtn, UpBtn } from './sideButton.css';
 
 const SideButton = ({ open, setOpen }) => {
   return (

@@ -5,7 +5,7 @@ import Text from 'components/text';
 import IO from 'components/io';
 import ActiveTab from 'images/active-tab.png'
 
-import { Container, ContainerItems, ContainerModal, Button, ActiveTabContainer } from './gallery.css';
+import { Container, ContainerItems, ContainerModal, Button, NoButton, ActiveTabContainer } from './gallery.css';
 
 const Gallery = ({ items }) => {
   const [index, setIndex] = useState(0);
@@ -17,14 +17,21 @@ const Gallery = ({ items }) => {
         <Container>
           <ContainerItems size={items.length}>
             {items.map((item, i) => (
-              <Button key={i} onFocus={() => setIndex(i)} active={(i === index) && item.modal && true} onClick={() => { setIndex(i); setModalOpen(true) }} isModalOpen={modalOpen} hasModal={item.modal}>
+              item.modal ? <Button key={i} onFocus={() => setIndex(i)} active={(i === index) && item.modal && true} onClick={() => { setIndex(i); setModalOpen(true) }} isModalOpen={modalOpen} hasModal={item.modal}>
                 <Item {...item} id={i} />
                 <ActiveTabContainer isModalOpen={modalOpen} isVisible>
                   {i === index && item.modal && isVisible && modalOpen &&
                     < img src={ActiveTab} alt={item.title} />
                   }
                 </ActiveTabContainer>
-              </Button>
+              </Button> : <NoButton key={i}>
+                  <Item {...item} id={i} />
+                  <ActiveTabContainer isModalOpen={modalOpen} isVisible>
+                    {i === index && item.modal && isVisible && modalOpen &&
+                      < img src={ActiveTab} alt={item.title} />
+                    }
+                  </ActiveTabContainer>
+                </NoButton>
             ))}
           </ContainerItems>
           {items.map((item, i) => (

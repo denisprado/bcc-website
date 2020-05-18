@@ -117,7 +117,9 @@ export default class IO extends Component {
     const { isVisible, hasBeenVisible } = this.state;
 
     return (
-      <div ref={this.handleRef}>
+      <div ref={this.handleRef} style={{
+        flexBasis: '0', flexShrink: '1', flexGrow: '1'
+      }}>
         {this.props.children({ isVisible, hasBeenVisible })}
       </div>
     );

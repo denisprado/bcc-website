@@ -12,7 +12,6 @@ export const Container = styled.div`
   position: absolute;
   top: 12vh;
   right: 3.5rem;
-  transition: transform 0.6s ease-in-out;
   opacity: ${({ open }) => (open ? 0 : 0.95)};
   transition: 0.3s all ease-in-out;
   min-width: 500px;

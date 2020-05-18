@@ -14,7 +14,7 @@ Title.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   as: PropTypes.string,
   size: PropTypes.oneOf(['small', 'large', 'medium']),
-  align: PropTypes.oneOf(['center']),
+  align: PropTypes.oneOf(['center', 'left']),
 };
 
 export default Title;

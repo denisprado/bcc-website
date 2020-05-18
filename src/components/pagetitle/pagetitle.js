@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Container } from './pagetitle.css';
-import Img from 'gatsby-image';
 import Title from 'components/title';
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Container } from './pagetitle.css';
 
-const PageTitle = ({ as = 'span', size, align, img, text }) => {
+const PageTitle = ({ as = 'span', align, img, text }) => {
   return (
     <Container>
       {img.src.substring(img.src.length - 8, img.src.length) !== 'none.png' && (

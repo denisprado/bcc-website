@@ -7,7 +7,8 @@ export const Title = styled.span`
   width: 100%;
   line-height: 1.2;
   margin: 0 0 2rem 0;
-
+  flex-basis: 0;
+  flex-grow: 1;
   strong {
     color: ${accent};
   }

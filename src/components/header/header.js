@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import posed from 'react-pose';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { Container, LogoImg } from './header.css';
 
 

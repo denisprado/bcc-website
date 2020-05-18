@@ -1,13 +1,12 @@
-import React, { Suspense } from 'react';
-import PropTypes from 'prop-types';
-import Title from 'components/title';
-import Text from 'components/text';
-import Image from 'components/image';
 import Contact from 'components/contact';
-import Img from 'gatsby-image';
 import IO from 'components/io';
+import Text from 'components/text';
+import Title from 'components/title';
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Container, ContainerImage, ContainerText, ContainerTitle, ContainerComponent } from './item.css';
 
-import { Container, ContainerText, ContainerTitle, ContainerImage } from './item.css';
 
 
 const Item = ({
@@ -68,7 +67,9 @@ const Item = ({
           )}
         </ContainerText>
         {component &&
-          <Contact />
+          <ContainerComponent>
+            <Contact />
+          </ContainerComponent>
         }
       </Container>)}
   </IO >
@@ -83,6 +84,8 @@ Item.propTypes = {
   sizeTitle: PropTypes.string,
   sizeImage: PropTypes.string,
   image: PropTypes.object,
+  component: PropTypes.string,
+  boderRadius: PropTypes.string
 };
 
 export default Item;
