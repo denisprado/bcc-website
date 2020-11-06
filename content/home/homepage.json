@@ -39,7 +39,7 @@
         {
           "title": "Execução",
           "image": "../images/gallery/projeto.svg",
-          "modal": "<ul><li>Executamos projetos de Pesquisa e Desenvolvimento (P&D) para tecnologias emergentes verdes.</li><li>Aportamos recomendações estratégias para investimentos e execução em novos modelos de negócios.</li><li>Analisamos a viabilidade técnica de soluções e construímos parâmetros e indicadores de desempenho e performance.</li></ul>",
+          "modal": "<ul><li>Executamos projetos de Pesquisa e Desenvolvimento (P&D) para tecnologias emergentes verdes.</li><li>Desenvolvemos recomendações estratégicas para investimentos e execução em novos modelos de negócios.</li><li>Analisamos a viabilidade técnica de soluções e construímos parâmetros e indicadores de desempenho e performance.</li></ul>",
           "sizeText": "medium",
           "sizeImage": "35%",
           "bgCardColor": false
@@ -175,7 +175,7 @@
         },
         {
           "title": "Fale conosco",
-          "text": "Envie uma mensagem pelo formuário ao lado ou pelo email <code>faleconosco@bcconsulting.com</code>",
+          "text": "Envie uma mensagem pelo formuário ao lado ou pelo email <code>robson.cruz@bcconsulting.com.br</code>",
           "sizeText": "",
           "bgCardColor": false
         }

@@ -21,7 +21,7 @@ const sideContainer = ({ open }) => {
         </p>
         <p>
           Exemplos notáveis destas tecnologias – e expertises principais da
-          Barassa Cruz- referem-se as tecnologias de mobilidade de baixa
+          Barassa Cruz- referem-se às tecnologias de mobilidade de baixa
           emissão, com destaque para veículos elétricos e híbridos, bem como as
           tecnologias de geração de energia limpa e sustentável, como os painéis
           fotovoltaicos.
