@@ -19,7 +19,7 @@ export const ContainerItems = styled.div`
   `}
   grid-row-gap: 0px;
   width: 100%;
-  align-items: start;
+  align-items: center;
 `;
 
 export const ContainerModal = styled.div`
@@ -63,10 +63,10 @@ export const Button = styled.button`
   &:active,
   &:focus {
     cursor: ${({ isModalOpen, hasModal }) =>
-    hasModal ? isModalOpen && 'pointer' : 'default'};
+      hasModal ? isModalOpen && 'pointer' : 'default'};
     z-index: 1;
     font-family: 'proxima-nova';
-    margin-bottom:  2.6rem;
+    margin-bottom: 2.6rem;
     border: none;
 
     h2 {
@@ -83,21 +83,21 @@ export const Button = styled.button`
   &:hover {
     h2 {
       color: ${({ active, hasModal }) =>
-    hasModal ? (!active ? primaryLighten : accent) : white};
+        hasModal ? (!active ? primaryLighten : accent) : white};
     }
   }
 `;
 
 export const NoButton = styled.div`
-z-index: 1;
-font-family: 'proxima-nova';
-margin-bottom:  2.6rem;
-border: none;
+  z-index: 1;
+  font-family: 'proxima-nova';
+  margin-bottom: 2.6rem;
+  border: none;
 
-h2 {
-  color: ${({ active, isModalOpen }) => active && isModalOpen && accent};
-}
-`
+  h2 {
+    color: ${({ active, isModalOpen }) => active && isModalOpen && accent};
+  }
+`;
 
 export const ActiveTabContainer = styled.div`
   text-align: center;

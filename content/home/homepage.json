@@ -106,6 +106,67 @@
     }
     ,
     {
+      "title": "alguns <strong>clientes</strong>",
+      "type": "gallery",
+      "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #295aae 50%, #3c77cf 100%)",
+      "connectorBegin": "../images/circle-center.png",
+      "connectorBeginAlign":"center",
+      "connectorEnd":"../images/arrow-center.png",
+      "cards": [
+        {
+          "title": "",
+          "text": "",
+          "sizeText": "large",
+          "sizeTitle": "medium",
+          "image": "../images/clients-logos/aes-logo.png",
+          "sizeImage": "70%"
+        },
+        {
+          "title": "",
+          "text": "",
+          "sizeText": "large",
+          "sizeTitle": "medium",
+          "image": "../images/clients-logos/coop-giz-logo.png",
+          "sizeImage": "70%"
+        },
+        {
+          "title": "",
+          "text": "",
+          "sizeText": "large",
+          "sizeTitle": "medium",
+          "image": "../images/clients-logos/ics-logo.png",
+          "sizeImage": "70%"
+        },
+        {
+          "title": "",
+          "text": "",
+          "sizeText": "large",
+          "sizeTitle": "medium",
+          "image": "../images/clients-logos/logo-certi.jpg",
+          "sizeImage": "70%"
+        },
+        {
+          "title": "",
+          "text": "",
+          "sizeText": "large",
+          "sizeTitle": "medium",
+          "image": "../images/clients-logos/move-logo.png",
+          "sizeImage": "70%"
+        },
+        {
+          "title": "",
+          "text": "",
+          "sizeText": "large",
+          "sizeTitle": "medium",
+          "image": "../images/clients-logos/emb-logo.jpg",
+          "sizeImage": "70%"
+        }
+      ],
+      
+      "bgCardColor": false
+    }
+    ,
+    {
       "title": "<strong>quem</strong> somos?",
       "type": "gallery",
       "connectorBegin": "../images/circle-center.png",
