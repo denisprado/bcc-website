@@ -4,14 +4,16 @@ import Gallery from 'components/gallery';
 import Image from 'components/image';
 import Layout from 'components/layout';
 import PageFooter from 'components/pagefooter';
-import PageTitle from 'components/pagetitle';
 import Section from 'components/section';
+import PageTitle from 'components/pagetitle';
+import History from 'components/history';
 import Title from 'components/title';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { ContainerContent } from '../index.css';
-import Nav from 'components/header/nav'
+import Nav from 'components/header/nav';
+import Carousel from 'components/carousel';
 
 const App = ({ data }) => (
   <Layout>
@@ -59,6 +61,12 @@ const App = ({ data }) => (
                         )}
                         {section.type === 'gallery' && (
                           <Gallery items={section.cards}></Gallery>
+                        )}
+                        {section.type === 'carousel' && (
+                          <Carousel items={section.cards}></Carousel>
+                        )}
+                        {section.type === 'history' && (
+                          <History items={section.cards}></History>
                         )}
                       </ContainerContent>
                       <PageFooter
@@ -123,6 +131,7 @@ query HomepageQuery {
           }
         }
         cards {
+          id
           bgCardColor
           title
           sizeTitle

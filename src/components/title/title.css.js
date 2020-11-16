@@ -9,6 +9,7 @@ export const Title = styled.span`
   margin: 0 0 2rem 0;
   flex-basis: 0;
   flex-grow: 1;
+
   strong {
     color: ${accent};
   }
@@ -23,8 +24,8 @@ export const Title = styled.span`
         return 'left';
     }
   }};
-    }
-  }};
+    
+  
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
@@ -37,6 +38,7 @@ export const Title = styled.span`
         return '400';
     }
   }};
+  
   font-size: ${({ size }) => () => {
     switch (size) {
       case 'large':
@@ -46,7 +48,7 @@ export const Title = styled.span`
       case 'small':
         return '2.4rem';
       default:
-        return '3.2rem';
+        return '2.4rem';
     }
   }};
 

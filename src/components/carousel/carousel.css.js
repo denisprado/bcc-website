@@ -22,8 +22,9 @@ export const Menu = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-items: stretch;
   flex-direction: column;
+
   ${MEDIA.MIN_TABLET`
     flex-direction: row;
  `};
@@ -31,6 +32,8 @@ export const Menu = styled.div`
 
 export const MenuItem = styled.div`
   text-align: center;
+  margin-right: 4rem;
+  margin-left: 4rem;
   flex-grow: 2;
   padding: 1rem 0 0 0;
 `;
@@ -41,12 +44,13 @@ export const Button = styled.button`
   font-family: 'proxima-nova';
   text-transform: uppercase;
   opacity: ${(props) => (props.active ? 1 : 0.5)};
-  font-size: ${(props) => (props.active ? 3.2 : 3.2)}rem;
+  font-size: ${(props) => (props.active ? 2.4 : 3.2)}rem;
   font-weight: ${(props) => !props.active && 100};
 
   ${MEDIA.MIN_TABLET`
-    font-size: ${(props) => (props.active ? 4.8 : 4.8)}rem;
+    font-size: ${(props) => (props.active ? 2.4 : 2.4)}rem;
   `}
+
   border: none;
   color: white;
 
@@ -59,12 +63,14 @@ export const Button = styled.button`
 export const Fwd = styled(IoIosArrowForward)`
   ${MEDIA.TABLET`
     display: none;
+    size: 24;
   `}
 `;
 
 export const Back = styled(IoIosArrowBack)`
   ${MEDIA.TABLET`
     display: none;
+    size: 24;
   `}
 `;
 

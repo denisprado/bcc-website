@@ -21,6 +21,7 @@
       "bgColor": "linear-gradient(to bottom, #295aae 0%, #295aae 50%, #3c77cf 100%)",
       "cards": [
         {
+          "id":1,
           "title": "Prospecção",
           "image": "../images/gallery/mapeamento.svg",
           "modal": "<ul><li>Atuamos na estruturação de plataformas de articulação e construção de modelos de governança</li><li>Construímos roadmaps e executamos estudos de inteligência e prospecção tecnológica</li><li>Realizamos o mapeamento e recomendações de instrumentos e políticas públicas para Ciência, Tecnologia e Inovação (CT&I).</li></ul>",
@@ -28,7 +29,8 @@
           "sizeImage": "35%",
           "bgCardColor": false
         },
-        {
+        {"id":2,
+
           "title": "Concepção",
           "image": "../images/gallery/ideacao.svg",
           "modal": "<ul><li>Fazemos a Ideação de projetos de Pesquisa e Desenvolvimento para tecnologias emergentes verdes.</li><li>Construímos projetos de implementação de veículos elétricos e híbridos e seus componentes embarcados, bem como geração de energia elétrica sustentável e distribuída.</li><li>Sustentamos a construção de propostas  para órgãos de fomento, governo e empresas globais.</li></ul>",
@@ -37,6 +39,7 @@
           "bgCardColor": false
         },
         {
+          "id":3,
           "title": "Execução",
           "image": "../images/gallery/projeto.svg",
           "modal": "<ul><li>Executamos projetos de Pesquisa e Desenvolvimento (P&D) para tecnologias emergentes verdes.</li><li>Desenvolvemos recomendações estratégicas para investimentos e execução em novos modelos de negócios.</li><li>Analisamos a viabilidade técnica de soluções e construímos parâmetros e indicadores de desempenho e performance.</li></ul>",
@@ -56,6 +59,7 @@
       "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #295aae 50%, #295aae 100%)",
       "cards": [
         {
+          "id":1,
           "title": "Pesquisa",
           "text": "Trabalhos exploratórios e prospectivos em tecnologias emergentes.",
           "image": "../images/gallery/pesquisa.svg",
@@ -64,6 +68,7 @@
 
         },
         {
+          "id":2,
           "title": "Consultoria",
           "text": "Projetos personalizados para empresas, entidades governamentais e terceiro setor.",
           "image": "../images/gallery/consultoria.svg",
@@ -71,6 +76,7 @@
           "sizeText": ""
         },
         {
+          "id":3,
           "title": "Eventos",
           "text": "Organização de eventos, matchmaking de stakeholders e construção de networking.",
           "image": "../images/gallery/eventos.svg",
@@ -78,6 +84,7 @@
           "sizeText": ""
         },
         {
+          "id":4,
           "title": "Educação",
           "text": "<p style={{textAlign:'center'}}>Cursos e palestras direcionadas para o nível tático, estratégico e tomadores de decisão.",
           "image": "../images/gallery/educacao.svg",
@@ -89,16 +96,54 @@
     ,
     {
       "title": "nossos <strong>projetos</strong>",
-      "type": "gallery",
+      "type": "carousel",
       "bgColor": "linear-gradient(to top, #3c77cf 0%, #295aae 50%, #295aae 100%)",
       "connectorBegin": "../images/circle-left.png",
       "connectorEnd":"../images/arrow-left-to-center.png",
       "cards": [
         {
+          "id":0,
           "title": "Construção da Plataforma Nacional da Mobilidade Elétrica (PNME)",
           "text": "Em parceria com o Governo Federal e cooperação internacional <strong>construímos</strong> um instrumento de articulação e governança nacional para coordenar ações em prol da construção de metas e agendas de ações para a mobilidade elétrica no Brasil a partir de uma proposta multistakeholder.",
-          "sizeText": "large",
-          "sizeTitle": "medium",
+          "sizeText": "medium",
+          "sizeTitle": "small",
+          "image": "",
+          "bgCardColor": false
+        },
+        {
+          "id":1,
+          "title": "Execução de Projeto de P&D no âmbito da Chamada Estratégica 22 ANEEL",
+          "text": "Prospecção e modelagem de novos negócios em mobilidade elétrica para o setor elétrico, realizando a aplicação de veículos elétricos e plataforma digital a partir de projetos piloto em empresas estratégicas, considerando a acareação de parâmetros técnicos e viabilidade econômica",
+          "sizeText": "medium",
+          "sizeTitle": "small",
+          "image": "",
+          "bgCardColor": false
+        },
+        {
+          "id":2,
+          "title": "Elaboração de proposta de Plataforma para o Programa de Pesquisa e Desenvolvimento do Setor Elétrico",
+          "text": "Realizamos a ideação de uma proposta de plataforma, levando em conta parâmetros de governança, instrumentos de funcionamento, solução digital e análise de riscos associados.          ",
+          "sizeText": "medium",
+          "sizeTitle": "small",
+          "image": "",
+          "bgCardColor": false
+        },
+        {
+          "id":3,
+          "title": "Mapeamento e análise de políticas públicas e instrumentos que abordam a eficiência energética no Brasil",
+          "text": "Empreendemos o mapeamento das políticas públicas existentes e em discussão que versam sobre a transição energética no Brasil, interpretando suas aspirações, alvos e setores específicos, bem como potenciais sinergias e conflitos associados",
+          "sizeText": "medium",
+          "sizeTitle": "small",
+          "image": "",
+          "bgCardColor": false
+        }
+        ,
+        {
+          "id":4,
+          "title": "Ideação de modelo de incentivo e governança necessárias para a expansão da solar fotovoltaica no Distrito Federal",
+          "text": "Concebemos uma proposta de incentivo ao investidor e sua modelagem associada para alavancagem do setor e seus serviços associados no DF, considerando a articulação com os atores destacáveis desse setor e apontando recomendações estratégicas ",
+          "sizeText": "medium",
+          "sizeTitle": "small",
           "image": "",
           "bgCardColor": false
         }
@@ -114,49 +159,55 @@
       "connectorEnd":"../images/arrow-center.png",
       "cards": [
         {
+          "id":1,
           "title": "",
           "text": "",
-          "sizeText": "large",
-          "sizeTitle": "medium",
+          "sizeText": "medium",
+          "sizeTitle": "small",
           "image": "../images/clients-logos/aes-logo.png",
           "sizeImage": "70%"
         },
         {
+          "id":2,
           "title": "",
           "text": "",
-          "sizeText": "large",
+          "sizeText": "medium",
           "sizeTitle": "medium",
           "image": "../images/clients-logos/coop-giz-logo.png",
           "sizeImage": "70%"
         },
         {
+          "id":3,
           "title": "",
           "text": "",
-          "sizeText": "large",
+          "sizeText": "medium",
           "sizeTitle": "medium",
           "image": "../images/clients-logos/ics-logo.png",
           "sizeImage": "70%"
         },
         {
+          "id":4,
           "title": "",
           "text": "",
-          "sizeText": "large",
+          "sizeText": "medium",
           "sizeTitle": "medium",
           "image": "../images/clients-logos/logo-certi.jpg",
           "sizeImage": "70%"
         },
         {
+          "id":5,
           "title": "",
           "text": "",
-          "sizeText": "large",
+          "sizeText": "medium",
           "sizeTitle": "medium",
           "image": "../images/clients-logos/move-logo.png",
           "sizeImage": "70%"
         },
         {
+          "id":6,
           "title": "",
           "text": "",
-          "sizeText": "large",
+          "sizeText": "medium",
           "sizeTitle": "medium",
           "image": "../images/clients-logos/emb-logo.jpg",
           "sizeImage": "70%"
@@ -175,6 +226,7 @@
       "bgColor": "linear-gradient(to bottom, #3c77cf 0%, #295aae 50%, #194090 100%)",
       "cards": [
         {
+          "id":1,
           "title": "Edgar Barassa",
           "image":"../images/edgar.png",
           "text": "<p>Experiência em Prospecção Tecnológica e Governança para Ciência, Tecnologia e Inovação</p>",
@@ -185,6 +237,7 @@
           "bgCardColor": false
         },
         {
+          "id":2,
           "title": "Robson Cruz",
           "image":"../images/robson.png",
           "boderRadius": "50%",
@@ -198,13 +251,85 @@
     },
     {
       "title": "nossa <strong>história</strong>",
-      "image":"../images/gallery/linha-do-tempo.svg",
-      "type": "text",
+      "image":"",
+      "type": "history",
       "sizeImage": "100%",
       "connectorBegin": "../images/circle-center.png",
       "connectorEnd": "../images/arrow-center.png",
       "connectorBeginAlign":"center",
-      "bgColor": "linear-gradient(to bottom, #194090 0%, #194090 100%)"
+      "bgColor": "linear-gradient(to bottom, #194090 0%, #194090 100%)",
+      "cards":[
+          {
+            "id":1,
+            "title": "Set/2018",
+            "text": "Concepção da empresa dentro das discussões do Rota 2030"
+          },
+          {
+            "id":2,
+            "title": "Jan/2019",
+            "text": "Fundação"         
+          },
+          {"id":3,
+            "title": "Março/2019",
+            "text": "Contrato firmado para a construção da primeira Plataforma Nacional de Mobilidade Elétrica "},
+
+          {
+            "id":4,
+            "title": "Abril/2019",
+            "text": "Participação do programa de aceleração STARTUP indústria ABDI | Contratação para a construção do Primeiro anuário da mobilidade elétrica no Brasil"
+          },
+            {
+              "id":5,
+              "title": "Agosto/2019",
+"text": "Apresentação na ANEEL de projeto dentro da Chamada estratégica 22 de mobilidade elétrica"},
+{"id":6,"title": "Novembro 2019",
+  "text": "Networking estratégico com empresas e instituições líderes em mobilidade elétrica na Califórnia (EUA)"
+},
+{
+  "id":7,
+  "title": "Dezembro/2019",
+  "text": "PROJETO APROVADO NA CHAMADA 22"
+},
+{
+  "id":8,
+  "title": "Março/2020",
+  "text": "Kick-off do projeto da chamada 22"},
+
+{
+  "id":9,
+  "title": "Abril 2020",
+  "text": "Consultoria estratégica para a ANEEL em prol da construção conceitual da Plataforma de Pesquisa, Desenvolvimento e Inovação (PPD&I) ao setor elétrico"
+},
+{
+  "id":10,
+  "title": "junho/2020","text":"Kick-off de projeto: Elaboração de estratégias de negócios e instrumentos de financiamento para a solar fotovoltaica no Distrito Federal, em parceria com a CERTI e GDF"},
+
+{
+  "id":11,
+  "title": "julho/2020",
+  "text": "Apoio à construção de ementas para cursos e disciplinas em mobilidade elétrica, em parceria com a cooperação alemã GIZ  e a rede federal de ensino ENERGIF"},
+
+{
+  "id":12,
+  "title": "Agosto /2020",
+  "text": "Elaboração de estratégica para implementação de estações de recarga de veículos elétricos em vias públicas e privadas perante a parceiros relacionados"},
+
+{
+  "id":13,
+  "title": "Setembro /2020",
+  "text": "Concepção de projeto de retrofit para veículos elétricos comerciais, considerando parâmetros essenciais para a tomada de decisão do ponto de vista técnico e econômico. "},
+
+{
+  "id":14,  
+  "title": "Novembro/2020",
+  "text": "Kick-off de projeto sobre mapeamento estratégicos de políticas para a transição energética no Brasil"},
+
+{
+  "id":15,
+  "title": "Dezembro/2020 e além",
+  "text": "Criando valor aos nossos clientes no apoio a tomada de decisão e suporte estratégico para a seleção e implementação de novas tecnológicas emergentes verdes."}
+          
+        ]
     }
     ,
     {
@@ -218,6 +343,7 @@
       "bgColor": "#194090"
     } ,
     {
+      
       "title": "entre em <strong>contato</strong>",
       "image": "../images/gallery/contato.svg",
       "sizeImage":"70%",
@@ -229,12 +355,14 @@
       "bgColor": "#194090",
       "cards": [
         {
+          "id":1,
           "text":"",
           "sizeText": "",
           "component": "Contact",
           "bgCardColor": false
         },
         {
+          "id":2,
           "title": "Fale conosco",
           "text": "Envie uma mensagem pelo formuário ao lado ou pelo email <code>robson.cruz@bcconsulting.com.br</code>",
           "sizeText": "",

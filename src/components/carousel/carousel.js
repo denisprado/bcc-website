@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Item from 'components/carousel/item';
+import Title from 'components/title';
 import {
   Container,
   Menu,
@@ -22,59 +23,30 @@ function Carousel({ items }) {
     index === 0 ? setIndex(length) : setIndex(index - 1);
 
   return items.map(
-    (item, i) =>
-      i === index && (
-        <Container key={i}>
-          <Item {...item} key={i} />
+    (item) =>
+      item.id === index && (
+        <Container key={item.id}>
           <Menu>
             <MenuItem>
-              <Button key={i} onClick={() => handleNext()}>
+              <Button key={item.id} i onClick={() => handleNext()}>
                 <Back />
                 <Up />
               </Button>
             </MenuItem>
+
             <MenuItem>
-              {items.map((item, i) =>
-                i === index - 1 ? (
-                  <Button key={i} onClick={() => handlePrevious()}>
-                    {item.title}
-                  </Button>
-                ) : (
-                  i === length &&
-                  index === 0 && (
-                    <Button key={i} onClick={() => handlePrevious()}>
-                      {item.title}
-                    </Button>
-                  )
-                )
-              )}
+              <Title size="default" as="h2" align="center">
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: item.title,
+                  }}
+                />
+              </Title>
+              <Item {...item} key={item.id} />
             </MenuItem>
+
             <MenuItem>
-              <Button
-                active
-                dangerouslySetInnerHTML={{
-                  __html: item.title,
-                }}
-              />
-            </MenuItem>
-            <MenuItem>
-              {items.map((item, i) =>
-                i === index + 1 ? (
-                  <Button key={i} onClick={() => handleNext()}>
-                    {item.title}
-                  </Button>
-                ) : (
-                  i === 0 &&
-                  index === length && (
-                    <Button key={i} onClick={() => handleNext()}>
-                      {item.title}
-                    </Button>
-                  )
-                )
-              )}
-            </MenuItem>
-            <MenuItem>
-              <Button key={i} onClick={() => handleNext()}>
+              <Button key={item.id} onClick={() => handlePrevious()}>
                 <Fwd />
                 <Down />
               </Button>

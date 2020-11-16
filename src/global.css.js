@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { white, accent, primary } from 'constants/theme';
+import { white, accent, primary, primaryLight } from 'constants/theme';
 
 export default createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -99,6 +99,43 @@ export default createGlobalStyle`
       margin-bottom: 0;
     }
   }
+  
+  .timeline-card-content.active{
+      border-top: 1px solid #fff !important;
+      border-bottom: 1px solid #fff !important;
+      background-color: ${primaryLight} !important;
+      padding: 0.5rem;
+      border-radius:0;
+    }
+
+    .timeline-card-content{
+      background-color: ${primary} !important;
+      padding: 00rem !important;
+      filter: none !important;
+      border-top:none !important;
+      border-bottom:none !important;
+
+    }
+    
+  .card-title {
+      font-size:2rem !important;
+      font-weight:300 !important;
+      font-family: proxima-nova, sans-serif !important;
+      color: ${white} !important;
+      line-height:2.4rem !important;
+  }
+  .timeline-horz-card-wrapper{
+    max-width:600px;
+  }
+  .timeline-main-wrapper{
+    margin:5rem;
+  }
+  .timeline-item-title {
+      font-size: 1.6rem !important;
+      font-weight:300 !important;
+      font-family: proxima-nova, sans-serif !important;
+      color: ${white} !important;
+  }
 
   button, button:active, button:focus {
     background:none;
@@ -143,5 +180,9 @@ export default createGlobalStyle`
     margin: 10vh auto;
     background: white;
     outline: none;
-}
+  }
+
+  
+
 `;
+

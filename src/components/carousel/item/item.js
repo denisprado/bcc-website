@@ -13,7 +13,7 @@ const Item = ({ text }) => {
     <Container>
       <ContainerText>
         <animated.div style={props}>
-          <Title size="medium" as="h2" align="center">
+          <Title size="small" as="h2" align="center">
             <span
               dangerouslySetInnerHTML={{
                 __html: text,
