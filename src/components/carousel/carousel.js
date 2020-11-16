@@ -11,6 +11,7 @@ import {
   Up,
   Back,
   Down,
+  Banner
 } from './carousel.css';
 
 function Carousel({ items }) {
@@ -35,14 +36,17 @@ function Carousel({ items }) {
             </MenuItem>
 
             <MenuItem>
-              <Title size="default" as="h2" align="center">
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: item.title,
-                  }}
-                />
-              </Title>
-              <Item {...item} key={item.id} />
+              <Banner>
+
+                <Title size="default" as="h2" align="center">
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: item.title,
+                    }}
+                  />
+                </Title>
+                <Item {...item} key={item.id} />
+              </Banner>
             </MenuItem>
 
             <MenuItem>

@@ -7,9 +7,9 @@ const Nav = () => (
   <Container>
     <ul>
       <li>
-        <Link to="/linkedink">
+        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/barassa-cruz-consulting">
           <FaLinkedinIn />
-        </Link>
+        </a>
       </li>
     </ul>
   </Container>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
-import { accent } from 'constants/theme';
+import { accent, primaryLight, white } from 'constants/theme';
 import {
   IoIosArrowForward,
   IoIosArrowUp,
@@ -32,11 +32,22 @@ export const Menu = styled.div`
 
 export const MenuItem = styled.div`
   text-align: center;
-  margin-right: 4rem;
-  margin-left: 4rem;
+  margin-right: 8rem;
+  margin-left: 8rem;
   flex-grow: 2;
   padding: 1rem 0 0 0;
 `;
+
+export const Banner = styled.div`
+  border-top: 1px solid ${white};
+  border-bottom: 1px solid ${white};
+  background-color: ${primaryLight};
+  margin: 4rem;
+  padding: 4rem;
+  span, h2{
+    text-align: left;
+  }
+`
 
 export const Button = styled.button`
   cursor: pointer;
