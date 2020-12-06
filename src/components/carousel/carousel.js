@@ -13,6 +13,8 @@ import {
   Down,
   Banner
 } from './carousel.css';
+import { accent } from '../../constants/theme';
+import { IconContext } from 'react-icons';
 
 function Carousel({ items }) {
   const [index, setIndex] = useState(0);
@@ -30,15 +32,16 @@ function Carousel({ items }) {
           <Menu>
             <MenuItem>
               <Button key={item.id} i onClick={() => handleNext()}>
-                <Back />
-                <Up />
+                <IconContext.Provider value={{ size: 96 }}>
+                  <Back />
+                </IconContext.Provider>
               </Button>
             </MenuItem>
 
             <MenuItem>
               <Banner>
 
-                <Title size="default" as="h2" align="center">
+                <Title size="medium" as="h2" align="center" color={accent}>
                   <span
                     dangerouslySetInnerHTML={{
                       __html: item.title,
@@ -51,8 +54,9 @@ function Carousel({ items }) {
 
             <MenuItem>
               <Button key={item.id} onClick={() => handlePrevious()}>
-                <Fwd />
-                <Down />
+                <IconContext.Provider value={{ size: 96 }}>
+                  <Fwd />
+                </IconContext.Provider>
               </Button>
             </MenuItem>
           </Menu>

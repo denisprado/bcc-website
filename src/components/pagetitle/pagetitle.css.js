@@ -60,7 +60,7 @@ export const Text = styled.span`
       }
     }};
   `};
-
+  
   strong {
     color: ${accent};
     font-weight: 400;

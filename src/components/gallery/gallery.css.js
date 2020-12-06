@@ -63,7 +63,7 @@ export const Button = styled.button`
   &:active,
   &:focus {
     cursor: ${({ isModalOpen, hasModal }) =>
-      hasModal ? isModalOpen && 'pointer' : 'default'};
+    hasModal ? isModalOpen && 'pointer' : 'default'};
     z-index: 1;
     font-family: 'proxima-nova';
     margin-bottom: 2.6rem;
@@ -83,7 +83,7 @@ export const Button = styled.button`
   &:hover {
     h2 {
       color: ${({ active, hasModal }) =>
-        hasModal ? (!active ? primaryLighten : accent) : white};
+    hasModal ? (!active ? primaryLighten : accent) : white};
     }
   }
 `;

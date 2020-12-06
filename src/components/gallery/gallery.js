@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import Item from 'components/gallery/item';
 import Text from 'components/text';
 import IO from 'components/io';
-import ActiveTab from 'images/active-tab.png';
 
+import ActiveTab from 'images/active-tab.png';
+import ActiveTabPhone from 'images/active-tab-phone.png';
 import {
   Container,
   ContainerItems,
@@ -48,15 +49,15 @@ const Gallery = ({ items }) => {
                   </ActiveTabContainer>
                 </Button>
               ) : (
-                <NoButton key={i}>
-                  <Item {...item} id={i} />
-                  <ActiveTabContainer isModalOpen={modalOpen} isVisible>
-                    {i === index && item.modal && isVisible && modalOpen && (
-                      <img src={ActiveTab} alt={item.title} />
-                    )}
-                  </ActiveTabContainer>
-                </NoButton>
-              )
+                  <NoButton key={i}>
+                    <Item {...item} id={i} />
+                    <ActiveTabContainer isModalOpen={modalOpen} isVisible>
+                      {i === index && item.modal && isVisible && modalOpen && (
+                        <img src={ActiveTab} alt={item.title} />
+                      )}
+                    </ActiveTabContainer>
+                  </NoButton>
+                )
             )}
           </ContainerItems>
           {items.map(

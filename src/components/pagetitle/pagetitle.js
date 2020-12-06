@@ -11,7 +11,7 @@ const PageTitle = ({ as = 'span', align, img, text }) => {
         <Img fluid={img} alt={text} />
       )}
       <Title as={as}
-        size={'small'}
+        size={'medium'}
         align={align}>
         <span
           dangerouslySetInnerHTML={{ __html: text }}

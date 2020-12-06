@@ -8,6 +8,7 @@ import {
   IoIosArrowDown,
 } from 'react-icons/io';
 
+
 export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
@@ -18,22 +19,29 @@ export const Container = styled.div`
 `;
 
 export const Menu = styled.div`
-  justify-items: center;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-items: stretch;
-  flex-direction: column;
-
-  ${MEDIA.MIN_TABLET`
-    flex-direction: row;
- `};
+  justify-content: stretch;
+  flex-direction: row;
 `;
 
 export const MenuItem = styled.div`
   text-align: center;
-  margin-right: 8rem;
-  margin-left: 8rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+  ${MEDIA.DESK`
+  margin-right:3rem;
+  margin-left: 3rem;
+  `}
+  ${MEDIA.TABLET`
+  margin-right: 2rem;
+  margin-left: 2rem;
+  `}
+  ${MEDIA.PHONE`
+    margin-right: .5rem;
+    margin-left: .5rem;
+  `}
   flex-grow: 2;
   padding: 1rem 0 0 0;
 `;
@@ -42,8 +50,12 @@ export const Banner = styled.div`
   border-top: 1px solid ${white};
   border-bottom: 1px solid ${white};
   background-color: ${primaryLight};
-  margin: 4rem;
-  padding: 4rem;
+  padding: 4rem 4rem 0;
+  margin: 2rem;
+  ${MEDIA.PHONE`
+  margin: 0rem;
+  padding: 1rem;
+  `}
   span, h2{
     text-align: left;
   }
@@ -72,17 +84,13 @@ export const Button = styled.button`
 `;
 
 export const Fwd = styled(IoIosArrowForward)`
-  ${MEDIA.TABLET`
-    display: none;
-    size: 24;
-  `}
+  
+    size: 48;
 `;
 
 export const Back = styled(IoIosArrowBack)`
-  ${MEDIA.TABLET`
-    display: none;
-    size: 24;
-  `}
+  
+    font-size: 48;
 `;
 
 export const Up = styled(IoIosArrowUp)`

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { white, accent, primary, primaryLight } from 'constants/theme';
+import MEDIA from 'helpers/mediaTemplates';
 
 export default createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -33,6 +34,9 @@ export default createGlobalStyle`
 
   html {
     font-size: 62.5%;
+    ${MEDIA.PHONE`
+    font-size: 42.5%;
+    ` }
   }
 
   body {

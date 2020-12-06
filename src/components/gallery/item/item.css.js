@@ -20,6 +20,11 @@ export const Container = styled.div`
       }
     }
   `};
+
+  ${MEDIA.PHONE`
+  margin: 1rem;
+    padding: 2rem 0.5rem;
+  `}
 `;
 
 export const ContainerTitle = styled.div`

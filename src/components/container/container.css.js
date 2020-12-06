@@ -19,6 +19,6 @@ export const ContainerLayout = styled.div`
   `};
 
   ${MEDIA.PHONE`
-    width: 65%;
+    width: 95%;
   `};
 `;

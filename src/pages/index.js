@@ -14,6 +14,7 @@ import React from 'react';
 import { ContainerContent } from '../index.css';
 import Nav from 'components/header/nav';
 import Carousel from 'components/carousel';
+import ImageGrid from 'components/imageGrid';
 
 const App = ({ data }) => (
   <Layout>
@@ -67,6 +68,9 @@ const App = ({ data }) => (
                         )}
                         {section.type === 'history' && (
                           <History items={section.cards}></History>
+                        )}
+                        {section.type === 'imageGrid' && (
+                          <ImageGrid items={section.cards} />
                         )}
                       </ContainerContent>
                       <PageFooter

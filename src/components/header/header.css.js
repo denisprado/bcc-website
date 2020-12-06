@@ -11,11 +11,12 @@ export const Container = styled.header`
   position: fixed;
   z-index: 1;
 
-  ${MEDIA.TABLET`
-    display: block;
-    position: absolute;
+  ${MEDIA.PHONE`
+    display: flex;
     background-color: ${primary};
-    float: left;
+    position: relative;
+    display: block;
+    z-index:0;
   `}
 
   a {
