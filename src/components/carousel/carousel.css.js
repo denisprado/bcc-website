@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
-import { accent, primaryLight, white } from 'constants/theme';
+import { accent, primaryLight, white, transparent } from 'constants/theme';
 import {
   IoIosArrowForward,
   IoIosArrowUp,
   IoIosArrowBack,
   IoIosArrowDown,
 } from 'react-icons/io';
-
 
 export const Container = styled.div`
   width: 100%;
@@ -56,10 +55,10 @@ export const Banner = styled.div`
   margin: 0rem;
   padding: 1rem;
   `}
-  span, h2{
+  span, h2 {
     text-align: left;
   }
-`
+`;
 
 export const Button = styled.button`
   cursor: pointer;
@@ -84,13 +83,11 @@ export const Button = styled.button`
 `;
 
 export const Fwd = styled(IoIosArrowForward)`
-  
-    size: 48;
+  size: 48;
 `;
 
 export const Back = styled(IoIosArrowBack)`
-  
-    font-size: 48;
+  font-size: 48;
 `;
 
 export const Up = styled(IoIosArrowUp)`
@@ -103,4 +100,26 @@ export const Down = styled(IoIosArrowDown)`
   ${MEDIA.MIN_DESKTOP`
     display: none;
   `}
+`;
+
+export const CirclesContainer = styled.div`
+  margin-top: 1rem;
+  padding: 1rem;
+  flex: 1;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+`;
+
+export const CircleItem = styled.div`
+  border: 1px solid ${white};
+  border-radius: 50%;
+  &::before {
+    content: &nbsp;
+  }
+  background-color: ${({ active }) => (active ? accent : transparent)};
+  width: 15px;
+  margin: 10px;
+  height: 15px;
 `;
